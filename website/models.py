@@ -38,6 +38,7 @@ class Post(models.Model):
     updated = models.DateTimeField(auto_now=True, blank=True, null=True)
     read_time = models.IntegerField()
     slug = models.SlugField(null=True,unique=True)
+    featured = models.BooleanField(default=False)
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
