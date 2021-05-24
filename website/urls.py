@@ -6,6 +6,7 @@ app_name = 'website'
 
 urlpatterns = [
     path('', views.index, name='home'),
-    path('<slug:slug>', views.index, name='category_detail'),
+    path('<slug:category_slug>/<slug:post_slug>/', views.post_detail, name='post_detail'),
+    path('<slug:category_slug>/', views.allPostCat, name='category_detail'),
     
 ]

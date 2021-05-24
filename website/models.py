@@ -50,7 +50,7 @@ class Post(models.Model):
         verbose_name_plural = 'posts'
 
     def get_absolute_url(self):
-        return reverse('website:post_detail', args=[str(self.category.slug, self.slug)])
+        return reverse('website:post_detail', args=[self.category.slug, self.slug])
 
     def __str__(self):
         return self.title

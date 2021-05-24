@@ -1,5 +1,7 @@
 /*   */
 /*  navbatr  */
+
+
 #searchIconMobile {
   display: none;
 }
@@ -12,7 +14,7 @@
 }
 
 #navbarContent li {
-  margin-left: 19px;
+  margin-left: 12px;
   font-weight: 300;
 }
 
@@ -35,8 +37,8 @@
 }
 
 #homeImages {
-  width: 395px;
-  height: 310px;
+  width: 365px;
+  height: auto;
  
 }
 
@@ -48,11 +50,75 @@
   font-size: 13px;
   font-weight: 30 !important;
 }
+/* DESKTOP RESPONSIVE */
+@media only screen and (min-width: 769px) {
 
+  
+.homeImagesPost{
+
+    width: 800px !important;
+    height:auto !important;
+    margin-right: -374px;
+ 
+   
+   
+
+  }
+  #newsletter_button{
+
+  }
+  #newsletter_input{
+    padding: 5px;
+    width: 250px;
+    border: none;
+  }
+  #newsletter_header{
+    font-size: 15px;
+  }
+  #color{
+    background-color: lightcoral;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+#whatwedoimage{
+
+max-height: 100px;
+max-width:100px;
+object-fit: cover;
+
+}
+
+.paragraph{
+  font-size: 10px;
+}
+#whatwedoimage{}
+
+#whatwedorow{
+
+  padding-bottom: 20px;
+
+}
+
+#recommended_text{
+
+  padding-top: 64px;
+  font-size: 15px;
+  padding-bottom: 30px;
+  font-weight: bolder;
+  
+}
 #row{
 
-  padding-bottom: 80px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid rgb(206, 206, 206);
+  padding-top: 40px;
+  width: 95%;
 }
+
 
 .title_text{
   
@@ -65,20 +131,78 @@
   padding-bottom: 44px;;
   max-width: 100vw;
 
-  border-bottom: 1px solid black;
-
-
- 
   
+}
+
+#homeImagesPost{
+
+  height: 300px;
+}
+
 }
 @media only screen and (max-width: 765px) {
 
 
 
 }
+
+/* MOBILE RESPONSIVE */
 @media only screen and (max-width: 765px) {
+  /* WHAT WE DO */
+  #whatwedorow{
+
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
   
+   
+    
   
+  }
+  #paragraphwhatwedocol{
+    
+  }
+
+  
+  #whatwedorow .paragraph{
+
+    font-size: 15px;
+  
+
+
+  }
+
+
+
+  /* Facebook Page */
+  #recommended_text{
+    font-size: 15px;
+    padding-bottom: 30px;
+    font-weight: bolder;
+    padding-top: 30px;
+    
+
+  }
+
+  /* MOBILE What we do */
+
+  #whatWeDoRow{
+
+    padding: 20px 0;
+
+  }
+
+  #whatwedoimage{
+
+    max-height: 100px;
+    max-width:100px;
+    object-fit: cover;
+    
+    }
+    
+    #paragraphwhatwedocol .paragraph{
+      font-size: 15px;
+    }
   .container {
 
     
@@ -89,9 +213,17 @@
     /* padding-left: 19px !important;
     padding-top: 41px; */
   }
+  #whatwedorow {
+
+    display: none;
+    }
+   .rt-added{
+
+      display: none;
+    }
   #homeImages {
    
-    width: 94.0vw !important;
+    width: 92.0vw !important;
     height: auto;
     padding-top: 40px;
     
@@ -166,7 +298,7 @@
     padding-bottom: 44px;;
     max-width: 100vw;
 
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #dad3cc;
 
 
    

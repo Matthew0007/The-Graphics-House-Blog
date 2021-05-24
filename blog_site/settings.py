@@ -73,6 +73,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'website.context_processors.menu',
                 'website.context_processors.post_menu',
+                'website.context_processors.whatWeDo',
             ],
         },
     },

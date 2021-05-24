@@ -1,6 +1,12 @@
 from .models import *
 
 
+def whatWeDo(request):
+    whatWeDo = Post.objects.filter(category = 8)
+
+
+    return dict(whatWeDo=whatWeDo)
+
 
 def menu(request):
     links = Category.objects.all()

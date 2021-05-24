@@ -1,9 +1,22 @@
-{% extends "base.html" %} 
-{% load static %} 
-{% block metadescription %} 
-{%endblock %} 
-{% block title %} DeeperLifeSingles {% endblock %} 
-{% block content%}
+{% extends "base.html" %}
+{% load static %}
+{% block metadescription %}
+	{% if category %}
+		{{ category.description|truncatewords:155 }}
+	{% else %}
+		Welcome to the cushion store where you can buy comfy and awesome cushions.
+	{% endif %}
+{% endblock %}
+{% block title %}
+	{% if category %}
+		{{ category.name }} - Perfect Cushion Store
+	{% else %}
+		See Our Cushion Collection - Perfect Cushion Store
+	{% endif %}
+{% endblock %}
+{% block content %}
+
+
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;700&display=swap" rel="stylesheet">
 
@@ -17,18 +30,19 @@
     <!-- =============================Featured Po============ -->
 
 <div class="col-md-8 pt-lg-5">
-    {%if featured %} 
-        {% for post in featured%}
+    <h1>{{category.name}}</h1>
+    {%if posts %} 
+        {% for post in posts%}
 
     <div id="row" class="row ">
 
         <div class="col-sm-12 col-md-12 col-lg-6">
-            <a class="nav-link" href="{{post.get_absolute_url}}"> <img id="homeImages" class="  " src="{{post.image.url}}" /></a>
+            <a class="nav-link" style="text-decoration: none; list-style-type: none;" href="{{post.get_absolute_url}}"><img id="homeImages" class="  " src="{{post.image.url}}" /></a>
 
         </div>
         <div class="col-md-12 col-sm-12 col-lg-6" >
-            <a style="list-style-type: none; text-decoration: none;"  href="{%url 'website:category_detail' post.category.slug%}" class="text-dark category_text ">{{post.category}}</a>
-        <b><h4 style="text-transform:capitalize ;" class="title_text ">{{post.title}}</h4></b>
+            <p class="category_text ">{{post.category}}</p>
+        <b><h4 style="text-transform: capitalize;" class="title_text ">{{post.title}}</h4></b>
         </div>
     </div>
 
@@ -68,15 +82,15 @@ data-show-facepile="false"
                 padding-bottom: 30px;
                 font-weight: bolder;" id="recommended_text " class=" mt-1 rt-added"> WHAT WE DO</h1>
                 {% if whatWeDo %}
-                {%for post in whatWeDo%}
+                {%for p in whatWeDo%}
 
                 <div id="whatwedorow" class="row ">
                     <div  class=" col-lg-3">
-                        <img id="whatwedoimage" src="{{post.image.url}}">
+                        <img id="whatwedoimage" src="{{p.image.url}}">
                     </div>
                     <div id="paragraphwhatwedocol" class="col-lg-8  my-auto">
                         <p class="paragraph my-auto">
-                            {{post.title}}
+                            {{p.title}}
                         </p>
                     </div>
                 </div> 
@@ -129,4 +143,11 @@ data-show-facepile="false"
     
 
 
-{% endblock content %}
+
+
+
+
+
+
+
+{% endblock %}

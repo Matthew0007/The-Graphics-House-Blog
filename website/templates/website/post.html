@@ -16,25 +16,29 @@
 
     <!-- =============================Featured Po============ -->
 
-<div class="col-md-8 pt-lg-5">
-    {%if featured %} 
-        {% for post in featured%}
+<div class="col-md-8 pt-lg-2">
+   
+      
 
     <div id="row" class="row ">
+        <a href="{%url 'website:category_detail' post.category.slug%}" class="category_text ">{{post.category}}</a>
+
+
+        <h3 style="">{{post.title}}</h3>
 
         <div class="col-sm-12 col-md-12 col-lg-6">
-            <a class="nav-link" href="{{post.get_absolute_url}}"> <img id="homeImages" class="  " src="{{post.image.url}}" /></a>
+            <a href="{{post.get_absolute_url}}"> <img id="homeImages" class="mx-auto homeImagesPost  " src="{{post.image.url}}" /></a>
 
-        </div>
-        <div class="col-md-12 col-sm-12 col-lg-6" >
-            <a style="list-style-type: none; text-decoration: none;"  href="{%url 'website:category_detail' post.category.slug%}" class="text-dark category_text ">{{post.category}}</a>
-        <b><h4 style="text-transform:capitalize ;" class="title_text ">{{post.title}}</h4></b>
+            
+
+       
+           
+   
         </div>
     </div>
+    <p id="post_detail_paragraph">{{post.content|safe}}</p>
 
 
-    {%endfor%} 
-    {%endif%}
 
 </div>
 
