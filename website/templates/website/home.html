@@ -1,25 +1,50 @@
-{% extends "base.html" %}
-{% load static %}
-{% block metadescription %}
+{% extends "base.html" %} 
+{% load static %} 
+{% block metadescription %} 
+{%endblock %} 
+{% block title %} DeeperLifeSingles {% endblock %} 
+{% block content%}
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;700&display=swap" rel="stylesheet">
 
-{% endblock %}
-{% block title %}
-	
-{% endblock %}
-{% block content %}
+
+      <div class="container ">
+
+       <div class="row">
+
+<div class="col-md-8 pt-lg-4">
+    {%if featured %} 
+        {% for post in featured%}
+
+    <div id="row" class="row ">
+
+        <div class="col-sm-12 col-md-12 col-lg-6">
+            <img id="homeImages" class="  " src="{{post.image.url}}" />
+
+        </div>
+        <div class="col-md-12 col-sm-12 col-lg-6" >
+            <p class="category_text ">{{post.category}}</p>
+        <b><h4 class="title_text ">{{post.title}}</h4></b>
+        </div>
+    </div>
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    hello world
-</body>
-</html>
+    {%endfor%} 
+    {%endif%}
+
+</div>
+
+<div class="col-md-4">
+
+    
+</div>
+       </div>
+      <div class="col-12">
+        
+      </div>
+
+      </div>
+    
+
 
 {% endblock content %}

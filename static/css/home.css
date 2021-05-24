@@ -1,0 +1,176 @@
+/*   */
+/*  navbatr  */
+#searchIconMobile {
+  display: none;
+}
+#navbarMain {
+  background-color: #f4f5f5;
+  margin-top: -1px;
+}
+#logoNavbar {
+  display: none;
+}
+
+#navbarContent li {
+  margin-left: 19px;
+  font-weight: 300;
+}
+
+#block {
+  display: block;
+}
+
+#block:hover {
+}
+#navbarContent li a {
+  color: black;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  list-style-type: none;
+  text-decoration: none;
+}
+#navbarContent li a:hover {
+  color: #c92020;
+}
+
+#homeImages {
+  width: 395px;
+  height: 310px;
+ 
+}
+
+.category_text{
+
+
+  font-family: 'Source Sans Pro', sans-serif;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 30 !important;
+}
+
+#row{
+
+  padding-bottom: 80px;
+}
+
+.title_text{
+  
+
+  font-family: 'Source Sans Pro', sans-serif;
+
+  font-size: 21px;
+  font-weight: 600;
+  opacity: 90%;
+  padding-bottom: 44px;;
+  max-width: 100vw;
+
+  border-bottom: 1px solid black;
+
+
+ 
+  
+}
+@media only screen and (max-width: 765px) {
+
+
+
+}
+@media only screen and (max-width: 765px) {
+  
+  
+  .container {
+
+    
+    min-width: 100% !important;
+    max-width: 100% !important;
+    padding-right:50px !important;
+    padding-left:20px !important;
+    /* padding-left: 19px !important;
+    padding-top: 41px; */
+  }
+  #homeImages {
+   
+    width: 94.0vw !important;
+    height: auto;
+    padding-top: 40px;
+    
+    margin: auto !important;
+
+    
+  }
+  #logo {
+    display: none;
+  }
+  #logoNavbar {
+    display: block;
+  }
+  #icon {
+    color: black;
+    background-color: white;
+  }
+
+  #my_navbar {
+    background-color: red;
+  }
+  #navbarContent li a {
+    color: white;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    margin-right: auto;
+    margin-bottom: 10px;
+  }
+
+  #navbarContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #navbarContent li {
+    margin-bottom: 14px;
+    margin-top: 20px;
+  }
+
+  #searchIconMobile {
+    display: block;
+    padding: 0.5%;
+  }
+  #navbarMain {
+    background-color: #c92020;
+  }
+
+  #searchIconMobile {
+    color: white;
+  }
+
+  .category_text{
+    padding-top: 19px;
+
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 30 !important;
+  }
+  
+
+  .title_text{
+    
+
+    font-family: 'Source Sans Pro', sans-serif;
+  
+    font-size: 21px;
+    font-weight: 600;
+    opacity: 90%;
+    padding-bottom: 44px;;
+    max-width: 100vw;
+
+    border-bottom: 1px solid black;
+
+
+   
+    
+  }
+  }
+
