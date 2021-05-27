@@ -1,0 +1,1483 @@
+
+ #navbarContent li {
+    margin-left: 28px;
+    font-weight: 300;
+  }
+  
+  #navbarMain {
+    background-color: #f4f5f5;
+    margin-top: -1px;
+    color: black;
+  }
+  #navbarContent li a{
+    color: black !important;
+  }
+  
+.homePageWhatImage:hover{
+
+  filter: brightness(70%);
+
+
+}
+.forEachRowHomePageTextHeaderMobile{
+
+  transition: 0.2s ease-in-out;
+}
+
+
+.homePageWhatHeaderText:hover{
+  text-decoration:underline ;
+
+
+}
+
+.forEachRowImageMobile{
+  transition: 0.2s ease-in-out;
+  overflow:hidden;
+}
+
+
+.homePageWhatImage{
+
+  transition: 0.2s ease-in-out;
+}
+.homePageWhatHeaderText{
+  transition: 0.2s ease-in-out;
+
+
+}
+  
+  #navbarContent li a {
+    color: black;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+  }
+  #navbarContent li a:hover {
+    color: #c92020 !important;
+  }
+  
+  /* /*  
+  /*  navbatr  */
+  
+  /* body{
+    overflow-x: hidden;
+  }
+  #searchIconMobile {
+    display: none;
+  }
+  
+  .text_hover{
+  
+    transition: ease-in-out .095s;
+  }
+  .text_hover:hover{
+  
+    opacity: 80%;
+  
+  
+  
+  }
+  
+  .text_hover_image{
+  
+  
+  }
+  
+  
+  
+  
+  
+  
+  
+  #block {
+    display: block;
+  }
+  
+  #block:hover {
+  }
+  
+  
+  #homeImages {
+    width: 365px;
+    height: auto;
+   
+  }
+  
+  .category_text{
+  
+  
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 30 !important;
+  }
+  DESKTOP RESPONSIVE
+  @media only screen and (min-width: 769px) {
+  
+  
+  
+    body{
+      overflow-x: hidden;
+    }
+  
+  
+  
+    
+   
+  .homeImagesPost{
+  
+      width: 800px !important;
+      height:auto !important;
+      margin-right: -374px;
+   
+     
+     
+  
+    }
+  
+    #homeImages{
+  
+  
+    }
+    #newsletter_button{
+  
+    }
+    #newsletter_input{
+      padding: 5px;
+      width: 250px;
+      border: none;
+    }
+    #newsletter_header{
+      font-size: 15px;
+    }
+    #color{
+      background-color: lightcoral;
+      width: 300px;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  #whatwedoimage{
+  
+  max-height: 100px;
+  max-width:100px;
+  object-fit: cover;
+  
+  }
+  
+  .paragraph{
+    font-size: 10px;
+  }
+  #whatwedoimage{}
+  
+  #whatwedorow{
+  
+    padding-bottom: 20px;
+  
+  }
+  
+  #recommended_text{
+  
+    padding-top: 64px;
+    font-size: 15px;
+    padding-bottom: 30px;
+    font-weight: bolder;
+    
+  }
+  #row{
+  
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgb(206, 206, 206);
+    padding-top: 40px;
+    width: 95%;
+  }
+  
+  
+  .title_text{
+    
+  
+    font-family: 'Source Sans Pro', sans-serif;
+  
+    font-size: 21px;
+    font-weight: 600;
+    opacity: 90%;
+    padding-bottom: 44px;;
+    max-width: 100vw;
+  
+    
+  }
+  
+  #homeImagesPost{
+  
+    height: 300px;
+  }
+  
+  /* POST.HTML */
+  /* DESKTOP */
+  
+  /* 
+  .postDesktopCreatedText{
+    margin-left: -100px !important;
+  }
+  .postDesktopCreatedMinuteBrandText{
+    
+    font-size: 8px !important;
+    text-transform: uppercase !important;
+  }
+  .postDesktopMinuteText{
+  
+    opacity: 90% !important;
+    color: rgba(0, 0, 0, 0.301) !important;
+    margin-left: -80px !important;
+  
+  }
+  
+  .postDesktopBrandText{
+   
+    
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500 !important;
+  
+  
+  
+  }
+  
+  }
+  @media only screen and (max-width: 765px) {
+  
+  
+  
+  } */
+  
+  /* MOBILE RESPONSIVE */
+  /* @media only screen and (max-width: 765px) {
+    /* WHAT WE DO */
+    /* #whatwedorow{
+  
+      padding-bottom: 20px;
+      display: flex;
+      justify-content: center;
+    
+     
+      
+    
+    }
+    #paragraphwhatwedocol{
+      
+    }
+  
+    
+    #whatwedorow .paragraph{
+  
+      font-size: 15px;
+    
+  
+  
+    } */
+  
+  
+  
+    /* Facebook Page */
+    /* #recommended_text{
+      font-size: 15px;
+      padding-bottom: 30px;
+      font-weight: bolder;
+      padding-top: 30px;
+      
+  
+    } */
+  
+    /* MOBILE What we do */
+  
+    /* #whatWeDoRow{
+  
+      padding: 20px 0;
+  
+    }
+  
+    #whatwedoimage{
+  
+      max-height: 100px;
+      max-width:100px;
+      object-fit: cover;
+      
+      }
+      
+      #paragraphwhatwedocol .paragraph{
+        font-size: 15px;
+      }
+    .container {
+  
+      
+      min-width: 100% !important;
+      max-width: 100% !important;
+      padding-right:50px !important;
+      padding-left:20px !important; */
+      /* padding-left: 19px !important;
+      padding-top: 41px; */
+    /* }
+    #whatwedorow {
+  
+      display: none;
+      }
+     .rt-added{
+  
+        display: none;
+      }
+    #homeImages {
+     
+      width: 94.0vw !important;
+      height: auto;
+      padding-top: 30px;
+      
+      margin-left: -20px;
+  
+      
+    }
+    #logo {
+      display: none;
+    }
+    #logoNavbar {
+      display: block;
+    }
+    #icon {
+      color: black;
+      background-color: white;
+    }
+  
+    #my_navbar {
+      background-color: red;
+    }
+    #navbarContent li a {
+      color: white;
+      font-size: 12px;
+      text-transform: uppercase;
+      font-family: sans-serif;
+      margin-right: auto;
+      margin-bottom: 10px;
+    }
+  
+    #navbarContent {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    #navbarContent li {
+      margin-bottom: 14px;
+      margin-top: 20px;
+    }
+  
+    #searchIconMobile {
+      display: block;
+      padding: 0.5%;
+    }
+    #navbarMain {
+      background-color: #f4f5f5;
+    }
+  
+    #searchIconMobile {
+      color: white;
+    }
+  
+    .category_text{
+      padding-top: 19px;
+  
+      font-family: 'Source Sans Pro', sans-serif;
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 30 !important;
+    }
+    
+  
+    .title_text{
+      
+  
+      font-family: 'Source Sans Pro', sans-serif;
+    
+      font-size: 21px;
+      font-weight: 600;
+      opacity: 90%;
+      padding-bottom: 44px;;
+      max-width: 100vw;
+  
+      border-bottom: 1px solid #dad3cc;
+  
+  
+     
+      
+    }
+  
+  
+    .mobile_h3{
+  
+      font-size: 40px;
+    }
+  
+    .created{
+      margin-left: -30px;
+    }
+    .text{
+      
+      font-size: 8px;
+      text-transform: uppercase;
+    }
+   .min{
+  
+      opacity: 20%;
+      color: rgba(0, 0, 0, 0.301);
+      margin-left: -45px;
+  
+  
+    }
+  
+    .homeImagesPost{
+      padding-bottom: 60px;
+    }
+  
+    #newsletter_button{
+  
+    }
+    #newsletter_input{
+      padding: 5px;
+      width: 250px;
+      border: none;
+    }
+    #newsletter_header{
+      font-size: 15px;
+      width: 60%;
+    }
+    #color{
+      margin-top: 40px ;
+      background-color: lightcoral;
+      width: 90vw;
+      height: 70vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-left: 25px;
+  
+    }
+  
+    .cat_name{
+      padding-top: 40px;
+  
+      font-family: 'Source Sans Pro', sans-serif;
+    }
+  
+    .posts{
+  
+      opacity: 20%;
+      color: rgba(0, 0, 0, 0.616);
+      font-size: 10px;
+      padding-bottom: 15px;
+     
+  
+  
+    }
+  
+    .homeImagesCat{
+  
+      padding-top: 20px;
+      width: 94vw !important;
+      margin-left: -10px;
+  
+      
+    }
+    .email{
+      display: none;
+    }
+    .recommended_text{
+  
+      margin-left: 140px;
+    }
+  
+    .kumuyi{
+  
+      margin-left: 70px;
+    }
+    .title_text_cat{
+  
+  
+  
+  
+      
+  
+      font-family: 'Source Sans Pro', sans-serif;
+    
+      font-size: 21px;
+      font-weight: 600;
+      opacity: 90%;
+      padding-bottom: 64px;;
+      max-width: 100vw;
+  
+      border-bottom: 1px solid #dad3cc;
+  
+  
+     
+      
+   
+  
+  
+  
+    }
+  
+    #homeImages{
+      margin-left: -10px;
+    }
+  
+    .homePageImages{
+  
+      margin-left: -20px !important;
+    }
+  
+    .ny-footer{
+  
+  padding: 40px;
+  
+    } */
+  
+  
+  /* PRODUCT.HTML */
+  /* MOBILE */
+  
+  
+  
+  
+  
+  
+  /* }  */
+  
+  
+  
+  /* HOMEPAGE */
+  /* DESKTOP ONLY */
+  
+  
+  
+  
+  
+  /* MOBILE ONLY */
+  @media only screen and (max-width: 765px) {
+  
+  
+  
+  /* ENTIRE PAGE */
+    .homePageFirstSection{
+  
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden !important;
+  
+    }
+    body{
+  
+        overflow-x: hidden !important;
+    }
+  
+  
+  /* SECTION - FIRST ROW */
+ 
+  .forEachRowImageMobile{
+  
+    padding-top: 2vh;
+    width: 93vw ;
+    height: auto!important;
+  
+  
+  }
+  .forEachRowHomePageMobile{
+
+    display: flex;
+    justify-content: center;
+    
+  }
+  .forEachRowHomePageContent{
+
+    font-weight: lighter;
+    padding-top: 5vh;
+   
+  }
+
+  .forEachRowHomePageTextMobile{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    flex-direction: column;
+  }
+  
+  .forEachRowHomePageCategorytMobile{
+    padding-top: 4vh;
+    text-transform: uppercase;
+    font-size: 9px;
+    padding-bottom: 1vh;
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .forEachRowHomePageLabelstMobile{
+    padding-top: .5vh;
+    text-transform: uppercase;
+    font-size: 9px;
+    padding-bottom: 1vh;
+    display: inline-block;
+    margin-right: 10px;
+
+  }
+.forEachRowHomePageTextHeaderMobile{
+    font-size: 30px;
+}
+  .forEachRowHomePageMinuteRead{
+
+    opacity: 20%;
+      
+  }
+  
+  /* FACEBOOK SECTION */
+  
+  .homePageFacebookSection{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+  
+  }
+  
+  .facebookSection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .facebookHeaderText{
+    float: left !important;
+    font-size: 13px;
+    font-weight: bold;
+    padding-top: 5vh;
+    padding-bottom: 3vh;
+  }
+  
+  
+  /* WHAT WE DO SECTION */
+  
+  .homePageWhatSection{
+  
+    display: flex;
+    flex-direction: column;
+    width: 94vw;
+    
+  
+  
+  }
+  .homePageWhatImage{
+  
+    width: 20vw;
+    height: auto;
+  }
+  
+  .homePageWhatHeaderText{
+    font-size: 10px;
+    width: 94vw;
+    padding-left: 13px;
+  
+  }
+  .homePageWhatH1{
+    float: left !important;
+    font-size: 13px;
+    font-weight: bold;
+    padding-top: 5vh;
+    padding-bottom: 3vh;
+  }
+  
+  .homePageWhatRow{
+  
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 2vh;
+  
+  
+  }
+  
+  /* NEED TO REACH US */
+  .homePageNeedReachUsH1{
+  float: left !important;
+  font-size: 13px;
+  font-weight: bold;
+  padding-top: 5vh;
+  padding-bottom: 3vh;
+  }
+  
+  /* NEWSLETTER SECTION */
+  
+  .homePageNewsLetterSection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  }
+  
+  .homePageNewsLetterBackground{margin-top: 40px ;
+  background-color: #c92020;
+  width: 90vw;
+  height: 27vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  }
+  .homePageNewsLetterHeader{
+  
+    font-size: 13px;
+    width: 80%;
+    font-weight: bold;
+    padding-bottom: 15px;
+    color: white;
+  }
+  .homePageNewsLetterInput{
+  
+    width: 80%;
+    height:20%;
+    border:none;
+  }
+  
+  .homePageNewsLetterButton{
+    width:40vw;
+    font-size: 14px;
+  }
+  }
+  
+  
+  /* LAPTOP ONLY */
+  @media only screen and (max-width: 1024px) and (min-width: 766px)  {
+  
+    #logo{
+  
+        display: block;
+      }
+      #logoNavbar {
+        display: none;
+      }
+    
+    .container-md{
+
+        max-width: 80vw;
+    }
+  /* ENTIRE PAGE */
+  .homePageFirstSection{
+  
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden !important;
+
+  }
+  body{
+
+      overflow-x: hidden !important;
+  }
+
+
+/* SECTION - FIRST ROW */
+
+.forEachRowImageMobile{
+
+  padding-top: 2vh;
+  width: 77vw ;
+  height: auto!important;
+
+
+}
+.forEachRowHomePageLabelstMobile{
+    padding-top: 1vh;
+    text-transform: uppercase;
+    font-size: 9px;
+    padding-bottom: 1vh;
+    display: inline-block;
+    margin-right: 10px;
+
+  }
+.forEachRowHomePageTextHeaderMobile{
+    font-size: 30px;
+}
+.forEachRowHomePageMobile{
+
+  display: flex;
+  justify-content: center;
+  
+}
+.forEachRowHomePageContent{
+
+  font-weight: lighter;
+  padding-top: 5vh;
+ 
+}
+
+.forEachRowHomePageTextMobile{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  flex-direction: column;
+}
+
+.forEachRowHomePageCategorytMobile{
+  padding-top: 4vh;
+  text-transform: uppercase;
+  font-size: 9px;
+  padding-bottom: 1vh;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+
+.forEachRowHomePageMinuteRead{
+
+  opacity: 20%;
+    
+}
+
+/* FACEBOOK SECTION */
+
+.homePageFacebookSection{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+
+}
+
+.facebookSection{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.facebookHeaderText{
+  float: left !important;
+  font-size: 13px;
+  font-weight: bold;
+  padding-top: 5vh;
+  padding-bottom: 3vh;
+}
+
+
+/* WHAT WE DO SECTION */
+
+.homePageWhatSection{
+
+  display: flex;
+  flex-direction: column;
+  width: 94vw;
+  
+
+
+}
+.homePageWhatImage{
+
+  width: 20vw;
+  height: auto;
+}
+
+.homePageWhatHeaderText{
+  font-size: 20px;
+  width: 94vw;
+  padding-left: 13px;
+
+}
+.homePageWhatH1{
+  float: left !important;
+  font-size: 13px;
+  font-weight: bold;
+  padding-top: 5vh;
+  padding-bottom: 3vh;
+}
+
+.homePageWhatRow{
+
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 2vh;
+  align-items: center;
+
+
+
+}
+
+/* NEED TO REACH US */
+.homePageNeedReachUsH1{
+float: left !important;
+font-size: 13px;
+font-weight: bold;
+padding-top: 5vh;
+padding-bottom: 3vh;
+}
+
+/* NEWSLETTER SECTION */
+
+.homePageNewsLetterSection{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.homePageNewsLetterBackground{margin-top: 40px ;
+background-color: #c92020;
+width: 90vw;
+height: 27vh;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+.homePageNewsLetterHeader{
+
+  font-size: 13px;
+  width: 80%;
+  font-weight: bold;
+  padding-bottom: 15px;
+  color: white;
+}
+.homePageNewsLetterInput{
+
+  width: 80%;
+  height:20%;
+  border:none;
+}
+
+.homePageNewsLetterButton{
+  width:40vw;
+  font-size: 14px;
+}
+  
+  }
+  
+  @media only screen and (max-width: 991px)  {
+  
+    #logo{
+  
+      display: none;
+    }
+    #logoNavbar {
+      display: block;
+    }
+  
+  }
+  
+  
+  /* DESKTOPS ONLY */
+  @media only screen and (max-width: 1200px) and (min-width: 1025px)  {
+  
+    #logoNavbar {
+      display: none;
+    }
+  
+  .container-md{
+  
+    max-width: 90vw;
+  }
+    .Outer{
+  
+  
+  display: flex;
+
+  justify-content: space-between; 
+  justify-content: center !important;
+  
+    }
+  /* FIRST SECTION */
+  
+  
+  
+    
+  
+  
+  .homePageFirstSection{
+    
+  
+    
+    
+  }
+  .forEachRowImageMobile{
+  
+    width: 55vw;
+    
+  }
+  
+  .forEachRowHomePageTextMobile{
+    
+   
+    width: 55vw;
+  }
+
+  .forEachRowHomePageTextHeaderMobile{
+    font-size: 30px !important;
+    margin-bottom: -35px;
+}
+  
+  
+  .forEachRowHomePageMobile{
+   
+    padding-bottom: 5vh;
+  
+  }
+  .forEachRowHomePageCategorytMobile{
+    
+    text-transform: uppercase;
+    font-size: 9px;
+    padding-bottom: 1vh;
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .forEachRowHomePageLabelstMobile{
+    display: inline-block !important;
+    
+    text-transform: uppercase;
+    font-size: 9px;
+    padding-bottom: 4vh;
+  
+    margin-right: 10px;
+
+  }
+  .forEachRowHomePageContent{
+
+    width: 60vw;
+
+  }
+  
+  
+  .forEachRowHomePageTextHeaderMobile{
+  
+    width: 60vw;
+    padding-bottom: 5vh;
+    font-size: 19px;
+  }
+  .homePageFirstSection2Outer{
+  
+  
+  }
+  .homePageFirstSection2{
+  
+    display: flex;
+    padding-top: 5vh;
+    flex-direction: column;
+  
+   
+    
+    
+  }
+  /* DESKTOP SECTIONS */
+  .firstSectionDesktop{
+   display: inline-block !important;
+  
+    
+  }
+  .secondSectionDesktop{
+    display: inline-block !important;
+    width: 30vw;
+    vertical-align: top;
+    
+    
+    
+   
+    
+  }
+  
+  
+  
+  /* FACEBOOK SECTION */
+  
+  .facebookWidth{
+  
+    width: 10vw;
+  }
+  
+  .homePageFacebookSection .facebookHeaderText{
+  
+    display: inline-block;
+    font-weight: bold;
+    padding-top: 5vh;
+    padding-bottom: 3vh;
+    font-size: 13px;
+  }
+  
+  .homePageFacebookSection{
+  
+   
+    width: 40%;
+  
+  }
+  
+  .facebookSection{
+    
+    width: 30%;
+  }
+  
+  .homePageFacebookSection .facebookHeaderText{
+  
+    display: inline-block;
+    font-weight: bold;
+    padding-top: 5vh;
+    padding-bottom: 3vh;
+  }
+  
+  
+  
+  /* WHAT WE DO SECGTION */
+  
+  
+  
+  .homePageWhatImage{
+    width: 10vw;
+  height: auto;}
+  
+  .homePageWhatRow{
+    display: flex;
+    padding-bottom: 14px;
+    align-items: center;
+    
+  
+  }
+  
+  .homePageWhatH1{
+  
+    
+  
+      font-size: 13px;
+      font-weight: bold;
+      padding-top: 5vh;
+      padding-bottom: 3vh;
+      margin: 0 auto;
+    
+  }
+  .homePageWhatSection{
+  
+   
+  }
+  
+  
+  /* NEWSLETTER SECTION */
+  
+  
+  .homePageNewsLetterSection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    
+  
+  }
+  
+  .homePageNewsLetterBackground{
+  margin-top: 40px ;
+  background-color: #c92020;
+  width: 23vw;
+  height: 27vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  }
+  .homePageNewsLetterHeader{
+  
+    font-size: 13px;
+    width: 30%;
+    font-weight: bold;
+    padding-bottom: 15px;
+    color: white;
+  }
+  .homePageNewsLetterInput{
+  
+    width: 30%;
+    height:20%;
+    border:none;
+  }
+  
+  .homePageNewsLetterButton{
+    width:20vw;
+    font-size: 14px;
+  }
+  
+  
+  
+  
+  }
+  
+  
+  /* FULLSCREEN 😎 */
+  @media only screen and (min-width: 1201px)  {
+  
+    #logoNavbar {
+        display: none;
+      }
+    
+    .container-md{
+    
+      max-width: 70vw;
+    }
+      .Outer{
+    
+    
+    display: flex;
+  
+    
+    justify-content: center !important;
+    
+      }
+    /* FIRST SECTION */
+    
+    
+    
+      
+    
+    
+    .homePageFirstSection{
+      
+    
+      
+      
+    }
+    .homePageFirstSection2InnerOuter{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+
+    }
+    .homePageFirstSection2Inner{
+
+        width: 45vw;
+    
+}
+    .labelContainer{
+        display:inline-block;
+
+        width: 40vw !important;
+        display: flex !important;
+        align-items: center !important;
+        margin-right: -70px !important;
+    }
+   
+    .forEachRowImageMobile{
+    
+      width: 40vw;
+      
+    }
+    
+    .forEachRowHomePageTextMobile{
+      
+     
+      width: 57vw;
+    }
+  
+    .forEachRowHomePageTextHeaderMobile{
+      font-size: 30px !important;
+      margin-bottom: -35px;
+      width: 100% !important;
+  }
+    
+    
+    .forEachRowHomePageMobile{
+     
+      padding-bottom: 5vh;
+      display: flex;
+      width: 55vw;
+
+      justify-content: center;
+    
+    }
+    .forEachRowHomePageCategorytMobile{
+      
+      text-transform: uppercase;
+      font-size: 9px;
+      padding-bottom: 1vh;
+      display: inline-block;
+      margin-right: 10px;
+    }
+    .forEachRowHomePageLabelstMobile{
+      display: inline-block !important;
+      text-transform: uppercase;
+      font-size: 9px;
+      padding-bottom: 4vh;
+    
+      margin-right: 10px;
+  
+    }
+    .forEachRowHomePageContent{
+      width: 60vw;
+    }
+    
+    .forEachRowHomePageTextHeaderMobile{
+    
+      width: 60vw;
+      padding-bottom: 5vh;
+      font-size: 19px;
+    }
+    .homePageFirstSection2Outer{
+    
+    }
+    .homePageFirstSection2{
+    
+      display: flex;
+      padding-top: 5vh;
+      flex-direction: column;
+    
+      
+      
+      
+    }
+    /* DESKTOP SECTIONS */
+    .firstSectionDesktop{
+     display: inline-block !important;
+    
+      
+    }
+    .secondSectionDesktop{
+      display: inline-block !important;
+      width: 30vw;
+      vertical-align: top;
+      
+      
+      
+     
+      
+    }
+    
+    
+    
+    /* FACEBOOK SECTION */
+    
+    .facebookWidth{
+    
+      width: 10vw;
+    }
+    
+    .homePageFacebookSection .facebookHeaderText{
+    
+      display: inline-block;
+      font-weight: bold;
+      padding-top: 5vh;
+      padding-bottom: 3vh;
+      font-size: 13px;
+      width: 40%;
+    }
+    
+    .homePageFacebookSection{
+    
+     
+      width: 40%;
+    
+    }
+    
+    .facebookSection{
+      
+      width: 30%;
+    }
+    
+    .homePageFacebookSection .facebookHeaderText{
+    
+      display: inline-block;
+      font-weight: bold;
+      padding-top: 5vh;
+      padding-bottom: 3vh;
+    }
+    
+    
+    
+    /* WHAT WE DO SECGTION */
+    
+    .homePageWhatH1{
+
+  
+
+      font-size: 13px;
+      font-weight: bold;
+      padding-top: 5vh;
+      padding-bottom: 3vh;
+      margin: 0 auto;
+    
+  }
+ 
+
+
+
+.homePageWhatImage{
+  width: 6vw;
+height: auto;}
+
+.homePageWhatRow{
+  display: flex;
+  padding-bottom: 14px;
+  align-items: center;
+  
+  
+
+}
+
+
+.homePageWhatHeaderText{
+
+  padding-left: 10px;
+  font-size: 13px;
+}
+
+.homePageWhatSection{
+
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+}
+    
+    
+    /* NEWSLETTER SECTION */
+    
+    
+    .homePageNewsLetterSection{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      float: left;
+      
+    
+    }
+    
+    .homePageNewsLetterBackground{
+    margin-top: 40px ;
+    background-color: #c92020;
+    width: 23vw;
+    height: 27vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    }
+    .homePageNewsLetterHeader{
+    
+      font-size: 13px;
+      width: 30%;
+      font-weight: bold;
+      padding-bottom: 15px;
+      color: white;
+    }
+    .homePageNewsLetterInput{
+    
+      width: 30%;
+      height:20%;
+      border:none;
+    }
+    
+    .homePageNewsLetterButton{
+      width:20vw;
+      font-size: 14px;
+    }
+  }

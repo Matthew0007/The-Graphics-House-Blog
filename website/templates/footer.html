@@ -1,3 +1,42 @@
-<div class = "footer navbar-fixed-bottom my-footer">
-	<p class="text-center">&copy; Online Cushions. All Rights Reserved.</p>
+
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/all.css' %}" />
+<div style="background-color: black; position: absolute; bottom: 100; width: 100vw;" class = " footer text-light navbar-fixed-bottom my-footer">
+
+
+
+	
+	
+
+		<section class="container footerAllItems">
+
+			<a class="logo" href="{% url 'website:home' %}"> <img class="my-4 mx-auto" style="width: 250px;" src="{% static 'images/HS.png' %}" alt="Online Cushion Store"></a>
+
+
+
+			<div class="links">
+
+			 <a class="link" href="#">Home</a>
+			 <a class="link" href="#">About</a>
+			 <a class="link" href="#">What We Do</a>
+
+			</div>
+
+			
+			
+
+		</section>
+				<div class="copyright container">
+
+								<p class="text-center copyright-text">© 2021 HolinessSingles. All rights Reserved</p>
+
+							</div>
+		
+		
+
+
+
+
+	
 </div>

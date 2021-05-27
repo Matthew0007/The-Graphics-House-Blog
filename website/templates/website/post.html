@@ -4,133 +4,146 @@
 {%endblock %} 
 {% block title %} DeeperLifeSingles {% endblock %} 
 {% block content%}
+
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/post.css' %}" />
+<link rel="stylesheet" href="{% static 'css/all.css' %}" />
 
 
-      <div class="container ">
+      <div class="Outer container-md ">
 
-
-
-<div class="row">
-
-    <!-- =============================Featured Po============ -->
-
-<div class="col-md-8 pt-lg-2">
-   
-      
-
-    <div id="row" class="row ">
-        <a href="{%url 'website:category_detail' post.category.slug%}" class="category_text ">{{post.category}}</a>
-
-
-        <h3 style="">{{post.title}}</h3>
-
-        <div class="col-sm-12 col-md-12 col-lg-6">
-            <a href="{{post.get_absolute_url}}"> <img id="homeImages" class="mx-auto homeImagesPost  " src="{{post.image.url}}" /></a>
-
-            
-
-       
-           
-   
-        </div>
-    </div>
-    <p id="post_detail_paragraph">{{post.content|safe}}</p>
-
-
-
-</div>
-
-
-
-
-<!-- =============================RECOMMENDED KUMUTYI SECTION============ -->
-
-<div class="col-md-4 col-sm-12">
-
-    <div id="whatWeDoRow" class="row">
-
-        <div class=" col-lg-12 ">
-
-            <h1 id="recommended_text" class="mt-sm-1 mt-md-4">RECOMMENDED PAGE</h1>
-           
-            <iframe style="background-color: red;" class="" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fofficialpastorkumuyi&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" 
-            data-hide-cover="false"
-data-show-facepile="false"
-            allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-        </div>
-
-
-
-<!-- =============================What we do section============ -->
-
-        <div class="col-sm-12">
-            <div class="">
-                <h1 style=" padding-top: 64px;
-                font-size: 15px;
-                padding-bottom: 30px;
-                font-weight: bolder;" id="recommended_text " class=" mt-1 rt-added"> WHAT WE DO</h1>
-                {% if whatWeDo %}
-                {%for post in whatWeDo%}
-
-                <div id="whatwedorow" class="row ">
-                    <div  class=" col-lg-3">
-                        <img id="whatwedoimage" src="{{post.image.url}}">
-                    </div>
-                    <div id="paragraphwhatwedocol" class="col-lg-8  my-auto">
-                        <p class="paragraph my-auto">
-                            {{post.title}}
-                        </p>
-                    </div>
-                </div> 
-              
-                {%endfor%}               
-                {%endif%}
-
-                <!-- -->
-
-            </div>
-
-        </div>
-
-        <div class="col-sm-12 mb-lg-5">
-
-            
-
-            <h1 style=" padding-top: 64px;
-                font-size: 15px;
-                padding-bottom: 30px;
-                font-weight: bolder;" id="recommended_text " class=" mt-1 rt-added"> NEED TO REACH US?</h1>
-
-                <p style="opacity:80%; color: grey;" class=""><span  style="font-weight: bolder; color: black;">Email:</span> singles@gmail.com</p>
-
-        </div>
-
-        <div class="col-sm-12">
-
-            <div id="color">
-            <h1 class="text-center pb-4" id="newsletter_header">GET NOTIFIED WHEN WE POST SOMETHING NEW!</h1>
-            <input id="newsletter_input" type="email" placeholder="Email">
-            <button class="btn btn-dark rounded-0 mt-3" id="newsletter_button">SUBSCRIBE</button>
         
+      
+      
+      <div class="firstSectionDesktop ">
+      <section class=" homePageFirstSection">
+      <!--======================================================== FOR EACH ROW ======================================================== -->
+              
+      
+          
+             
+              <div class="homePageFirstSection2Outer">
+              <div class="homePageFirstSection2">
+                <div class="homePageFirstSection2InnerOuter">
+
+            <div class="homePageFirstSection2Inner ">
+                <p class="forEachRowHomePageCategorytMobile"><a style="list-style-type: none; text-decoration: none;"  href="{%url 'website:category_detail' post.category.slug%}" class=" text-dark">{{post.category}}</a></p>
+
+                <h4 style="text-transform:capitalize ;" class="forEachRowHomePageTextHeaderMobile text-dark"> {{post.title}} </h4>
+                <br>
+                <div class="labelContainer" >
+                <p class="forEachRowHomePageLabelstMobile">{{post.author}}</p>
+              <p class="forEachRowHomePageLabelstMobile">{{post.created|date:'M d, Y'}}</p>
+              <p class="forEachRowHomePageLabelstMobile forEachRowHomePageMinuteRead">{{post.read_time }} MIN READ</p>
+            </div>
         </div>
-
-        </div>
-
-
-
-
-
     </div>
+                          <div class="forEachRowHomePageMobile">
+                  <a class="" href="{{post.get_absolute_url}}"> 
+                      <img style="" id="" class=" forEachRowImageMobile" src="{{post.image.url}}" />
+                  </a>
 
+           
+             </div>
+         
+             <div class="forEachRowHomePageTextMobile">
+      
+                <p class="forEachRowHomePageContent">{{post.content|safe}}</p>
+
+      
+              
+              </div>
+             </div>  
+             
+          </div>
+          </section>
+      </div>
+      
+              
+         
+     
+      
     
-</div>
-</div>
+      
+      <div class="secondSectionDesktop ">
+      
+      
+      
+      <section class=" homePageFacebookSection">
+          <!--======================================================== FACEBOOK SECTION ======================================================== -->
+      <h1 class="facebookHeaderText">RECOMMENDED PAGE</h1>
+          <div class="facebookSection">
+              <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-width="300" data-height="" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div>
+      
+          </section>
+      
+      <!--======================================================== WHAT WE DO SECTION ======================================================== -->
+      <section class="container homePageWhatSection" id="container-tablet-WhatWeDo">
+      
+          <h1 class=" homePageWhatH1">WHAT WE DO</h1>
+      
+          {% if whatWeDo %}
+          {%for post in whatWeDo%}
+          <div class="homePageWhatRow">
+                  <a href="{{post.get_absolute_url}}"><img class="homePageWhatImage" src="{{post.image.url}}"></a>
+                  <p class="homePageWhatHeaderText ">
+                    <a style="list-style-type: none; text-decoration: none; color: black;" href="{{post.get_absolute_url}}">
+                        {{post.title}}
+                   </a>
+                  </p>
+              </div>
+          {%endfor%}
+          {%endif%}
+      
+           
+      </section>
+      
+      
+      <!--======================================================== NEED TO REACH US SECTION ======================================================== -->
+      <section style="display:none;" class="container homePageNeedReachUs">
+      
+      
+          <h1 class="homePageNeedReachUsH1">WHAT WE DO</h1>
+      
+          <p class="homePageNeedReachUsEmail">Email: <span class="homePageNeedReachUsAddress"> HolinessSingles.com</span></p>
+      
+          </section>
+      
+      
+      
+          <!--======================================================== NEWSLETTER ======================================================== -->
+      
+          <section class=" homePageNewsLetterSection mb-5">
+      
+              <div class="homePageNewsLetterBackground">
+                  <h1 class="text-center homePageNewsLetterHeader" >GET NOTIFIED WHEN WE POST SOMETHING NEW!</h1>
+                  <input class="text-gray homePageNewsLetterInput"  type="email" placeholder="Email">
+                  <button class="btn btn-dark rounded-0 mt-3 homePageNewsLetterButton" id="newsletter_button">SUBSCRIBE</button>
+      
+      
+              </div>
+      
+      
+          </section>
+      
+      
+      </div>
+      
+      </div>
+      
+      
+      {% endblock content %}
       
 
-      </div>
-    
 
 
-{% endblock content %}
+
+
+
+
+
+      
+
+
+

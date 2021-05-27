@@ -1,14 +1,14 @@
 {% load static %}
 
 
-<nav id="navbarMain" class="navbar navbar-expand-md border-top border-bottom">
+<nav  id="navbarMain" class="navbar navbar-expand-lg border-top border-bottom">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <i class="fas fa-bars text-white"></i>
+      <i class="fas fa-bars text-dark"></i>
     </button>
     <a id="logoNavbar" class="navbar-brand mx-auto mr-3" href="{% url 'website:home' %}"> <img class=" mx-auto" style="width: 170px;" src="{% static 'images/HS.png' %}" alt="Online Cushion Store"></a>
     <a class="navbar-brand" href="#"><img src=""></a>
-    <i  id="searchIconMobile" class="fas fa-search"></i>
+    <i  id="searchIconMobile" class="fas fa-search text-dark"></i>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul id="navbarContent" class="navbar-nav mx-auto ">
   
@@ -16,7 +16,7 @@
         {%for link in links%}
        
         <li class="nav-item">
-          <a href="{% url 'website:category_detail' link.slug %}"   class=" active" aria-current="page" >{{link.name}}</a>
+          <a href="{% url 'website:category_detail' link.slug %}"   class=" t active" aria-current="page" >{{link.name}}</a>
         </li>
 
         <div id="block" class="">
@@ -28,6 +28,7 @@
     </div>
   </div>
 </nav>
+
 
 
 

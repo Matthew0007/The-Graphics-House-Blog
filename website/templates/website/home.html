@@ -4,6 +4,17 @@
 {%endblock %} 
 {% block title %} DeeperLifeSingles {% endblock %} 
 {% block content%}
+
+<link rel="stylesheet" href="{% static 'css/home.css' %}" />
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="{% static 'css/all.css' %}" />
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+{%comment%}<!-- 
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;700&display=swap" rel="stylesheet">
 
@@ -14,7 +25,7 @@
 
 <div class="row">
 
-    <!-- =============================Featured Po============ -->
+
 
 <div class="col-md-8 pt-lg-5">
     {%if featured %} 
@@ -23,12 +34,12 @@
     <div id="row" class="row ">
 
         <div class="col-sm-12 col-md-12 col-lg-6">
-            <a class="nav-link" href="{{post.get_absolute_url}}"> <img id="homeImages" class="  " src="{{post.image.url}}" /></a>
+            <a class="nav-link text_hover" href="{{post.get_absolute_url}}"> <img id="homeImages" class=" homePageImages" src="{{post.image.url}}" /></a>
 
         </div>
         <div class="col-md-12 col-sm-12 col-lg-6" >
-            <a style="list-style-type: none; text-decoration: none;"  href="{%url 'website:category_detail' post.category.slug%}" class="text-dark category_text ">{{post.category}}</a>
-        <b><h4 style="text-transform:capitalize ;" class="title_text ">{{post.title}}</h4></b>
+            <a style="list-style-type: none; text-decoration: none;"  href="{%url 'website:category_detail' post.category.slug%}" class="text-dark category_text text_hover">{{post.category}}</a>
+        <b><h4 style="text-transform:capitalize ;" class="title_text "><a style="list-style-type: none; text-decoration: none; " class="text-dark text_hover" href="{{post.get_absolute_url}}"> {{post.title}}</a></h4></b>
         </div>
     </div>
 
@@ -41,7 +52,7 @@
 
 
 
-<!-- =============================RECOMMENDED KUMUTYI SECTION============ -->
+
 
 <div class="col-md-4 col-sm-12">
 
@@ -49,9 +60,9 @@
 
         <div class=" col-lg-12 ">
 
-            <h1 id="recommended_text" class="mt-sm-1 mt-md-4">RECOMMENDED PAGE</h1>
+            <h1 id="recommended_text" class="mt-sm-1 mt-md-4 recommended_text">RECOMMENDED PAGE</h1>
            
-            <iframe style="background-color: red;" class="" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fofficialpastorkumuyi&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" 
+            <iframe style="background-color: red;" class="kumuyi" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fofficialpastorkumuyi&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" 
             data-hide-cover="false"
 data-show-facepile="false"
             allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
@@ -59,7 +70,7 @@ data-show-facepile="false"
 
 
 
-<!-- =============================What we do section============ -->
+
 
         <div class="col-sm-12">
             <div class="">
@@ -75,7 +86,7 @@ data-show-facepile="false"
                         <img id="whatwedoimage" src="{{post.image.url}}">
                     </div>
                     <div id="paragraphwhatwedocol" class="col-lg-8  my-auto">
-                        <p class="paragraph my-auto">
+                        <p class="paragraph my-auto text_hover">
                             {{post.title}}
                         </p>
                     </div>
@@ -84,17 +95,17 @@ data-show-facepile="false"
                 {%endfor%}               
                 {%endif%}
 
-                <!-- -->
+        
 
             </div>
 
         </div>
 
-        <div class="col-sm-12 mb-lg-5">
+        <div class="col-sm-12 mb-lg-5 email">
 
             
 
-            <h1 style=" padding-top: 64px;
+            <h1  style=" padding-top: 64px;
                 font-size: 15px;
                 padding-bottom: 30px;
                 font-weight: bolder;" id="recommended_text " class=" mt-1 rt-added"> NEED TO REACH US?</h1>
@@ -126,7 +137,111 @@ data-show-facepile="false"
       
 
       </div>
-    
+     -->
+
+
+
+
+
+{%endcomment%}
+
+<div class="Outer container-md">
+
+
+<div class="firstSectionDesktop ">
+<section class=" homePageFirstSection">
+<!--======================================================== FOR EACH ROW ======================================================== -->
+
+        {% for post in featured%}
+        <div class="homePageFirstSection2Outer">
+        <div class="homePageFirstSection2">
+        <div class="forEachRowHomePageMobile">
+            <a class="" href="{{post.get_absolute_url}}"> 
+                <img style="" id="" class=" forEachRowImageMobile" src="{{post.image.url}}" />
+            </a>
+       </div>
+       <div class="forEachRowHomePageTextMobile">
+
+        <p class="forEachRowHomePageCategorytMobile"><a style="list-style-type: none; text-decoration: none;"  href="{%url 'website:category_detail' post.category.slug%}" class=" text-dark">{{post.category}}</a></p>
+
+
+        <h4 style="text-transform:capitalize ;" class="forEachRowHomePageTextHeaderMobile text-dark"><a style="list-style-type: none; text-decoration: none; " class="text-dark  " href="{{post.get_absolute_url}}"> {{post.title}}</a></h4>
+
+       </div>  
+    </div>
+</div>
+        {%endfor%}
+   
+</section>
+
+</div>
+
+<div class="secondSectionDesktop ">
+
+
+
+<section class=" homePageFacebookSection">
+    <!--======================================================== FACEBOOK SECTION ======================================================== -->
+<h1 class="facebookHeaderText">RECOMMENDED PAGES</h1>
+    <div class="facebookSection">
+        <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-width="300" data-height="" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div>
+
+    </section>
+
+<!--======================================================== WHAT WE DO SECTION ======================================================== -->
+<section class="container homePageWhatSection" id="container-tablet-WhatWeDo">
+
+    <h1 class=" homePageWhatH1">WHAT WE DO</h1>
+
+    {% if whatWeDo %}
+    {%for post in whatWeDo%}
+    <div class="homePageWhatRow">
+        <a href="{{post.get_absolute_url}}"><img class="homePageWhatImage" src="{{post.image.url}}"></a>
+        <p class="homePageWhatHeaderText ">
+                <a style="list-style-type: none; text-decoration: none; color: black;" href="{{post.get_absolute_url}}">
+                     {{post.title}}
+                </a>
+               
+            </p>
+        </div>
+    {%endfor%}
+    {%endif%}
+
+     
+</section>
+
+
+<!--======================================================== NEED TO REACH US SECTION ======================================================== -->
+<section style="display:none;" class="container homePageNeedReachUs">
+
+
+    <h1 class="homePageNeedReachUsH1">WHAT WE DO</h1>
+
+    <p class="homePageNeedReachUsEmail">Email: <span class="homePageNeedReachUsAddress"> HolinessSingles.com</span></p>
+
+    </section>
+
+
+
+    <!--======================================================== NEWSLETTER ======================================================== -->
+
+    <section class=" homePageNewsLetterSection mb-5">
+
+        <div class="homePageNewsLetterBackground">
+            <h1 class="text-center homePageNewsLetterHeader" >GET NOTIFIED WHEN WE POST SOMETHING NEW!</h1>
+            <input class="text-gray homePageNewsLetterInput"  type="email" placeholder="Email">
+            <button class="btn btn-dark rounded-0 mt-3 homePageNewsLetterButton" id="newsletter_button">SUBSCRIBE</button>
+
+
+        </div>
+
+
+    </section>
+
+
+</div>
+
+</div>
 
 
 {% endblock content %}
