@@ -15,45 +15,24 @@
 
         {%for link in links%}
        
-        <li class="nav-item">
+        <li class="nav-item navers">
           <a href="{% url 'website:category_detail' link.slug %}"   class=" t active" aria-current="page" >{{link.name}}</a>
         </li>
 
-        <div id="block" class="">
-         
-        </div>
+        
         {%endfor%}
+
        
       </ul>
+      
     </div>
   </div>
 </nav>
 
 
 
-
 <script>
 
-var navItems = document.getElementsByClassName('nav-item');
-
-
-
-
-for(var i = 0; i < navItems.length; i++){
-
-  navItems[i].addEventListener('click',getValues() )
-}
-
-function getValues(){
-
-  for(var j = 0; i < navItems.length; j++){
-console.log("hello")
-console.log(navItems[j].textContent)
-}
-    
-  }
-
-
-
+ 
 
 </script>

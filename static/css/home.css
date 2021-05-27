@@ -615,6 +615,7 @@ padding: 40px;
     font-weight: bold;
     padding-top: 5vh;
     padding-bottom: 3vh;
+    width: 4vw;
   }
 
   /* WHAT WE DO SECTION */
@@ -941,11 +942,12 @@ padding: 40px;
   }
 
   .homePageFacebookSection .facebookHeaderText {
-    display: inline-block;
+    
     font-weight: bold;
     padding-top: 5vh;
     padding-bottom: 3vh;
     font-size: 13px;
+    width: 15vw;
   }
 
   .homePageFacebookSection {
@@ -956,12 +958,7 @@ padding: 40px;
     width: 30%;
   }
 
-  .homePageFacebookSection .facebookHeaderText {
-    display: inline-block;
-    font-weight: bold;
-    padding-top: 5vh;
-    padding-bottom: 3vh;
-  }
+  
 
   /* WHAT WE DO SECGTION */
 
@@ -1132,6 +1129,7 @@ font-weight: 300;
     font-weight: bold;
     padding-top: 5vh;
     padding-bottom: 3vh;
+    width: 10vw;
   }
 
   /* WHAT WE DO SECGTION */
@@ -1162,7 +1160,8 @@ font-weight: 300;
   }
 
   .homePageWhatSection {
-   float: right !important;
+   float: left;
+   width: 100%;
     
   }
 

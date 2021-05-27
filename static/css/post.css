@@ -1104,39 +1104,29 @@ flex-direction: column;
   
   .homePageFacebookSection .facebookHeaderText{
   
-    display: inline-block;
+    
     font-weight: bold;
     padding-top: 5vh;
     padding-bottom: 3vh;
     font-size: 13px;
+    width: 22vw;
   }
   
   .homePageFacebookSection{
   
-   
+  
     width: 40%;
   
   }
-  
+
   .facebookSection{
     
     width: 30%;
   }
   
-  .homePageFacebookSection .facebookHeaderText{
-  
-    display: inline-block;
-    font-weight: bold;
-    padding-top: 5vh;
-    padding-bottom: 3vh;
-  }
-  
-  
   
   /* WHAT WE DO SECGTION */
-  
-  
-  
+
   .homePageWhatImage{
     width: 10vw;
   height: auto;}
@@ -1221,16 +1211,16 @@ flex-direction: column;
         display: none;
       }
     
-    .container-md{
-    
-      max-width: 70vw;
-    }
+      .container-md {
+        max-width: 69%;
+        display: flex;
+        
+        
+        justify-content: space-between;
+      }
       .Outer{
-    
-    
+
     display: flex;
-  
-    
     justify-content: center !important;
     
       }
@@ -1272,13 +1262,15 @@ flex-direction: column;
     .forEachRowImageMobile{
     
       width: 40vw;
+      margin-left: -70px;
       
     }
     
     .forEachRowHomePageTextMobile{
       
      
-      width: 57vw;
+      width: 51vw;
+      
     }
   
     .forEachRowHomePageTextHeaderMobile{
@@ -1338,19 +1330,15 @@ flex-direction: column;
       
     }
     /* DESKTOP SECTIONS */
-    .firstSectionDesktop{
-     display: inline-block !important;
-    
-      
-    }
-    .secondSectionDesktop{
+    .firstSectionDesktop {
       display: inline-block !important;
-      width: 30vw;
+    }
+    .secondSectionDesktop {
+      
+      width: 45%;
+     
       vertical-align: top;
       
-      
-      
-     
       
     }
     
@@ -1358,126 +1346,101 @@ flex-direction: column;
     
     /* FACEBOOK SECTION */
     
-    .facebookWidth{
-    
+    .facebookWidth {
       width: 10vw;
     }
-    
-    .homePageFacebookSection .facebookHeaderText{
-    
-      display: inline-block;
+  
+    .homePageFacebookSection .facebookHeaderText {
       font-weight: bold;
       padding-top: 5vh;
       padding-bottom: 3vh;
       font-size: 13px;
+      width: 9vw;
+    }
+  
+    .homePageFacebookSection {
       width: 40%;
     }
-    
-    .homePageFacebookSection{
-    
-     
-      width: 40%;
-    
-    }
-    
-    .facebookSection{
-      
+  
+    .facebookSection {
       width: 30%;
     }
-    
-    .homePageFacebookSection .facebookHeaderText{
-    
-      display: inline-block;
-      font-weight: bold;
-      padding-top: 5vh;
-      padding-bottom: 3vh;
-    }
-    
-    
-    
-    /* WHAT WE DO SECGTION */
-    
-    .homePageWhatH1{
-
   
+  /* WHAT WE DO SECGTION */
 
-      font-size: 13px;
-      font-weight: bold;
-      padding-top: 5vh;
-      padding-bottom: 3vh;
-      margin: 0 auto;
-    
+  .homePageWhatImage {
+    width: 5vw;
+    height: auto;
   }
- 
 
+  .homePageWhatRow {
+    display: flex;
+    padding-bottom: 14px;
+    align-items: center;
+  }
+  .homePageWhatHeaderText {
+    padding-left: 10px;
+    font-size: 14px;
+    font-family: "Playfair Display", serif;
+    width: 70%;
+  }
+  .homePageWhatH1 {
+    font-size: 13px;
+    font-weight: bold;
+    padding-top: 5vh;
+    padding-bottom: 3vh;
+    margin: 0 auto;
+    display: inline-block;
+  }
 
-
-.homePageWhatImage{
-  width: 6vw;
-height: auto;}
-
-.homePageWhatRow{
-  display: flex;
-  padding-bottom: 14px;
-  align-items: center;
-  
-  
-
-}
-
-
-.homePageWhatHeaderText{
-
-  padding-left: 10px;
-  font-size: 13px;
-}
-
-.homePageWhatSection{
-
-  font-family: 'Lato', sans-serif;
-  font-weight: bold;
-}
+  .homePageWhatSection {
+    float: left;
+    width: 100%;
+     
+   }
     
-    
-    /* NEWSLETTER SECTION */
-    
-    
-    .homePageNewsLetterSection{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      float: left;
-      
-    
-    }
-    
-    .homePageNewsLetterBackground{
-    margin-top: 40px ;
+     /* NEWSLETTER SECTION */
+
+  .homePageNewsLetterSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+  }
+
+  .homePageNewsLetterBackground {
+    margin-top: 40px;
     background-color: #c92020;
-    width: 23vw;
-    height: 27vh;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    }
-    .homePageNewsLetterHeader{
-    
-      font-size: 13px;
-      width: 30%;
-      font-weight: bold;
-      padding-bottom: 15px;
-      color: white;
-    }
-    .homePageNewsLetterInput{
-    
-      width: 30%;
-      height:20%;
-      border:none;
-    }
-    
-    .homePageNewsLetterButton{
-      width:20vw;
-      font-size: 14px;
-    }
+  }
+  .homePageNewsLetterHeader {
+    font-size: 13px;
+    width: 80%;
+    font-weight: bold;
+    padding: 31px  0 26px 0;
+    color: white;
+  }
+  .homePageNewsLetterInput {
+    width: 80%;
+    height: 30px;
+    border: none;
+  }
+
+  .homePageNewsLetterButton {
+    width: 40%;
+    font-size: 13px;
+    margin-bottom: 30px;
+  }
+ ::placeholder{
+  margin-top: -10px;
+  padding-left: 16px;
+  margin-bottom: 19px;
+  font-size: 12px;
+  font-weight: 300;
+}
   }

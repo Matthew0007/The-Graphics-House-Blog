@@ -9,7 +9,7 @@ def whatWeDo(request):
 
 
 def menu(request):
-    links = Category.objects.all()
+    links = Category.objects.filter(navbar = True)
 
     print(links[1].name)
     return dict(links=links)

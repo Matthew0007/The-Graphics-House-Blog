@@ -306,9 +306,9 @@ data-show-facepile="false"
       
       
       <div class="firstSectionDesktop ">
-      <section class=" homePageFirstSection">
+      <section class="container-fluid homePageFirstSection">
       <!--======================================================== FOR EACH ROW ======================================================== -->
-                <div class="container border-bottom">
+                <div class=" border-bottom">
                     <h1 style="font-size: 25px;" class="pt-5 forEachRowHomePageCategorytMobile forEachRowHomePageCategorytMobileSeperate">{{category}}</h1>
                             <p class="numPosts">{{posts|length}} POSTS</p>
                 </div>
@@ -327,7 +327,7 @@ data-show-facepile="false"
               <p class="forEachRowHomePageCategorytMobile"><a style="list-style-type: none; text-decoration: none;"  href="{%url 'website:category_detail' post.category.slug%}" class=" text-dark">{{post.category}}</a></p>
       
       
-              <h4 style="text-transform:capitalize ;" class="forEachRowHomePageTextHeaderMobile text-dark"><a style="list-style-type: none; text-decoration: none; " class="text-dark  " href="{{post.get_absolute_url}}"> {{post.title}}</a></h4>
+              <h4 style="text-transform:capitalize ;" class="forEachRowHomePageTextHeaderMobile text-dark"><a style="font-family: 'Playfair Display', serif !important; list-style-type: none; text-decoration: none; " class="text-dark  " href="{{post.get_absolute_url}}"> {{post.title}}</a></h4>
       
              </div>  
           </div>
@@ -344,14 +344,13 @@ data-show-facepile="false"
       
       <section class=" homePageFacebookSection">
           <!--======================================================== FACEBOOK SECTION ======================================================== -->
-      <h1 class="facebookHeaderText">RECOMMENDED PAGES</h1>
+      <h1 style="width: 200px !important;" class="facebookHeaderText">RECOMMENDED PAGES</h1>
           <div class="facebookSection">
-              <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-width="300" data-height="" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div>
-      
-          </section>
+            <div class="fb-page" data-href="https://www.facebook.com/officialpastorkumuyi/" data-tabs="timeline" data-width="300" data-height="" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/officialpastorkumuyi/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/officialpastorkumuyi/">PASTOR W F KUMUYI</a></blockquote></div>          </section>
+        </section>
       
       <!--======================================================== WHAT WE DO SECTION ======================================================== -->
-      <section class="container homePageWhatSection" id="container-tablet-WhatWeDo">
+      <section class=" homePageWhatSection" id="container-tablet-WhatWeDo">
       
           <h1 class=" homePageWhatH1">WHAT WE DO</h1>
       

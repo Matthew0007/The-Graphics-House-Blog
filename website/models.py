@@ -10,6 +10,8 @@ class Category(models.Model):
     name = models.CharField(max_length=250, unique=True)
     description = models.TextField(blank=True)
     slug = models.SlugField(null=True,unique=True)
+    navbar = models.BooleanField(default=True)
+
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
@@ -39,6 +41,7 @@ class Post(models.Model):
     read_time = models.IntegerField()
     slug = models.SlugField(null=True,unique=True)
     featured = models.BooleanField(default=False)
+    view_count = models.IntegerField(default=0)
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
