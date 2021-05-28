@@ -14,9 +14,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com"> 
 <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-
-
-
 {%comment%}<!-- 
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;700&display=swap" rel="stylesheet">
@@ -149,7 +146,14 @@ data-show-facepile="false"
 {%endcomment%}
 
 
+<div id="dropdown" class="container-fluid bg-dark">
 
+   
+
+
+</div>
+
+<p class="text-center my_search_text mt-5">You have searched for: <b>"{{ query }}"</b></p>
 <div class="Outer container-md">
 
 
@@ -157,7 +161,7 @@ data-show-facepile="false"
 <section class=" homePageFirstSection">
 <!--======================================================== FOR EACH ROW ======================================================== -->
 
-        {% for post in featured%}
+        {% for post in posts%}
         <div class="homePageFirstSection2Outer">
         <div class="homePageFirstSection2">
         <div class="forEachRowHomePageMobile">
@@ -175,6 +179,14 @@ data-show-facepile="false"
        </div>  
     </div>
 </div>
+
+{% empty %}
+<style>
+    
+</style>
+
+
+
         {%endfor%}
    
 </section>
@@ -189,25 +201,11 @@ data-show-facepile="false"
     <!--======================================================== FACEBOOK SECTION ======================================================== -->
 <h1 class="facebookHeaderText">RECOMMENDED PAGES</h1>
     <div class="facebookSection">
-        <iframe src="https://www.facebook.com/plugins/group.php?href=https%3A%2F%2Fwww.facebook.com%2Fgroups%2Fdeeperlifebiblechurchsingles&width=300&show_social_context=true&show_metadata=true&appId=148660960575291&height=352" width="300" height="352" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>   
-    
-    
-        <section style="display: none;" id="newsLetterFacebook"  class="newsLetterFacebook homePageNewsLetterSection mb-5">
-
-            <div class="homePageNewsLetterBackground">
-                <h1 class="text-center homePageNewsLetterHeader" >GET NOTIFIED WHEN WE POST SOMETHING NEW!</h1>
-                <input class="text-gray homePageNewsLetterInput"  type="email" placeholder="Enter your email">
-                <button class="btn btn-dark rounded-0 mt-3 homePageNewsLetterButton" id="newsletter_button">SUBSCRIBE</button>
-    
-    
-            </div>
-    
-    
-        </section>
+        <div class="fb-page" data-href="https://www.facebook.com/officialpastorkumuyi/" data-tabs="timeline" data-width="300" data-height="" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/officialpastorkumuyi/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/officialpastorkumuyi/">PASTOR W F KUMUYI</a></blockquote></div>          </section>
     </section>
 
 <!--======================================================== WHAT WE DO SECTION ======================================================== -->
-<section class="container-mine homePageWhatSection" id="container-tablet-WhatWeDo">
+<section class=" homePageWhatSection" id="container-tablet-WhatWeDo">
 
     <h1 class=" homePageWhatH1">WHAT WE DO</h1>
 

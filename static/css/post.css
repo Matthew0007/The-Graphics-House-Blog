@@ -1,16 +1,18 @@
 
  #navbarContent li {
-    margin-left: 28px;
+    
     font-weight: 300;
+
+    
   }
   
   #navbarMain {
     background-color: #f4f5f5;
     margin-top: -1px;
-    color: black;
+    color: white;
   }
   #navbarContent li a{
-    color: black !important;
+    color: white;
   }
   
 .homePageWhatImage:hover{
@@ -48,7 +50,7 @@
 }
   
   #navbarContent li a {
-    color: black;
+    color: white;
     font-size: 12px;
     text-transform: uppercase;
     font-family: sans-serif;
@@ -58,516 +60,27 @@
   #navbarContent li a:hover {
     color: #c92020 !important;
   }
-  
-  /* /*  
-  /*  navbatr  */
-  
-  /* body{
-    overflow-x: hidden;
-  }
-  #searchIconMobile {
-    display: none;
-  }
-  
-  .text_hover{
-  
-    transition: ease-in-out .095s;
-  }
-  .text_hover:hover{
-  
-    opacity: 80%;
-  
-  
-  
-  }
-  
-  .text_hover_image{
-  
-  
-  }
-  
-  
-  
-  
-  
-  
-  
-  #block {
-    display: block;
-  }
-  
-  #block:hover {
-  }
-  
-  
-  #homeImages {
-    width: 365px;
-    height: auto;
-   
-  }
-  
-  .category_text{
-  
-  
-    font-family: 'Source Sans Pro', sans-serif;
-    text-transform: uppercase;
-    font-size: 13px;
-    font-weight: 30 !important;
-  }
-  DESKTOP RESPONSIVE
-  @media only screen and (min-width: 769px) {
-  
-  
-  
-    body{
-      overflow-x: hidden;
-    }
-  
-  
-  
-    
-   
-  .homeImagesPost{
-  
-      width: 800px !important;
-      height:auto !important;
-      margin-right: -374px;
-   
-     
-     
-  
-    }
-  
-    #homeImages{
-  
-  
-    }
-    #newsletter_button{
-  
-    }
-    #newsletter_input{
-      padding: 5px;
-      width: 250px;
-      border: none;
-    }
-    #newsletter_header{
-      font-size: 15px;
-    }
-    #color{
-      background-color: lightcoral;
-      width: 300px;
-      height: 200px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-    }
-  #whatwedoimage{
-  
-  max-height: 100px;
-  max-width:100px;
-  object-fit: cover;
-  
-  }
-  
-  .paragraph{
-    font-size: 10px;
-  }
-  #whatwedoimage{}
-  
-  #whatwedorow{
-  
-    padding-bottom: 20px;
-  
-  }
-  
-  #recommended_text{
-  
-    padding-top: 64px;
-    font-size: 15px;
-    padding-bottom: 30px;
-    font-weight: bolder;
-    
-  }
-  #row{
-  
-    padding-bottom: 60px;
-    border-bottom: 1px solid rgb(206, 206, 206);
-    padding-top: 40px;
-    width: 95%;
-  }
-  
-  
-  .title_text{
-    
-  
-    font-family: 'Source Sans Pro', sans-serif;
-  
-    font-size: 21px;
-    font-weight: 600;
-    opacity: 90%;
-    padding-bottom: 44px;;
-    max-width: 100vw;
-  
-    
-  }
-  
-  #homeImagesPost{
-  
-    height: 300px;
-  }
-  
-  /* POST.HTML */
-  /* DESKTOP */
-  
-  /* 
-  .postDesktopCreatedText{
-    margin-left: -100px !important;
-  }
-  .postDesktopCreatedMinuteBrandText{
-    
-    font-size: 8px !important;
-    text-transform: uppercase !important;
-  }
-  .postDesktopMinuteText{
-  
-    opacity: 90% !important;
-    color: rgba(0, 0, 0, 0.301) !important;
-    margin-left: -80px !important;
-  
-  }
-  
-  .postDesktopBrandText{
-   
-    
-    text-transform: uppercase;
-    font-size: 13px;
-    font-weight: 500 !important;
-  
-  
-  
-  }
-  
-  }
-  @media only screen and (max-width: 765px) {
-  
-  
-  
-  } */
-  
-  /* MOBILE RESPONSIVE */
-  /* @media only screen and (max-width: 765px) {
-    /* WHAT WE DO */
-    /* #whatwedorow{
-  
-      padding-bottom: 20px;
-      display: flex;
-      justify-content: center;
-    
-     
-      
-    
-    }
-    #paragraphwhatwedocol{
-      
-    }
-  
-    
-    #whatwedorow .paragraph{
-  
-      font-size: 15px;
-    
-  
-  
-    } */
-  
-  
-  
-    /* Facebook Page */
-    /* #recommended_text{
-      font-size: 15px;
-      padding-bottom: 30px;
-      font-weight: bolder;
-      padding-top: 30px;
-      
-  
-    } */
-  
-    /* MOBILE What we do */
-  
-    /* #whatWeDoRow{
-  
-      padding: 20px 0;
-  
-    }
-  
-    #whatwedoimage{
-  
-      max-height: 100px;
-      max-width:100px;
-      object-fit: cover;
-      
-      }
-      
-      #paragraphwhatwedocol .paragraph{
-        font-size: 15px;
-      }
-    .container {
-  
-      
-      min-width: 100% !important;
-      max-width: 100% !important;
-      padding-right:50px !important;
-      padding-left:20px !important; */
-      /* padding-left: 19px !important;
-      padding-top: 41px; */
-    /* }
-    #whatwedorow {
-  
-      display: none;
-      }
-     .rt-added{
-  
-        display: none;
-      }
-    #homeImages {
-     
-      width: 94.0vw !important;
-      height: auto;
-      padding-top: 30px;
-      
-      margin-left: -20px;
-  
-      
-    }
-    #logo {
-      display: none;
-    }
-    #logoNavbar {
-      display: block;
-    }
-    #icon {
-      color: black;
-      background-color: white;
-    }
-  
-    #my_navbar {
-      background-color: red;
-    }
-    #navbarContent li a {
-      color: white;
-      font-size: 12px;
-      text-transform: uppercase;
-      font-family: sans-serif;
-      margin-right: auto;
-      margin-bottom: 10px;
-    }
-  
-    #navbarContent {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  
-    #navbarContent li {
-      margin-bottom: 14px;
-      margin-top: 20px;
-    }
-  
-    #searchIconMobile {
-      display: block;
-      padding: 0.5%;
-    }
-    #navbarMain {
-      background-color: #f4f5f5;
-    }
-  
-    #searchIconMobile {
-      color: white;
-    }
-  
-    .category_text{
-      padding-top: 19px;
-  
-      font-family: 'Source Sans Pro', sans-serif;
-      text-transform: uppercase;
-      font-size: 13px;
-      font-weight: 30 !important;
-    }
-    
-  
-    .title_text{
-      
-  
-      font-family: 'Source Sans Pro', sans-serif;
-    
-      font-size: 21px;
-      font-weight: 600;
-      opacity: 90%;
-      padding-bottom: 44px;;
-      max-width: 100vw;
-  
-      border-bottom: 1px solid #dad3cc;
-  
-  
-     
-      
-    }
-  
-  
-    .mobile_h3{
-  
-      font-size: 40px;
-    }
-  
-    .created{
-      margin-left: -30px;
-    }
-    .text{
-      
-      font-size: 8px;
-      text-transform: uppercase;
-    }
-   .min{
-  
-      opacity: 20%;
-      color: rgba(0, 0, 0, 0.301);
-      margin-left: -45px;
-  
-  
-    }
-  
-    .homeImagesPost{
-      padding-bottom: 60px;
-    }
-  
-    #newsletter_button{
-  
-    }
-    #newsletter_input{
-      padding: 5px;
-      width: 250px;
-      border: none;
-    }
-    #newsletter_header{
-      font-size: 15px;
-      width: 60%;
-    }
-    #color{
-      margin-top: 40px ;
-      background-color: lightcoral;
-      width: 90vw;
-      height: 70vw;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      margin-left: 25px;
-  
-    }
-  
-    .cat_name{
-      padding-top: 40px;
-  
-      font-family: 'Source Sans Pro', sans-serif;
-    }
-  
-    .posts{
-  
-      opacity: 20%;
-      color: rgba(0, 0, 0, 0.616);
-      font-size: 10px;
-      padding-bottom: 15px;
-     
-  
-  
-    }
-  
-    .homeImagesCat{
-  
-      padding-top: 20px;
-      width: 94vw !important;
-      margin-left: -10px;
-  
-      
-    }
-    .email{
-      display: none;
-    }
-    .recommended_text{
-  
-      margin-left: 140px;
-    }
-  
-    .kumuyi{
-  
-      margin-left: 70px;
-    }
-    .title_text_cat{
-  
-  
-  
-  
-      
-  
-      font-family: 'Source Sans Pro', sans-serif;
-    
-      font-size: 21px;
-      font-weight: 600;
-      opacity: 90%;
-      padding-bottom: 64px;;
-      max-width: 100vw;
-  
-      border-bottom: 1px solid #dad3cc;
-  
-  
-     
-      
-   
-  
-  
-  
-    }
-  
-    #homeImages{
-      margin-left: -10px;
-    }
-  
-    .homePageImages{
-  
-      margin-left: -20px !important;
-    }
-  
-    .ny-footer{
-  
-  padding: 40px;
-  
-    } */
-  
-  
-  /* PRODUCT.HTML */
-  /* MOBILE */
-  
-  
-  
-  
-  
-  
-  /* }  */
-  
+ 
   
   
   /* HOMEPAGE */
   /* DESKTOP ONLY */
   
-  
-  
-  
-  
   /* MOBILE ONLY */
   @media only screen and (max-width: 765px) {
+
+    
   
-  
+    #navbarContent li {
+    
+      
+      font-weight: 300;
+      padding-bottom: 3.2vh;
+      padding-top: 3.2vh;
+      border-bottom: 1px solid white;
+      
+    }
+   
   
   /* ENTIRE PAGE */
     .homePageFirstSection{
@@ -725,7 +238,9 @@
   
   }
   
-  .homePageNewsLetterBackground{margin-top: 40px ;
+  .homePageNewsLetterBackground{
+    
+    margin-top: 40px ;
   background-color: #c92020;
   width: 90vw;
   height: 27vh;
@@ -754,10 +269,64 @@
     font-size: 14px;
   }
   }
+  /* ADDITIONAL MEDIA FOR NAVBAR TABLET */
+  @media only screen and (max-width: 991px) {
   
+   .whole{
+
+    display: none !important;
+   }
+    
+    #logo{
+  
+      display: none !important;
+
+    }
+    #logoNavbar {
+      display: block !important;
+    }
+  
+   
+
+  }
+
+  @media only screen and (min-width: 992px) and (max-width: 1024px){
+
+ #navbarContent li {
+    
+      font-weight: 300;
+      margin-left: 28px;
+      border: none !important;
+      padding-bottom: 0 !important;
+      padding-top: 0 !important;
+      
+      
+    }
+
+    #logo{
+  
+      display: block !important;
+    }
+    #logoNavbar {
+      display: none !important;
+    }
+
+  }
   
   /* LAPTOP ONLY */
   @media only screen and (max-width: 1024px) and (min-width: 766px)  {
+
+   
+    
+    #navbarContent li {
+    
+      font-weight: 300;
+    
+      padding-bottom: 3.2vh;
+      padding-top: 3.2vh;
+      border-bottom: 1px solid white ;
+      
+    }
   
     #logo{
   
@@ -962,22 +531,17 @@ flex-direction: column;
   
   }
   
-  @media only screen and (max-width: 991px)  {
-  
-    #logo{
-  
-      display: none;
-    }
-    #logoNavbar {
-      display: block;
-    }
-  
-  }
   
   
   /* DESKTOPS ONLY */
   @media only screen and (max-width: 1200px) and (min-width: 1025px)  {
   
+    #navbarContent li {
+    
+      font-weight: 300;
+      margin-left: 28px;
+      
+    }
     #logoNavbar {
       display: none;
     }
@@ -1206,6 +770,19 @@ flex-direction: column;
   
   /* FULLSCREEN 😎 */
   @media only screen and (min-width: 1201px)  {
+
+    #navbarContent li {
+    
+      font-weight: 300;
+      margin-left: 28px;
+      
+    }
+
+    #navbarContent li{
+ 
+
+    }
+   
   
     #logoNavbar {
         display: none;

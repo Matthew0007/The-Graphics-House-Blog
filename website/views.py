@@ -1,6 +1,10 @@
 from django.shortcuts import render
 from .models import *
 from django.shortcuts import render, get_object_or_404, redirect
+from django.utils import timezone as tz
+import datetime
+
+
 # Create your views here.
 
 
@@ -13,6 +17,11 @@ def index(request):
     for i in whatWeDo:
        pass
 
+
+
+
+
+
     return render(request, 'website/home.html', {'featured':featured, 'whatWeDo':whatWeDo})
 
 
@@ -23,19 +32,34 @@ def allPostCat(request, category_slug):
 
     cat = get_object_or_404(Category, slug=category_slug)
     posts = Post.objects.filter(category=cat, published=True) 
+
+
    
     return render(request, 'website/category.html', {'category':cat,'posts':posts })
 
 
-def post_detail(request, category_slug, post_slug):
 
+
+    
+def post_detail(request, category_slug, post_slug):
+    compareTime = tz.now() - datetime.timedelta(days=3)
+    print(compareTime)
+
+    
+    new = False
     try:
         post = get_object_or_404(Post, slug=post_slug)
-        post.view_count = post.view_count +1
+        post.view_count = post.view_count + 1
         post.save()
+
+        if post.created >= compareTime:
+            new = True
+  
+        
+       
     except Exception as e:
         raise e
 
-    return render(request, 'website/post.html', {'post':post})
+    return render(request, 'website/post.html', {'post':post,'new':new})
 
    

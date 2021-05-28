@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'livereload',
+    'search_app',
 ]
 
 MIDDLEWARE = [
@@ -63,6 +64,7 @@ TEMPLATES = [
         'DIRS': [
 
               str(BASE_DIR.joinpath('website','templates')),
+              str(BASE_DIR.joinpath('search_app','templates')),
         ],
         'APP_DIRS': True,
         'OPTIONS': {

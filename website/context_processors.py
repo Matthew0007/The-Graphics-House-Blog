@@ -11,12 +11,15 @@ def whatWeDo(request):
 def menu(request):
     links = Category.objects.filter(navbar = True)
 
-    print(links[1].name)
+    
     return dict(links=links)
 
 
 def post_menu(request):
 
-    post_list = Post.objects.all()
+    post_list = Post.objects.filter(published = True)
     return dict(post_list=post_list)
+
+def new_post(request):
+    pass
 

@@ -16,22 +16,215 @@
     
   
     <title>{% block title %}{% endblock %}</title>
+    <style>
+      
+      body{
+        
+
+        overflow-x: hidden ;
+        /* background-color: rgb(24, 24, 24); */
+
+        /* background-image: url("{% static 'images/background.png'  %}"); */
+      }
+    </style>
 </head>
 <body>
-  <div class="container-fluid navbar-fixed-top my_top_navbar_div p-0">
+
+  <style>
+
+    #searchIcon{
+
+      opacity: 60%;
+      transition: 0.3s ease-in-out;
+    }
+    #searchIcon:hover{
+      opacity: 100%;
+      cursor: pointer;
+    }
+
+#searchArea{
+    
+          position: absolute;
+          background-color: white;
+          z-index: 1;
+
+          
+          width: 100vw;
+          height: 100vh;
+          transition: 1s ease-in-out;
+      
+      }
+  
+      
+      
+      #search{
+
+        margin-left: 25.0vw;
+        margin-top: 35.0vh;
+        width: 50vw;
+        height: 20vh;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        transition: 0.1s ease-in-out;
+        
+      }
+      #search.closed{
+
+       
+  
+  }
+
+      #search:focus{
+
+        border-bottom: 6px solid black;
+    
+
+      }
+ 
+      ::placeholder{
+
+        font-size: 70% !important;
+        
+      }
+      #searchIcon{
+
+        font-size: 270% !important;
+      }
+      #myForm{
+
+        position: absolute;
+      }
+      input[type="search"]{
+
+        font-size: 100px;
+      }
+      
+      #closeDiv{
+        z-index: 1;
+        position: absolute;
+        font-size: 250%;
+      margin-left: 95vw;
+        
+      }
+      #closer{
+
+        transition: 0.2s ease-in-out;
+      }
+      #closer:hover{
+
+        cursor: pointer;
+        opacity: 60%;
+      }
+      
+
+    @media only screen and (max-width: 765px) {
+
+      #search{
+
+            margin-left: 05.0vw;
+            margin-top: 35.0vh;
+            width: 70vw;
+            height: 20vh;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            }
+                  ::placeholder{
+
+            font-size: 40% !important;
+
+            }
+            #search:focus{
+
+    border-bottom: 3px solid black;
+
+
+}
+
+            input[type="search"]{
+
+            font-size: 50px;
+            }
+            #closeDiv{
+                  z-index: 1;
+                  position: absolute;
+                  font-size: 250%;
+                margin-left: 90vw;
+      
+    }
+    }
+    </style>
+    <div style="display: none;" id="contained">
+    <div class="container-fluid" id="searchArea">
+        <form action="{% url 'search_app:searchResult' %}" method="get" id="myForm">
+            <input  name="q" id="search"  type="search" placeholder="Search...">
+            <button style="background-color: white; border:none;" id="searchIcon" class="btn fas fa-search"></button>
+    </div>
+    <div id="closeDiv">
+
+      <i style="background-color: white; border:none;" id="closer" class=" fas fa-times"></i>
+    </div>
+  </div>
+   
+  <div id="everything" class="container-fluid navbar-fixed-top my_top_navbar_div p-0">
         {% include 'header.html' %}    
       {% include 'navbar.html' %} 
   
 
     {% block content %}
     {% endblock %}
+    
       </div>
-  
   {% include 'footer.html' %}
+      <!-- <form class="form-inline my-lg-0" action="{% url 'search_app:searchResult' %}" method="get">
+        {% csrf_token %}
+      <input class="form-control " type="search" placeholder="Search" aria-label="Search" name="q">
+      <button class="btn btn-secondary my-sm-0" type="submit">Search</button> -->
+
+  
+  
   <script src="{% static 'Javascript/script.js' %}"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
   <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0" nonce="XYmdf9N7"></script>
+  <async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0" nonce="XYmdf9N7"></async>
+  <script>
+       
+
+       
+       
+    var searchIcon = document.getElementById("searchIconMobile")
+    console.log(searchIcon)
+    var container = document.getElementById("contained");
+    var ex = document.getElementById("closer");
+    var input = document.getElementById("search");
+
+    searchIcon.addEventListener("click", ()=>{
+
+      container.style.display = "block"
+    });
+    
+    ex.addEventListener("click", ()=>{
+      
+     container.style.display = "none"
+     container.classList.add("closed")
+    
+    });
+    input.addEventListener("keypress", function (e){
+    
+     if(e.key =='Enter'){
+     
+    
+       container.style.display = "none";
+    
+     }
+    });
+    
+    
+    
+      
+    </script>
+
 </body>
 
 

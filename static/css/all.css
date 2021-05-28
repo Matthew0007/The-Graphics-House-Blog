@@ -19,6 +19,7 @@
     list-style-type: none;
     text-transform: uppercase;
     color: white;
+    
   }
 
  .copyright-text{
@@ -174,6 +175,7 @@
   color: white;
   padding: 6%;
   width: 7vw;
+  font-weight: bolder !important;
  
 }
 
@@ -197,6 +199,25 @@
   padding-bottom: 30px;
   
 }
+
+
+.buttonHeader{
+
+border: none;
+
+
+}
+.buttonHeader:hover{
+
+opacity: 90%;
+
+
+
+
+
+}
+
+
 
 
 }
