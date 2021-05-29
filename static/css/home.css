@@ -348,6 +348,8 @@
     
   }
 
+  
+
   .facebookHeaderText{
     float: left !important;
     font-size: 13px;
@@ -362,22 +364,24 @@
     vertical-align: top;
     height: 80%;
     padding: 0 70px;
+    
   
   }
 
   .newsLetterFacebook{
 
     display: block !important;
+    margin-bottom: 13vh !important;
   }
    /* @media only screen and (max-width: 1024px) and (min-width: 766px) {
   /* WHAT WE DO SECTION */
   .homePageWhatSection {
+
     
     display: flex;
     flex-direction: column;
     width: 45vw;
-    border-left: 1px black solid;
-    float: right !important;
+   border-left:  1px solid #dee2e6 !important;
     padding: 0 50px;
     
   }
@@ -481,10 +485,34 @@
     align-items: stretch !important;
     justify-content: center !important;
     margin: 0 auto !important;
+    padding-top: 50px !important;
+
    
    
     
     width: 100vw !important;
+  }
+
+
+  /* REACH US SECRION */
+
+
+  #reachUsWhatSection{
+
+
+    display: block !important;
+    display: flex;
+    flex-direction: row;
+    
+  }
+
+  .homePageNeedReachUsH1{
+
+    
+    font-size: 13px;
+    font-weight: bold;
+    padding-top: 5vh;
+    padding-bottom: 3vh;
   }
 }
 
@@ -768,12 +796,7 @@ font-weight: 300;
     width: 10vw;
   }
 
-  .homePageFacebookSection .facebookHeaderText {
-    font-weight: bold;
-    padding-top: 5vh;
-    padding-bottom: 3vh;
-    font-size: 13px;
-  }
+  
 
   .homePageFacebookSection {
     width: 40%;
@@ -783,12 +806,13 @@ font-weight: 300;
     width: 30%;
   }
 
-  .homePageFacebookSection .facebookHeaderText {
+  .facebookHeaderText {
     display: inline-block;
     font-weight: bold;
     padding-top: 5vh;
     padding-bottom: 3vh;
-    width: 10vw;
+    width: 15vw;
+    font-size: 13px;
   }
 
   /* WHAT WE DO SECGTION */
