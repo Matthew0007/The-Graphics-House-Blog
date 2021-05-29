@@ -181,11 +181,6 @@ data-show-facepile="false"
 </div>
 
 {% empty %}
-<style>
-    
-</style>
-
-
 
         {%endfor%}
    
@@ -194,72 +189,85 @@ data-show-facepile="false"
 </div>
 
 <div class="secondSectionDesktop ">
+      
+      
+      
+    <section class=" homePageFacebookSection">
+        <!--======================================================== FACEBOOK SECTION ======================================================== -->
+    <h1 style="width: 200px !important;" class="facebookHeaderText">RECOMMENDED PAGES</h1>
+        <div class="facebookSection">
+          <iframe src="https://www.facebook.com/plugins/group.php?href=https%3A%2F%2Fwww.facebook.com%2Fgroups%2Fdeeperlifebiblechurchsingles&width=300&show_social_context=true&show_metadata=true&appId=148660960575291&height=352" width="300" height="352" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>    
+      
+      
+          <section style="display: none;" id="newsLetterFacebook"  class="newsLetterFacebook homePageNewsLetterSection mb-5">
+
+              <div class="homePageNewsLetterBackground">
+                  <h1 class="text-center homePageNewsLetterHeader" >GET NOTIFIED WHEN WE POST SOMETHING NEW!</h1>
+                  <input class="text-gray homePageNewsLetterInput"  type="email" placeholder="Enter your email">
+                  <button class="btn btn-dark rounded-0 mt-3 homePageNewsLetterButton" id="newsletter_button">SUBSCRIBE</button>
+      
+      
+              </div>
+      
+      
+          </section>
+      
+      
+      
+      
+      </section>
+      </section>
+    <!--======================================================== WHAT WE DO SECTION ======================================================== -->
+<section class="container-mine homePageWhatSection" id="container-tablet-WhatWeDo">
+
+  <h1 class=" homePageWhatH1">WHAT WE DO</h1>
+
+  {% if whatWeDo %}
+  {%for post in whatWeDo%}
+  <div class="homePageWhatRow">
+      <a href="{{post.get_absolute_url}}"><img class="homePageWhatImage" src="{{post.image.url}}"></a>
+      <p class="homePageWhatHeaderText ">
+              <a style="list-style-type: none; text-decoration: none; color: black;" href="{{post.get_absolute_url}}">
+                   {{post.title}}
+              </a>
+             
+          </p>
+      </div>
+  {%endfor%}
+  {%endif%}
+
+  <!--======================================================== NEED TO REACH US SECTION ======================================================== -->
 
 
+  <section id="reachUsWhatSection" style="display:none;" class=" homePageNeedReachUs">
 
-<section class=" homePageFacebookSection">
-    <!--======================================================== FACEBOOK SECTION ======================================================== -->
-<h1 class="facebookHeaderText">RECOMMENDED PAGES</h1>
-    <div class="facebookSection">
-        <iframe src="https://www.facebook.com/plugins/group.php?href=https%3A%2F%2Fwww.facebook.com%2Fgroups%2Fdeeperlifebiblechurchsingles&width=300&show_social_context=true&show_metadata=true&appId=148660960575291&height=352" width="300" height="352" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>   
-    </section>
 
-<!--======================================================== WHAT WE DO SECTION ======================================================== -->
-<section class=" homePageWhatSection" id="container-tablet-WhatWeDo">
+      <h1 class="homePageNeedReachUsH1">NEED TO REACH US?</h1>
+  
+      <p class="homePageNeedReachUsEmail "><b>Email:</b> <span class="homePageNeedReachUsAddress"> HolinessSingles@gmail.com</span></p>
+  
+      </section>
 
-    <h1 class=" homePageWhatH1">WHAT WE DO</h1>
-
-    {% if whatWeDo %}
-    {%for post in whatWeDo%}
-    <div class="homePageWhatRow">
-        <a href="{{post.get_absolute_url}}"><img class="homePageWhatImage" src="{{post.image.url}}"></a>
-        <p class="homePageWhatHeaderText ">
-                <a style="list-style-type: none; text-decoration: none; color: black;" href="{{post.get_absolute_url}}">
-                     {{post.title}}
-                </a>
-               
-            </p>
-        </div>
-    {%endfor%}
-    {%endif%}
-
-     
 </section>
 
+        <!--======================================================== NEWSLETTER ======================================================== -->
+        <section class=" homePageNewsLetterSection mb-5">
+          <div class="homePageNewsLetterBackground">
+              <h1 class="text-center homePageNewsLetterHeader" >GET NOTIFIED WHEN WE POST SOMETHING NEW!</h1>
+              <input class="text-gray homePageNewsLetterInput"  type="email" placeholder="Enter your email">
+              <button class="btn btn-dark rounded-0 mt-3 homePageNewsLetterButton" id="newsletter_button">SUBSCRIBE</button>
+          </div>
+      </section>
 
-<!--======================================================== NEED TO REACH US SECTION ======================================================== -->
-<section style="display:none;" class="container homePageNeedReachUs">
-
-
-    <h1 class="homePageNeedReachUsH1">WHAT WE DO</h1>
-
-    <p class="homePageNeedReachUsEmail">Email: <span class="homePageNeedReachUsAddress"> HolinessSingles.com</span></p>
-
-    </section>
-
-
-
-    <!--======================================================== NEWSLETTER ======================================================== -->
-
-    <section class=" homePageNewsLetterSection mb-5">
-
-        <div class="homePageNewsLetterBackground">
-            <h1 class="text-center homePageNewsLetterHeader" >GET NOTIFIED WHEN WE POST SOMETHING NEW!</h1>
-            <input class="text-gray homePageNewsLetterInput"  type="email" placeholder="Enter your email">
-            <button class="btn btn-dark rounded-0 mt-3 homePageNewsLetterButton" id="newsletter_button">SUBSCRIBE</button>
-
-
-        </div>
-
-
-    </section>
-
-
-</div>
-
-</div>
-
-
-
-
-{% endblock content %}
+      <!--======================================================== NEED TO REACH US SECTION ======================================================== -->
+     <section id="reachUsWhatSectionOriginal"  style="display:none;" class=" homePageNeedReachUs">
+      <h1 class="homePageNeedReachUsH1">NEED TO REACH US?</h1>
+      <p class="homePageNeedReachUsEmail "><b>Email:</b> <span style="font-weight: lighter;" class="homePageNeedReachUsAddress"> HolinessSingles@gmail.com</span></p>
+      </section>
+     
+    </div>
+    </div>
+    
+    
+    {% endblock content %}
+    

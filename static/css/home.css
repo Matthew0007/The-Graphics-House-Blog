@@ -99,8 +99,8 @@
 
 .container-mine{
 
-  width: 50% !important;
-  padding: 0 15%;
+  width: 70% !important;
+  padding: 0 8%;
 }
   #navbarContent li {
     
@@ -169,7 +169,7 @@
     font-weight: bold;
     padding-top: 5vh;
     padding-bottom: 3vh;
-    width: 29vw;
+    width: 39vw;
   }
 
   /* WHAT WE DO SECTION */
@@ -177,7 +177,7 @@
   .homePageWhatSection {
     display: flex;
     flex-direction: column;
-    width: 89vw !important;
+    width: 95vw !important;
   }
   .homePageWhatImage {
     width: 20vw;
@@ -196,6 +196,7 @@
     font-weight: bold;
     padding-top: 5vh;
     padding-bottom: 3vh;
+    border-top: 1px solid #dee2e6 !important
   }
 
   .homePageWhatRow {
@@ -207,12 +208,20 @@
   }
 
   /* NEED TO REACH US */
-  .homePageNeedReachUsH1 {
-    float: left !important;
+  
+  .homePageNeedReachUsH1Mobile{
+
+  
     font-size: 13px;
     font-weight: bold;
     padding-top: 5vh;
     padding-bottom: 3vh;
+  }
+    
+  #reachUsWhatSection{
+  
+  
+    display: block !important;
   }
 
   /* NEWSLETTER SECTION */
@@ -260,6 +269,17 @@
   margin-bottom: 19px;
   font-size: 12px;
   font-weight: 300;
+}
+
+.whantContributeOriginal{
+
+  display: none;
+
+
+}
+.whantContributeMobile{
+
+  display: block !important;
 }
 
 }
@@ -514,6 +534,16 @@
     padding-top: 5vh;
     padding-bottom: 3vh;
   }
+
+  .whantContributeOriginal{
+
+    display: none;
+
+
+  }
+
+
+
 }
 
 @media only screen and (max-width: 991px) {
@@ -713,6 +743,44 @@ margin-bottom: 19px;
 font-size: 12px;
 font-weight: 300;
 }
+
+
+
+/* NEED TO REACH US SECTION */
+
+.homePageNeedReachUsH1{
+
+  
+  font-size: 13px;
+  font-weight: bold;
+  padding-top: 5vh;
+  padding-bottom: 3vh;
+}
+  
+#reachUsWhatSectionOriginal{
+
+
+  display: block !important;
+}
+
+
+/* NEED TO RACH US */
+
+
+.homePageNeedReachUsH1{
+
+  
+  font-size: 13px;
+  font-weight: bold;
+  padding-top: 5vh;
+  padding-bottom: 3vh;
+}
+  
+#reachUsWhatSectionOriginal{
+
+
+  display: block !important;
+}
 }
 
 /* FULLSCREEN 😎 */
@@ -820,6 +888,7 @@ font-weight: 300;
   .homePageWhatImage {
     width: 5vw;
     height: auto;
+   
   }
 
   .homePageWhatRow {
@@ -897,7 +966,23 @@ font-weight: 300;
     display: block;
   }
 
+/* NEED TO RACH US */
 
+
+.homePageNeedReachUsH1{
+
+  
+  font-size: 13px;
+  font-weight: bold;
+  padding-top: 5vh;
+  padding-bottom: 3vh;
+}
+  
+#reachUsWhatSectionOriginal{
+
+
+  display: block !important;
+}
 
  
 }

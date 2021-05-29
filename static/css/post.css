@@ -1,11 +1,8 @@
-
- #navbarContent li {
+#navbarContent li {
     
     font-weight: 300;
 
-    
   }
-  
   #navbarMain {
     background-color: #f4f5f5;
     margin-top: -1px;
@@ -18,21 +15,16 @@
 .homePageWhatImage:hover{
 
   filter: brightness(70%);
-
-
 }
 .forEachRowHomePageTextHeaderMobile{
 
   transition: 0.2s ease-in-out;
 }
 
-
 .homePageWhatHeaderText:hover{
   text-decoration:underline ;
 
-
 }
-
 .forEachRowImageMobile{
   transition: 0.2s ease-in-out;
   overflow:hidden;
@@ -69,6 +61,11 @@
   /* MOBILE ONLY */
   @media only screen and (max-width: 765px) {
 
+    .container-mine{
+
+      width: 70% !important;
+      padding: 0 8%;
+    }
     
   
     #navbarContent li {
@@ -153,121 +150,139 @@
     opacity: 20%;
       
   }
-  
-  /* FACEBOOK SECTION */
-  
-  .homePageFacebookSection{
+   /* FACEBOOK SECTION */
+
+   .homePageFacebookSection {
     display: flex;
     align-items: center;
     flex-direction: column;
-    
-  
   }
-  
-  .facebookSection{
+
+  .facebookSection {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
   }
-  
-  .facebookHeaderText{
+
+  .facebookHeaderText {
     float: left !important;
     font-size: 13px;
     font-weight: bold;
     padding-top: 5vh;
     padding-bottom: 3vh;
+    width: 39vw;
   }
-  
-  
+
   /* WHAT WE DO SECTION */
-  
-  .homePageWhatSection{
-  
+
+  .homePageWhatSection {
     display: flex;
     flex-direction: column;
-    width: 94vw;
-    
-  
-  
+    width: 95vw !important;
   }
-  .homePageWhatImage{
-  
+  .homePageWhatImage {
     width: 20vw;
     height: auto;
   }
-  
-  .homePageWhatHeaderText{
-    font-size: 10px;
-    width: 94vw;
+
+  .homePageWhatHeaderText {
+    font-size: 14px;
+    font-family: "Playfair Display", serif;
+    width: 120%;
     padding-left: 13px;
-  
   }
-  .homePageWhatH1{
+  .homePageWhatH1 {
     float: left !important;
     font-size: 13px;
     font-weight: bold;
     padding-top: 5vh;
     padding-bottom: 3vh;
+    border-top: 1px solid #dee2e6 !important
   }
-  
-  .homePageWhatRow{
-  
+
+  .homePageWhatRow {
     display: flex;
-    flex-direction: row;
+
+    align-items: center;
+
     padding-bottom: 2vh;
-  
-  
   }
-  
+
   /* NEED TO REACH US */
-  .homePageNeedReachUsH1{
-  float: left !important;
-  font-size: 13px;
-  font-weight: bold;
-  padding-top: 5vh;
-  padding-bottom: 3vh;
+  
+  .homePageNeedReachUsH1Mobile{
+
+  
+    font-size: 13px;
+    font-weight: bold;
+    padding-top: 5vh;
+    padding-bottom: 3vh;
   }
+    
+  #reachUsWhatSection{
   
+  
+    display: block !important;
+  }
+
   /* NEWSLETTER SECTION */
+
   
-  .homePageNewsLetterSection{
+  .homePageNewsLetterSection {
     display: flex;
     align-items: center;
     justify-content: center;
-  
-  }
-  
-  .homePageNewsLetterBackground{
     
-    margin-top: 40px ;
-  background-color: #c92020;
-  width: 90vw;
-  height: 27vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+
   }
-  .homePageNewsLetterHeader{
-  
+
+  .homePageNewsLetterBackground {
+    margin-top: 40px;
+    background-color: #c92020;
+    width: 400px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .homePageNewsLetterHeader {
     font-size: 13px;
     width: 80%;
     font-weight: bold;
-    padding-bottom: 15px;
+    padding: 31px  0 26px 0;
     color: white;
   }
-  .homePageNewsLetterInput{
-  
+  .homePageNewsLetterInput {
     width: 80%;
-    height:20%;
-    border:none;
+    height: 30px;
+    border: none;
   }
-  
-  .homePageNewsLetterButton{
-    width:40vw;
-    font-size: 14px;
+
+  .homePageNewsLetterButton {
+    width: 40%;
+    font-size: 13px;
+    margin-bottom: 30px;
   }
+ ::placeholder{
+  margin-top: -10px;
+  padding-left: 16px;
+  margin-bottom: 19px;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.whantContributeOriginal{
+
+  display: none;
+
+
+}
+.whantContributeMobile{
+
+  display: block !important;
+}
   }
   /* ADDITIONAL MEDIA FOR NAVBAR TABLET */
   @media only screen and (max-width: 991px) {
@@ -620,11 +635,7 @@ font-weight: 300;
     }
   /* FIRST SECTION */
   
-  
-  
-    
-  
-  
+ 
   .homePageFirstSection{
     
   
@@ -808,7 +819,27 @@ margin-bottom: 19px;
 font-size: 12px;
 font-weight: 300;
 }
-  }
+
+
+
+/* NEED TO REACH US SECTION */
+
+.homePageNeedReachUsH1{
+
+  
+  font-size: 13px;
+  font-weight: bold;
+  padding-top: 5vh;
+  padding-bottom: 3vh;
+}
+  
+#reachUsWhatSectionOriginal{
+
+
+  display: block !important;
+}
+
+}
   
   
   /* FULLSCREEN 😎 */
@@ -1062,5 +1093,23 @@ font-weight: 300;
   margin-bottom: 19px;
   font-size: 12px;
   font-weight: 300;
+}
+
+/* NEED TO RACH US */
+
+
+.homePageNeedReachUsH1{
+
+  
+  font-size: 13px;
+  font-weight: bold;
+  padding-top: 5vh;
+  padding-bottom: 3vh;
+}
+  
+#reachUsWhatSectionOriginal{
+
+
+  display: block !important;
 }
   }
