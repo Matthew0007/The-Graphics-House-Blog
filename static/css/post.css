@@ -414,22 +414,13 @@
     
 }
 
-/* FACEBOOK SECTION */
-
-.homePageFacebookSection{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  
-
-}
 
 .facebookSection{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+
+    
 }
+
+
 
 .facebookHeaderText{
   float: left !important;
@@ -437,96 +428,164 @@
   font-weight: bold;
   padding-top: 5vh;
   padding-bottom: 3vh;
+  margin: 0 auto;
 }
 
-
-/* WHAT WE DO SECTION */
-
-.homePageWhatSection{
-
-  display: flex;
-  flex-direction: column;
-  width: 94vw;
+.homePageFacebookSection {
+  
+  vertical-align: top;
+  height: 80%;
+  padding: 0 50px;
   
 
-
 }
-.homePageWhatImage{
 
-  width: 20vw;
+.newsLetterFacebook{
+
+  display: block !important;
+  margin-bottom: 13vh !important;
+}
+ /* @media only screen and (max-width: 1024px) and (min-width: 766px) {
+/* WHAT WE DO SECTION */
+.homePageWhatSection {
+
+  
+  display: flex;
+  flex-direction: column;
+  width: 45vw;
+ border-left:  1px solid #dee2e6 !important;
+  padding: 0 50px;
+  
+}
+.homePageWhatImage {
+  width: 10vw;
   height: auto;
 }
 
-.homePageWhatHeaderText{
-  font-size: 20px;
-  width: 94vw;
+.homePageWhatHeaderText {
+  font-size: 14px;
+  font-family: "Playfair Display", serif;
+  width: 70%;
   padding-left: 13px;
 
 }
-.homePageWhatH1{
+.homePageWhatH1 {
   float: left !important;
   font-size: 13px;
   font-weight: bold;
   padding-top: 5vh;
   padding-bottom: 3vh;
+
 }
 
-.homePageWhatRow{
-
+.homePageWhatRow {
   display: flex;
-  flex-direction: row;
-  padding-bottom: 2vh;
+
+
   align-items: center;
-
-
-
+  padding-bottom: 2vh;
 }
 
-/* NEED TO REACH US */
-.homePageNeedReachUsH1{
-float: left !important;
-font-size: 13px;
-font-weight: bold;
-padding-top: 5vh;
-padding-bottom: 3vh;
-}
-
+/* @media only screen and (max-width: 1024px) and (min-width: 766px) {
 /* NEWSLETTER SECTION */
 
-.homePageNewsLetterSection{
+.homePageNewsLetterSection {
   display: flex;
+  flex: 0 0 100% !important;
   align-items: center;
   justify-content: center;
+  display: none;
+  
+  
 
 }
 
-.homePageNewsLetterBackground{margin-top: 40px ;
-background-color: #c92020;
-width: 90vw;
-height: 27vh;
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
+.homePageNewsLetterBackground {
+  margin-top: 40px;
+  background-color: #c92020;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  float: left !important;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
-.homePageNewsLetterHeader{
-
+.homePageNewsLetterHeader {
   font-size: 13px;
   width: 80%;
   font-weight: bold;
-  padding-bottom: 15px;
+  padding: 31px  0 26px 0;
   color: white;
 }
-.homePageNewsLetterInput{
-
+.homePageNewsLetterInput {
   width: 80%;
-  height:20%;
-  border:none;
+  height: 30px;
+  border: none;
 }
 
-.homePageNewsLetterButton{
-  width:40vw;
-  font-size: 14px;
+.homePageNewsLetterButton {
+  width: 40%;
+  font-size: 13px;
+  margin-bottom: 30px;
+}
+::placeholder{
+margin-top: -10px;
+padding-left: 16px;
+margin-bottom: 19px;
+font-size: 12px;
+font-weight: 300;
+}
+
+
+/* @media only screen and (max-width: 1024px) and (min-width: 766px) {
+/* OUTER TABLES SECTIOIN  */
+
+.homePageTabletSectionOuter {
+  display: flex;
+  justify-content: center;
+  
+}
+
+/* @media only screen and (max-width: 1024px) and (min-width: 766px) {
+/* SECTIONS */
+
+.secondSectionDesktop{
+  display: inline-block !important;
+  display: flex !important;
+  
+  margin-left: -9vw;
+  justify-content: center !important;
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+  padding-top: 50px !important;
+
+ 
+ 
+  
+  width: 100vw !important;
+}
+
+
+/* REACH US SECRION */
+
+
+#reachUsWhatSection{
+
+
+  display: block !important;
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.homePageNeedReachUsH1{
+
+  
+  font-size: 13px;
+  font-weight: bold;
+  padding-top: 5vh;
+  padding-bottom: 3vh;
 }
   
   }
@@ -641,130 +700,114 @@ flex-direction: column;
     
   }
   /* DESKTOP SECTIONS */
-  .firstSectionDesktop{
-   display: inline-block !important;
-  
-    
-  }
-  .secondSectionDesktop{
+  .firstSectionDesktop {
     display: inline-block !important;
-    width: 30vw;
-    vertical-align: top;
-    
-    
-    
-   
-    
   }
-  
-  
-  
+  .secondSectionDesktop {
+    display: inline-block !important;
+    width: 33%;
+    vertical-align: top;
+    float: right;
+  }
+
   /* FACEBOOK SECTION */
-  
-  .facebookWidth{
-  
+
+  .facebookWidth {
     width: 10vw;
   }
-  
-  .homePageFacebookSection .facebookHeaderText{
-  
+
+  .homePageFacebookSection .facebookHeaderText {
     
     font-weight: bold;
     padding-top: 5vh;
     padding-bottom: 3vh;
     font-size: 13px;
-    width: 22vw;
-  }
-  
-  .homePageFacebookSection{
-  
-  
-    width: 40%;
-  
+    width: 15vw;
   }
 
-  .facebookSection{
-    
+  .homePageFacebookSection {
+    width: 40%;
+  }
+
+  .facebookSection {
     width: 30%;
   }
+
   
-  
+
   /* WHAT WE DO SECGTION */
 
-  .homePageWhatImage{
+  .homePageWhatImage {
     width: 10vw;
-  height: auto;}
-  
-  .homePageWhatRow{
+    height: auto;
+  }
+
+  .homePageWhatRow {
     display: flex;
     padding-bottom: 14px;
     align-items: center;
-    
-  
   }
-  
-  .homePageWhatH1{
-  
-    
-  
-      font-size: 13px;
-      font-weight: bold;
-      padding-top: 5vh;
-      padding-bottom: 3vh;
-      margin: 0 auto;
+
+  .homePageWhatHeaderText {
+    padding-left: 10px;
+    font-size: 13px;
+    font-family: "Playfair Display", serif;
+  }
+
+  .homePageWhatH1 {
+    font-size: 13px;
+    font-weight: bold;
+    padding-top: 5vh;
+    padding-bottom: 3vh;
+    margin: 0 auto;
+  }
+  .homePageWhatSection {
     
   }
-  .homePageWhatSection{
-  
-   
-  }
-  
-  
-  /* NEWSLETTER SECTION */
-  
-  
-  .homePageNewsLetterSection{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    float: left;
-    
-  
-  }
-  
-  .homePageNewsLetterBackground{
-  margin-top: 40px ;
+/* NEWSLETTER SECTION */
+
+.homePageNewsLetterSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+}
+
+.homePageNewsLetterBackground {
+  margin-top: 40px;
   background-color: #c92020;
-  width: 23vw;
-  height: 27vh;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  }
-  .homePageNewsLetterHeader{
-  
-    font-size: 13px;
-    width: 30%;
-    font-weight: bold;
-    padding-bottom: 15px;
-    color: white;
-  }
-  .homePageNewsLetterInput{
-  
-    width: 30%;
-    height:20%;
-    border:none;
-  }
-  
-  .homePageNewsLetterButton{
-    width:20vw;
-    font-size: 14px;
-  }
-  
-  
-  
-  
+}
+.homePageNewsLetterHeader {
+  font-size: 13px;
+  width: 80%;
+  font-weight: bold;
+  padding: 31px  0 26px 0;
+  color: white;
+}
+.homePageNewsLetterInput {
+  width: 80%;
+  height: 30px;
+  border: none;
+}
+
+.homePageNewsLetterButton {
+  width: 40%;
+  font-size: 13px;
+  margin-bottom: 30px;
+}
+::placeholder{
+margin-top: -10px;
+padding-left: 16px;
+margin-bottom: 19px;
+font-size: 12px;
+font-weight: 300;
+}
   }
   
   
