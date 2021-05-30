@@ -1,16 +1,40 @@
 {% load static %}
-
+<link rel="stylesheet" href="{% static 'css/all.css' %}" />
 <style>
+
+
+@media only screen and (max-width: 765px) {
+
+
+
+}
+@media only screen and (max-width: 991px) {
+
+  #searchIconMobile2{
+
+ display: none !important;
+
+}
+
+#searchIconMobile{
+
+ display: block !important;
+}
+
+}
+
+
+
   .t:hover{
 
-    color: red !important;
+    color: #c92020 !important;
    
 
   }
 
   .t{
 
-    color: white !important; 
+    color: black !important; 
     font-family: Helvetica !important;
     font-size: 13px !important; 
   }
@@ -25,36 +49,53 @@
     opacity: 20%;
     
   }
+  #searchIconMobile2{
+
+transition: 0.1s ease-in-out;
+}
+
+#searchIconMobile2:hover{
+
+cursor: pointer;
+opacity: 20%;
+
+}
+
+
 </style>
-<nav   style=" background-color: #c92020;"  id="navbarMain" class="navbar navbar-expand-lg  border-bottom bg-dark">
-<!-- <nav   style=" background-color: #c92020;"  id="navbarMain" class="navbar navbar-expand-lg  border-bottom "> -->
-  <div class="container-fluid">
-    <button id="hamburger" onclick="searchRemover()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <i class="fas fa-bars text-light"></i>
-    </button>
 
-    <a id="logoNavbar" class="navbar-brand mx-auto mr-3" href="{% url 'website:home' %}"> <img class=" mx-auto" style="width: 170px;" src="{% static 'images/HS.png' %}" alt="Online Cushion Store"></a>
-    <a class="navbar-brand" href="#"><img src=""></a>
+<nav   style=" background-color: #c92020; "   id="navbarMain" class="sticky-top border-top border-bottom navbar navbar-expand-lg bg-light">
+  <!-- <nav   style=" background-color: #c92020;"  id="navbarMain" class="navbar navbar-expand-lg  border-bottom "> -->
+    
+      <button style=""  id="hamburger" onclick="searchRemover()" class=" navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars text-dark"></i>
+      </button>
   
-    <i style="margin-right: 3vw;"  id="searchIconMobile" class="fas fa-search text-light"></i>
+      <a id="logoNavbar" class="navbar-brand mx-auto mr-3" href="{% url 'website:home' %}"> <img class=" mx-auto" style="width: 170px;" src="{% static 'images/HS.png' %}" alt="Online Cushion Store"></a>
+      <a class="navbar-brand" href="#"><img src=""></a>
+    
+      <i style="display: none; margin-right: 3vw;"  id="searchIconMobile" class="fas fa-search text-dark"></i>
+  
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul id="navbarContent" class="navbar-nav mx-auto ">
+          
+  
+  
+          {%for link in links%}
+         
+          <li class="nav-item text-center text-bold navers">
+     <a style="color: black;" href="{% url 'website:category_detail' link.slug %}"   class="text-white t " aria-current="page" >{{link.name}}</a> 
+          </li> 
+  
+          
+          {%endfor%}
+  
+      </div>
+      <i  style="margin-right: 3vw; "  id="searchIconMobile2" class="fas fa-search text-dark"></i>
+  
+   
+  </nav>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul id="navbarContent" class="navbar-nav mx-auto ">
-        
-
-
-        {%for link in links%}
-       
-        <li class="nav-item text-center text-white navers">
-   <a style="color: white;" href="{% url 'website:category_detail' link.slug %}"   class="text-white t " aria-current="page" >{{link.name}}</a> 
-        </li> 
-
-        
-        {%endfor%}
-
-    </div>
-  </div>
-</nav>
 
 
 

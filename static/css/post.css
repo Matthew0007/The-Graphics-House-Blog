@@ -74,7 +74,7 @@
       font-weight: 300;
       padding-bottom: 3.2vh;
       padding-top: 3.2vh;
-      border-bottom: 1px solid white;
+      border: none !important;
       
     }
    
@@ -1001,12 +1001,12 @@ font-weight: 300;
       width: 10vw;
     }
   
-    .homePageFacebookSection .facebookHeaderText {
+   .facebookHeaderText {
       font-weight: bold;
       padding-top: 5vh;
       padding-bottom: 3vh;
       font-size: 13px;
-      width: 9vw;
+      width: 19vw !important;
     }
   
     .homePageFacebookSection {

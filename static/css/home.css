@@ -15,10 +15,10 @@
 #navbarMain {
   background-color: #f4f5f5;
   margin-top: -1px;
-  color: white;
+  color: black;
 }
 #navbarContent li a{
-  color: white;
+  color: black;
 }
 .logo {
   display: block;
@@ -67,14 +67,14 @@
 #navbarMain {
   background-color: #f4f5f5;
   margin-top: -1px;
-  color: white;
+  color: black;
 }
 #navbarContent li a {
-  color: white;
+  color: black;
 }
 
 #navbarContent li a {
-  color: white;
+  color: black;
   font-size: 12px;
   text-transform: uppercase;
   font-family: sans-serif;
@@ -105,10 +105,15 @@
   #navbarContent li {
     
       
-    font-weight: 300;
+    
     padding-bottom: 3.2vh;
     padding-top: 3.2vh;
-    border-bottom: 1px solid white;
+    
+    
+  }
+
+  #navbarContent li a{
+
     
   }
 
@@ -290,12 +295,18 @@
   
   #navbarContent li {
     
-    font-weight: 300;
-  
+      
+    
     padding-bottom: 3.2vh;
     padding-top: 3.2vh;
-    border-bottom: 1px solid white ;
+    font-size:  34px !important;
     
+  }
+
+  #navbarContent li a{
+
+    
+    font-family: Helvetica;
   }
 
   #logo{
@@ -338,7 +349,7 @@
   }
 .forEachRowHomePageCategorytMobileSeperate{
 
-  font-family: "Playfair Display", serif;
+  /* font-family: "Playfair Display", serif; */
 
 }
 
@@ -566,9 +577,13 @@
     padding-bottom: 0 !important;
     padding-top: 0 !important;
     
+    font-size:  34px !important;
     
   }
+  #navbarContent li a{
 
+
+  }
   #logo{
 
     display: block !important;

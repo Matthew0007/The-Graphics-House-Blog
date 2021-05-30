@@ -18,8 +18,14 @@
     <title>{% block title %}{% endblock %}</title>
     <style>
       
+      *{
+     
+      }
       body{
-        
+        margin-bottom: -20px !important;
+        box-sizing: border-box !important;
+        margin: 0 !important;
+        padding: 0 !important;
 
         overflow-x: hidden ;
         /* background-color: rgb(24, 24, 24); */
@@ -194,6 +200,7 @@
        
        
     var searchIcon = document.getElementById("searchIconMobile")
+    var searchIcon2 = document.getElementById("searchIconMobile2")
     console.log(searchIcon)
     var container = document.getElementById("contained");
     var ex = document.getElementById("closer");
@@ -203,7 +210,10 @@
 
       container.style.display = "block"
     });
-    
+    searchIcon2.addEventListener("click", ()=>{
+
+      container.style.display = "block"
+});
     ex.addEventListener("click", ()=>{
       
      container.style.display = "none"

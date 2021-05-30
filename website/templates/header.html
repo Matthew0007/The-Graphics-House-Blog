@@ -7,31 +7,43 @@
 
 
 @media only screen and (max-width: 765px) {
-
-.whole{
-
-
-
-display: none !important;
-}
-
-}
-@media only screen and (max-width: 991px) {
-
     .mediasFacebook{
-            display: none;
+            display: none !important;
 
     }
 
     .mediasTwitter{
 
-        display: none;
+        display: none !important;
     }
 
-    .whole{
+    .buttonHeader{
+
+
+        display: none !important;
+    }
+}
+@media only screen and (max-width: 991px) {
+
+    .mediasFacebook{
+            display: none !important;
+
+    }
+
+    .mediasTwitter{
+
+        display: none !important;
+    }
+
+    .buttonHeader{
+
 
 display: none !important;
 }
+    /* .whole{
+
+display: none !important;
+} */
 
 }
 
@@ -51,6 +63,10 @@ position: absolute !important;
 margin-left: 22vw; 
 margin-top: 4.7vh;
 }
+
+
+
+    
 }
 
 @media only screen and (max-width: 1374px) and (min-width: 1260px) {
@@ -145,10 +161,10 @@ margin-top: 4.7vh;
 }
 .mediasTwitter:hover{
 
-    color: red !important;
+    color: #c92020 !important;
 }
 .mediasFacebook:hover{
-    color: red !important;
+    color: #c92020 !important;
 }
 
 
@@ -156,28 +172,29 @@ margin-top: 4.7vh;
 
 </style>
 
-<header class="bg-dark whole">
-
-   <span><a href="https://www.facebook.com/groups/deeperlifebiblechurchsingles"><i style="" class="mediasFacebook fab fa-facebook text-light"></i></a>
-    <a href="https://twitter.com/dclmhq"> <i style="" class="mediasTwitter fab fa-twitter-square text-light"></i></a></span> 
-   
-   
-
-    <button class="buttonHeader btn btn-light rounded-0" style="font-size: 10px; width: 100px; height: 25px; position: absolute;  margin-left: 74vw; margin-top: 4.9vh;">
-
-        SUBSCRIBE
-    </button>
-    <div style="text-align: center; " >
-       <a style=""  id="logo" href="{% url 'website:home' %}"> <img class="my-4 mx-auto" style="width: 250px;" src="{% static 'images/HS.png' %}" alt="Online Cushion Store"></a>
-   
-   
-    </div>
-    </div>
 
 
+<header style="display: block; position: relative;" class=" ">
 
-        
-</header>
+    <span><a  href="https://www.facebook.com/groups/deeperlifebiblechurchsingles"><i style="" class="mediasFacebook fab fa-facebook text-dark"></i></a>
+     <a href="https://twitter.com/dclmhq"> <i style="" class="mediasTwitter fab fa-twitter-square text-dark"></i></a></span> 
+     <button class="buttonHeader btn btn-dark rounded-0" style=" font-size: 10px; width: 100px; height: 25px; position: absolute;  margin-left: 74vw; margin-top: 4.9vh;">
+  
+         SUBSCRIBE
+     </button>
+     <div style=" text-align: center; " >
+        <a style=""  id="logo" href="{% url 'website:home' %}"> <img class="my-4 mx-auto" style="width: 250px;" src="{% static 'images/HS.png' %}" alt="Online Cushion Store"></a>
+    
+    
+     </div>
+     </div>
+  
+  
+  
+         
+  </header>
+
+
 
 
 

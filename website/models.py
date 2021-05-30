@@ -59,3 +59,11 @@ class Post(models.Model):
         return self.title
 
 
+class UserSession(models.Model):
+
+    user = models.TextField(default=None)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, default="1") 
+
+    def __str__(self):
+        return self.user
+
