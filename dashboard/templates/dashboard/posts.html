@@ -1,0 +1,86 @@
+{% extends "baseManager.html" %} 
+{% load static %} 
+{% block metadescription %} 
+{%endblock %} 
+{% block title %} HolinessSingles {% endblock %} 
+
+
+{% block content%}
+
+{% if messages %}
+{%for message in messages%}
+
+<!-- <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div> -->
+
+
+{%endfor%}
+{%endif%}
+<link rel="stylesheet" href="{% static 'css/posts.css' %}" />
+<div style="background-color: white !important;" class="content">
+
+   
+        
+  
+<div class="container postRow">
+    <button class="btn btn-dark">Manage Posts</button>
+    <a class="btn btn-dark" href="{% url 'dashboard:addPost' %}"> Add Post</a> 
+    <table class="table">
+        <h6 class="p-3 border-bottom text-success"> Posts <br>{{post_listed|length}}</h6>
+        <thead class="thead-dark">
+          <tr>
+              <th scope="col">Image</th>
+            <th scope="col">Title</th>
+            <th scope="col">Views</th>
+            <th scope="col">Category</th>
+            <th scope="col">Status</th>
+            <th scope="col">Views</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for p in post_listed %}
+          <tr class="">
+            <td><img class="" style="width: 60px;" src="{{p.image.url}}"></td>
+            <td>{{p.title}}</td>
+            <td>{{p.view_count}}</td>
+            <td>{{p.category}}</td>
+            <td>
+            {% if p.published %} 
+                <a href="{% url 'dashboard:unpublishPost' p.category.slug p.slug %}"  class="btn btn-danger">Unpublish</a>
+            {%else%}
+                <button  class="btn btn-success">Publish</button>
+            {% endif %}
+            </td>
+            <td>
+                <a href="{% url 'dashboard:editPost' p.category.slug p.slug %}">Edit</a><br>
+                <a class="text-danger" href="{% url 'dashboard:deletePost' p.category.slug p.slug %}">Delete</a><br>
+          </td>
+          </tr>
+          {% endfor %}
+
+         
+        </tbody>
+      </table>
+</div>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
+		integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.1/dist/chart.min.js"></script>
+{% endblock content%}

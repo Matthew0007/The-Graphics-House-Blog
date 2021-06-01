@@ -1,0 +1,142 @@
+
+.AdminProfileHeader{
+
+
+    font-family: Helvetica;
+    padding-bottom: 30px;
+}
+
+.sectionContent{
+
+
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+.sectionContent a{
+
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 30px;
+
+    border-top: 1px white solid;
+}
+/* STATISTICS ROW1 */
+.row1{
+
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 5;
+   
+}
+.column-top{
+    
+    align-self: center;
+    border-radius: 5px;
+   margin-right: 3vw;
+    background-color: white;
+    width: 18%;
+    height: 130px !important;
+}
+
+.box-items{
+
+    padding-top: 20px;
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    align-self: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.box-items-text{
+
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+
+/* RECENT POST ROW 2 */
+.postRow{
+
+    font-family: Helvetica;
+    margin-top: 2%;
+    background-color: white;
+    width: 100%;
+    border-radius: 3px;
+}
+
+/* SEOND ROW */
+
+.row2{
+    margin-top: 2%;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* CHARTS DATA SECTION  3 */
+
+/* category charts */
+
+.categoryChart{
+    border-radius: 3px;
+    background-color: white;
+  
+}
+
+.countrySection{
+    border-radius: 3px;
+    width: 48%;
+    vertical-align: top !important;
+    background-color: white;
+}
+
+.rowCharts{
+
+    width: 50%;
+
+    background-color: rgb(197, 197, 197);
+}
+
+.container-fluid{
+    padding: 0 !important; 
+    margin: 0 !important;
+   
+}
+
+.sidebar, .content{
+height: 100vh !important;
+overflow: auto;
+float: left;
+}
+
+
+.sidebar{
+
+
+    background-color: rgb(36, 36, 36);
+    width: 12%;
+}
+
+.content{
+
+    height: 100vh !important;
+    background-color: rgb(233, 233, 233);
+    width: 88%;
+    display: flex;
+    justify-content: center;
+}
+
+.content-body{
+
+    width: 80vw;
+}
+
+

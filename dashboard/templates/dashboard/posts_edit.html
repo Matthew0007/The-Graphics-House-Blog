@@ -1,0 +1,26 @@
+
+{% extends "baseManager.html" %} 
+{% load static %} 
+{% block metadescription %} 
+{%endblock %} 
+{% block title %} HolinessSingles {% endblock %} 
+
+
+{% block content%}
+<div style="background-color: white;" class="content">
+
+    <div class=" text-justify card-profile  p-3  mb-5  blueRefund" style="background-color: white;">
+        <a class="btn btn-dark" href="{% url 'dashboard:posts' %}"> Manage Post</a> 
+        <a class="btn btn-dark" href="{% url 'dashboard:addPost' %}"> Add Post</a> 
+    
+        <h1 class="text-center">Add Book</h1>
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.media }}
+        {{ form.as_p}}
+        <button class="btn btn-success" type="submit">Save</button>
+    </form>
+    </div>
+    </div>
+    {% endblock content %}
+    

@@ -3,7 +3,7 @@ from .models import *
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone as tz
 import datetime
-
+from django_ip_geolocation.decorators import with_ip_geolocation
 
 # Create your views here.
 
@@ -17,6 +17,9 @@ def index(request):
     for i in whatWeDo:
        pass
 
+    
+    print(request.geolocation['continent'])
+    
 
 
 
@@ -24,6 +27,19 @@ def index(request):
 
     return render(request, 'website/home.html', {'featured':featured, 'whatWeDo':whatWeDo})
 
+
+
+def allAuthorCat(request, category_slug):
+
+    if request.user.groups.filter(name="Manager").exists() == True:
+        managerCheck = True
+
+    cat = get_object_or_404(Category, slug=category_slug)
+    posts = Post.objects.filter(category=cat, published=True) 
+
+
+   
+    return render(request, 'website/category.html', {'category':cat,'posts':posts })
 
 def allPostCat(request, category_slug):
 
@@ -42,7 +58,7 @@ def allPostCat(request, category_slug):
 
     
 def post_detail(request, category_slug, post_slug):
-    compareTime = tz.now() - datetime.timedelta(days=3)
+    compareTime = tz.now() - datetime.timedelta(days=6)
     print(compareTime)
 
     

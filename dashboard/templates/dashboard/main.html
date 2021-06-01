@@ -1,1 +1,221 @@
-hello world
+{% extends "baseManager.html" %} 
+{% load static %} 
+{% block metadescription %} 
+{%endblock %} 
+{% block title %} HolinessSingles {% endblock %} 
+{% block content%}
+
+<div class="content">
+    <div class="content-body">
+<div class="row1 ">
+
+    <div class="column-top">
+        <div class="box-items">
+            <p class="box-items-text">45</p>
+    
+            <i class="box-items-text fas fa-star"></i> 
+           </div>
+           <p class="box-items-text-outer text-center">People</p>
+    </div>
+    <div class="column-top">
+        <div class="box-items">
+            <p class="box-items-text">45</p>
+    
+            <i class="box-items-text fas fa-star"></i> 
+           </div>
+           <p class="box-items-text-outer text-center">People</p>
+    </div>
+    <div class="column-top">
+        <div class="box-items">
+            <p class="box-items-text">45</p>
+    
+            <i class="box-items-text fas fa-star"></i> 
+           </div>
+           <p class="box-items-text-outer text-center">People</p>
+    </div>
+    <div class="column-top">
+        <div class="box-items">
+            <p class="box-items-text">45</p>
+    
+            <i class="box-items-text fas fa-star"></i> 
+           </div>
+           <p class="box-items-text-outer text-center">People</p>
+    </div>
+    <div class="column-top">
+        <div class="box-items">
+            <p class="box-items-text">45</p>
+    
+            <i class="box-items-text fas fa-star"></i> 
+           </div>
+           <p class="box-items-text-outer text-center">People</p>
+    </div>
+</div>
+
+<div class="postRow">
+    <table class="table">
+        <h6 class="p-3 bg-light border-bottom text-success">Recent Posts</h6>
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Image</th>
+            <th scope="col">Title</th>
+            <th scope="col">Category</th>
+            <th scope="col">Views</th>
+            <th scope="col">Status</th>
+          
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td class="">Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+            <td>@fat</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+
+<div class="row2">
+    <div class="rowCharts">
+        
+<div style=" width: 100%; " class="categoryChart">
+    <h6 class="p-3 bg-light border-bottom text-success">Category View Statistics</h6>
+    <canvas id="myChart" width="41%" height=21%"></canvas>
+</div>
+
+</div>
+<div class="countrySection ">
+    <h6 class="p-3 bg-light border-bottom text-success">Country Visits</h6>
+    <div class="progress-container p-3">
+        <h6>United States</h6>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%;" aria-valuemin="0" aria-valuemax="100">
+            </div>
+        </div>
+    </div>
+    <div class="progress-container p-3">
+        <h6>United States</h6>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%;" aria-valuemin="0" aria-valuemax="100">
+            </div>
+        </div>
+    </div>
+    <div class="progress-container p-3">
+        <h6>United States</h6>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 40%;" aria-valuemin="0" aria-valuemax="100">
+            </div>
+        </div>
+    </div>
+    <div class="progress-container p-3">
+        <h6>United States</h6>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 80%;" aria-valuemin="0" aria-valuemax="100">
+            </div>
+        </div>
+    </div>
+    <div class="progress-container p-3">
+        <h6>United States</h6>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 70%;" aria-valuemin="0" aria-valuemax="100">
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<div class="postRow">
+    <table class="table table-responsive">
+        <h6 class="p-3 bg-light border-bottom text-success">Top Posts</h6>
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Image</th>
+            <th scope="col">Title</th>
+            <th scope="col">Category</th>
+            <th scope="col">Views</th>
+            <th scope="col">Status</th>
+          
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td class="">Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+            <td>@fat</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    
+
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Will Of God', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            datasets: [{
+                label: '# of Views',
+                data: [1, 9, 3, 5, 2, 3],
+                backgroundColor: [
+                    'red',
+                    'green',
+                    'purple',
+                    'orange',
+                    'blue',
+                  
+                ],
+                
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+   
+    </script>
+{%endblock content%}

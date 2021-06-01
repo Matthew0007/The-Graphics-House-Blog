@@ -1,0 +1,41 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/manager.css' %}" />
+
+
+
+<div class="sidebar">
+
+<div class="text-white text-center py-md-3 px-md-3 w-75 AdminProfileHeader">
+    {{request.user}}
+    </div>
+<div class=" sectionContent">
+
+   <a class="text-white" href="">
+    <i class="fas fa-star"></i> Home
+    </a>
+    <a class="text-white" href="{% url 'dashboard:posts' %}">
+        <i class="fas fa-star"></i> Posts
+    </a>
+    <a class="text-white" href="">
+        <i class="fas fa-star"></i> Categories
+    </a>
+    <a class="text-white" href="">
+        <i class="fas fa-star"></i> Authors
+    </a>
+    <a class="text-white" href="">
+        <i class="fas fa-star"></i> Messages
+    </a>
+    
+</div>
+ 
+
+
+
+
+
+
+    
+   
+</div>
+
+

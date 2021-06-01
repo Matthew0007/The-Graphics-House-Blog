@@ -19,6 +19,8 @@
 }
 #navbarContent li a{
   color: black;
+  
+  
 }
 .logo {
   display: block;
@@ -75,7 +77,7 @@
 
 #navbarContent li a {
   color: black;
-  font-size: 12px;
+  font-size: 10px;
   text-transform: uppercase;
   font-family: sans-serif;
   list-style-type: none;
@@ -805,6 +807,7 @@ font-weight: 300;
     
     font-weight: 300;
     margin-left: 28px;
+    
     
   }
   #logoNavbar {
