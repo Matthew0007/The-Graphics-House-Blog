@@ -1,21 +1,24 @@
 from django.shortcuts import render
 from .models import *
 from website.models import *
-from website.forms import PostForm
+from website.forms import *
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 # Create your views here.
 
+
+# ==================================================DASHBOARD======================================================
 
 def main(request):
     context = {
     }
     return render(request,'dashboard/main.html', context)
 
-
+# ==================================================POSTS======================================================
 def postsView(request):
     messages.success(request, "post added")
-    post_listed = Post.objects.all()
+    posts_unordered = Post.objects.all()
+    post_listed = posts_unordered.order_by('-created')
     
     context = {
         'post_listed': post_listed,
@@ -65,7 +68,53 @@ def unpublishPost(request, category_slug, post_slug):
     return HttpResponseRedirect(reverse('dashboard:posts'))
 
 
+def publishPost(request, category_slug, post_slug):
+    publish = Post.objects.get(category__slug=category_slug, slug=post_slug)
+    saveData = publish
+    saveData.published = True
+    saveData.save()
+    return HttpResponseRedirect(reverse('dashboard:posts'))
+
+# ==================================================Category======================================================
+
+def categoryView(request):
+    category_list = Category.objects.all()
+    context = {
+        'category_list': category_list,
+    }
+    return render(request, 'dashboard/category.html', context)
+
+
+def editCategory(request, category_slug):
+    editCateogry = Category.objects.get(slug=category_slug)
+    form = CategoryForm(request.POST or None, instance = editCateogry)
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect(reverse('dashboard:categories'))
+    context = {'form':form}
+    return render(request, 'dashboard/category_edit.html', context )
+
+
+def deleteCategory(request, category_slug):
+    deleteCategory = Category.objects.get(slug=category_slug)
+    posts_category = Post.objects.filter(category__slug = category_slug)
+    if request.method == 'POST':      
+        deleteCategory.delete()
+        return HttpResponseRedirect(reverse('dashboard:categories'))
+    
+    return render(request, 'dashboard/category_delete.html',{'deleteCategory':deleteCategory, 'posts_category':posts_category} )
 
 
 
-
+def addCategory(request):
+    if request.method =='POST':
+        form = CategoryForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse('dashboard:categories'))
+    else:
+        form = CategoryForm()
+    context = {
+        'form':form,
+    }
+    return render(request, 'dashboard/category_add.html', context)

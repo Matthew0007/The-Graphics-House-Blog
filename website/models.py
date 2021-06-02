@@ -10,7 +10,7 @@ class Category(models.Model):
     name = models.CharField(max_length=250, unique=True)
     description = models.TextField(blank=True)
     slug = models.SlugField(null=True,unique=True)
-    navbar = models.BooleanField(default=True)
+    navbar = models.BooleanField(default=False)
 
 
     def save(self, *args, **kwargs):

@@ -6,24 +6,196 @@
     padding-bottom: 30px;
 }
 
-.sectionContent{
 
+
+/* GREETINGS */
+.greetingsContainer{
 
     display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+    width: 90%;
+    height: 42%;
+    background-color: white;
+    border-radius: 45px;
+}
+
+
+.greetings-section-container{
+
+    padding-left: 5%;
+}
+/* Greetings image */
+.undrawn{
+
+    width: 31%;
+}
+.greetings-header{
+
+    font-size: 350%;
+}
+.greetings-paragraph{
+
+    opacity: 40%;
+    width: 70%;
+}
+.greetingsButton{
+    border-radius: 46.5px;
+    font-size: 80%;
+    list-style-type: none;
+    text-transform: none;
+    text-decoration: none;
+    background: linear-gradient(154.86deg, #8648ED 57.59%, #6453ED 84.03%);
+    color: white;
+    padding: 2%;
+}
+.greetingsButton:hover{
+    color: black;
+    background-color: white ;
+
+}
+
+/* ===========================================Yout Statistics =========================================== */
+
+.yourStatisticsSection{
+    display: block;
+    padding-top: 3%;
+    padding-bottom: 2.4%;
+    width: 90%;
+}
+.yourStatisticsSectionParagraph{
+
+    opacity: 40%;
+    width: 37%;
+}
+/* BOXES */
+
+.statBoxContainer{
+
+    display: flex;
+    width: 90%;
+}
+.statBoxContainer1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
+    background: linear-gradient(180deg, #514CF4 0%, #8648ED 100%);
+    width: 400px;
+    color: white;
+    height: 250px;
+    border-radius: 20px;
+    margin-right: 50px;
     
 
 }
+.statBoxContainer1Header{
 
+    font-size: 75px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SIDEBAR ONLY */
+.sidebar{
+
+    
+    background: linear-gradient(180deg, #514CF4 2.36%, #8648ED 102.36%);
+    width: 12%;
+    font-family: 'Righteous', cursive;
+}
+
+/* SIDEBAR HEADER */
+.AdminProfileHeader{
+
+    display: flex;
+        justify-content: center;
+}
+
+.content{
+
+    height: 100vh !important;
+    background-color: #E6E7FC;
+    width: 88%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content-body{
+
+    width: 80vw;
+}
+/* SIDEBAR LINKS */
+.sidebar-link{
+
+    list-style-type: none;
+    text-transform: none;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+
+}
+.sidebar-link:hover{
+    cursor: pointer; 
+    background-color: #4842f5;
+}
+.sidebar, .content{
+height: 100vh !important;
+overflow: auto;
+float: left;
+}
+.sectionContent{
+    display: flex;
+    flex-direction: column;  
+}
 .sectionContent a{
-
     padding-bottom: 20px;
     padding-top: 20px;
     padding-left: 30px;
-
-    border-top: 1px white solid;
 }
-/* STATISTICS ROW1 */
+
+
+
+
+
+
+/* 
+
+
+
+
 .row1{
 
     margin-top: 2%;
@@ -60,7 +232,7 @@
 }
 
 
-/* RECENT POST ROW 2 */
+
 .postRow{
 
     font-family: Helvetica;
@@ -70,7 +242,7 @@
     border-radius: 3px;
 }
 
-/* SEOND ROW */
+
 
 .row2{
     margin-top: 2%;
@@ -81,9 +253,7 @@
     align-items: flex-start;
 }
 
-/* CHARTS DATA SECTION  3 */
 
-/* category charts */
 
 .categoryChart{
     border-radius: 3px;
@@ -111,32 +281,14 @@
    
 }
 
-.sidebar, .content{
-height: 100vh !important;
-overflow: auto;
-float: left;
+
+
+
+
+
+.sectionContent{
+
+    
+    padding-top: 33%;
 }
-
-
-.sidebar{
-
-
-    background-color: rgb(36, 36, 36);
-    width: 12%;
-}
-
-.content{
-
-    height: 100vh !important;
-    background-color: rgb(233, 233, 233);
-    width: 88%;
-    display: flex;
-    justify-content: center;
-}
-
-.content-body{
-
-    width: 80vw;
-}
-
-
+ */

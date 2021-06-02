@@ -9,3 +9,92 @@
     border-radius: 3px;
     height: 100%;
 }
+
+/* TABLE */
+
+table{
+
+    width: 100% !important;
+}
+
+th{
+    opacity: 20% !important;
+    font-size: 30px;
+    font-family: 'Palanquin Dark', sans-serif;
+}
+
+td{
+    font-family: 'Palanquin Dark', sans-serif;
+    
+    
+    
+}
+
+/* BUTTONS */
+.buttonUnPublish{
+
+    width: 33px;
+height: 10px;
+list-style-type: none;
+    text-transform: none;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 5px 14px;
+    font-family: 'Palanquin Dark', sans-serif;
+background: linear-gradient(180deg, #F44C6A 0%, #ED7048 100%);
+border-radius: 10px;
+}
+.buttonUnPublish:hover{
+    color: white;
+    opacity: 70%;
+}
+
+.buttonPublish{
+
+    width: 33px;
+    height: 10px;
+    list-style-type: none;
+        text-transform: none;
+        color: white;
+        text-decoration: none;
+        font-size: 15px;
+        padding: 5px 14px;
+        font-family: 'Palanquin Dark', sans-serif;
+        background: linear-gradient(180deg, #4C71F4 0%, #08A298 100%);    border-radius: 10px;
+
+}
+
+.buttonPublish:hover{
+
+color: white;
+opacity: 70%;
+}
+
+
+.catCol{
+
+    text-transform: uppercase;
+}
+
+.titleCol{
+    width: 30% !important;
+}
+.myTableStyling{
+
+   width: 90%;
+   border-bottom: 100px !important;
+   background-color: white;
+}
+
+/* CONTAINER */
+
+.tableConatiner {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    padding: 30px 50px;
+    border-radius: 70px;
+    background-color: white;
+    
+}

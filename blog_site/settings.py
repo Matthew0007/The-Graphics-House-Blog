@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'livereload',
     'search_app',
-    'dashboard'
+    'dashboard',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -160,3 +161,5 @@ CKEDITOR_CONFIGS = {
         'height':400,
     }
 }
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

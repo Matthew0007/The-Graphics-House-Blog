@@ -4,8 +4,8 @@
 {% block metadescription %} 
 {%endblock %} 
 {% block title %} HolinessSingles {% endblock %} 
-
 {% load crispy_forms_tags %}
+
 {% block content%}
 <div style="background-color: white;" class="content">
 
@@ -13,10 +13,9 @@
         <a class="btn btn-dark" href="{% url 'dashboard:posts' %}"> Manage Post</a> 
         <a class="btn btn-dark" href="{% url 'dashboard:addPost' %}"> Add Post</a> 
     
-        <h1 class="text-center">Add Book</h1>
-    <form action="" method="post" enctype="multipart/form-data">
+        <h1 class="text-center">Edit Category</h1>
+    <form action="" method="post">
         {% csrf_token %}
-        {{ form.media }}
         {{ form | crispy }}
         <button class="btn btn-success" type="submit">Save</button>
     </form>

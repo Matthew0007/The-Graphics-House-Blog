@@ -1,41 +1,37 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/manager.css' %}" />
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 
 
 
 <div class="sidebar">
 
-<div class="text-white text-center py-md-3 px-md-3 w-75 AdminProfileHeader">
+<div class="text-white text-center py-md-3 px-md-3 w-75 mx-auto AdminProfileHeader">
     {{request.user}}
     </div>
-<div class=" sectionContent">
+<div class=" sectionContent ">
 
-   <a class="text-white" href="">
-    <i class="fas fa-star"></i> Home
+   <a class="text-white sidebar-link" href="{% url 'dashboard:main' %}"">
+    <i class="fas fa-star "></i>&nbsp;&nbsp;   Dashboard
     </a>
-    <a class="text-white" href="{% url 'dashboard:posts' %}">
-        <i class="fas fa-star"></i> Posts
+
+    <a class="text-white sidebar-link" href="{% url 'dashboard:categories' %}">
+        <i class="fas fa-star"></i>&nbsp;&nbsp;  Categories
     </a>
-    <a class="text-white" href="">
-        <i class="fas fa-star"></i> Categories
+    <a class="text-white sidebar-link" href="{% url 'dashboard:posts' %}">
+        <i class="fas fa-star"></i>&nbsp;&nbsp;   Posts
     </a>
-    <a class="text-white" href="">
-        <i class="fas fa-star"></i> Authors
+    
+    <a class="text-white sidebar-link" href="">
+        <i class="fas fa-star"></i>&nbsp;&nbsp;   Authors
     </a>
-    <a class="text-white" href="">
-        <i class="fas fa-star"></i> Messages
+    <a class="text-white sidebar-link" href="">
+        <i class="fas fa-star"></i>&nbsp;&nbsp;   Messages
     </a>
     
 </div>
- 
-
-
-
-
-
-
-    
-   
+  
 </div>
 
 
