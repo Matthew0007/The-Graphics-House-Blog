@@ -1,5 +1,7 @@
 from .models import *
-
+from contact.models import *
+from contact.models import *
+from contact.forms import *
 
 def whatWeDo(request):
     whatWeDo = Post.objects.filter(category = 8)
@@ -22,4 +24,23 @@ def post_menu(request):
 
 def new_post(request):
     pass
+
+def message_count(request):
+    message_countAll = Messages.objects.filter(read=False)
+    message_count = message_countAll.count()
+    return dict(message_count=message_count)
+
+def contact_form(request):
+
+    formMessage = MessageForm()
+    context = {
+
+        'formMessage':formMessage
+    }
+    return context
+
+
+
+
+
 

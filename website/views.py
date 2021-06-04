@@ -51,13 +51,6 @@ def post_detail(request, category_slug, post_slug):
             ip = request.META.get('REMOTE_ADDR')
         return ip
 
-    
-        
-
-   
-
- 
-
     try:
         post = get_object_or_404(Post, slug=post_slug)
         

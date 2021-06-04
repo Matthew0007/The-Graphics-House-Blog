@@ -5,7 +5,7 @@
 {% block title %} HolinessSingles {% endblock %} 
 {% block content%}
 
-<div class="content">
+<div class="content mobileContainer">
     
     
 <!-- ===========================================GREETINGS ===========================================G-->
@@ -13,20 +13,17 @@
 
 
 
-<div class="greetingsContainer">
+<div class="greetingsContainer shadow-lg">
 
     <img class="undrawn" src="{% static 'images/undraw_Investing_re_bov7.png' %}">
     <div class="greetings-section-container">
-        <h1 class="greetings-header">Good Evening,  <span style="color: #6453ED;">Bob</span></h1>
+        <h1 class="greetings-header">Greetings,  <span style="color: #6453ED;">{{request.user}}</span></h1>
         <p class="greetings-paragraph">Here are some activities we have for yout to 
                                         get things done for today listed bellow, enjoy!</p>
-        <a class="greetingsButton">Add New Post</a>
+        <a href="{% url 'dashboard:addPost' %}" class="greetingsButton">Add New Post</a>
     </div>
 
-    
 </div>
-
-
 <!-- ===========================================Yout Statistics ===========================================G-->
 <div class="yourStatisticsSection">
     <h1 class="yourStatisticsSectionHeader">Your Statistics</h1>
@@ -34,19 +31,19 @@
         for yout to get things done for today listed bellow, enjoy!</p>
 </div>
 <div class="statBoxContainer">
-    <div style="background: linear-gradient(180deg, rgba(255, 0, 0, 0.72) 0%, #ED7048 100%);" class="statBoxContainer1">
-        <h1 class="statBoxContainer1Header">3984</h1>
-        <p class="statBoxContainer1Paragraph">Highest Viewed Post</p>
+    <div style="background: linear-gradient(180deg, rgba(255, 0, 0, 0.72) 0%, #ED7048 100%);" class="statBoxContainer1 shadow-lg">
+        <h1 class="statBoxContainer1Header">{{highest}}</h1>
+        <p class="statBoxContainer1Paragraph">Highest Post Total</p>
     </div>
-    <div class="statBoxContainer1">
+    <div class="statBoxContainer1 shadow-lg">
         <h1 class="statBoxContainer1Header">234</h1>
         <p class="statBoxContainer1Paragraph">Todays Visitors</p>
     </div>
-    <div style="background: linear-gradient(180deg, #4880ED 0%, #11BCE1 100%);" class="statBoxContainer1">
-        <h1 class="statBoxContainer1Header">384</h1>
+    <div style="background: linear-gradient(180deg, #4880ED 0%, #11BCE1 100%);" class="statBoxContainer1 shadow-lg">
+        <h1 class="statBoxContainer1Header">{{visitedTotal}}</h1>
         <p class="statBoxContainer1Paragraph">All Time Vistitors</p>
     </div>
-    <div style="background: linear-gradient(191.68deg, #F44C6A 23.97%, #ED48BF 91.43%);" class="statBoxContainer1">
+    <div style="background: linear-gradient(191.68deg, #F44C6A 23.97%, #ED48BF 91.43%);" class="statBoxContainer1 shadow-lg">
         <h1 class="statBoxContainer1Header">874</h1>
         <p class="statBoxContainer1Paragraph">Total This Month</p>
     </div>
@@ -56,223 +53,5 @@
 </div>
 
 
-
-
-
-
-
-    <!-- 
-    <div class="content-body">
-<div class="row1 ">
-
-    <div class="column-top">
-        <div class="box-items">
-            <p class="box-items-text">45</p>
-    
-            <i class="box-items-text fas fa-star"></i> 
-           </div>
-           <p class="box-items-text-outer text-center">People</p>
-    </div>
-    <div class="column-top">
-        <div class="box-items">
-            <p class="box-items-text">45</p>
-    
-            <i class="box-items-text fas fa-star"></i> 
-           </div>
-           <p class="box-items-text-outer text-center">People</p>
-    </div>
-    <div class="column-top">
-        <div class="box-items">
-            <p class="box-items-text">45</p>
-    
-            <i class="box-items-text fas fa-star"></i> 
-           </div>
-           <p class="box-items-text-outer text-center">People</p>
-    </div>
-    <div class="column-top">
-        <div class="box-items">
-            <p class="box-items-text">45</p>
-    
-            <i class="box-items-text fas fa-star"></i> 
-           </div>
-           <p class="box-items-text-outer text-center">People</p>
-    </div>
-    <div class="column-top">
-        <div class="box-items">
-            <p class="box-items-text">45</p>
-    
-            <i class="box-items-text fas fa-star"></i> 
-           </div>
-           <p class="box-items-text-outer text-center">People</p>
-    </div>
-</div>
-
-<div class="postRow">
-    <table class="table">
-        <h6 class="p-3 bg-light border-bottom text-success">Recent Posts</h6>
-        <thead class="thead-dark">
-          <tr>
-            <th scope="col">Image</th>
-            <th scope="col">Title</th>
-            <th scope="col">Category</th>
-            <th scope="col">Views</th>
-            <th scope="col">Status</th>
-          
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td class="">Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-            <td>@fat</td>
-          </tr>
-        </tbody>
-      </table>
-</div>
-
-
-<div class="row2">
-    <div class="rowCharts">
-        
-<div style=" width: 100%; " class="categoryChart">
-    <h6 class="p-3 bg-light border-bottom text-success">Category View Statistics</h6>
-    <canvas id="myChart" width="41%" height=21%"></canvas>
-</div>
-
-</div>
-<div class="countrySection ">
-    <h6 class="p-3 bg-light border-bottom text-success">Country Visits</h6>
-    <div class="progress-container p-3">
-        <h6>United States</h6>
-        <div class="progress">
-            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%;" aria-valuemin="0" aria-valuemax="100">
-            </div>
-        </div>
-    </div>
-    <div class="progress-container p-3">
-        <h6>United States</h6>
-        <div class="progress">
-            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%;" aria-valuemin="0" aria-valuemax="100">
-            </div>
-        </div>
-    </div>
-    <div class="progress-container p-3">
-        <h6>United States</h6>
-        <div class="progress">
-            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 40%;" aria-valuemin="0" aria-valuemax="100">
-            </div>
-        </div>
-    </div>
-    <div class="progress-container p-3">
-        <h6>United States</h6>
-        <div class="progress">
-            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 80%;" aria-valuemin="0" aria-valuemax="100">
-            </div>
-        </div>
-    </div>
-    <div class="progress-container p-3">
-        <h6>United States</h6>
-        <div class="progress">
-            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 70%;" aria-valuemin="0" aria-valuemax="100">
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-
-
-<div class="postRow">
-    <table class="table table-responsive">
-        <h6 class="p-3 bg-light border-bottom text-success">Top Posts</h6>
-        <thead class="thead-dark">
-          <tr>
-            <th scope="col">Image</th>
-            <th scope="col">Title</th>
-            <th scope="col">Category</th>
-            <th scope="col">Views</th>
-            <th scope="col">Status</th>
-          
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td class="">Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-            <td>@fat</td>
-          </tr>
-        </tbody>
-      </table>
-</div>
-
-</div>
-
-</div>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
-<script>
-    var ctx = document.getElementById('myChart').getContext('2d');
-    
-
-    var myChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ['Will Of God', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-            datasets: [{
-                label: '# of Views',
-                data: [1, 9, 3, 5, 2, 3],
-                backgroundColor: [
-                    'red',
-                    'green',
-                    'purple',
-                    'orange',
-                    'blue',
-                  
-                ],
-                
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
-
-   
-    </script> -->
 
 {%endblock content%}

@@ -1,0 +1,102 @@
+{% extends "baseManager.html" %} 
+{% load static %} 
+{% block metadescription %} 
+{%endblock %} 
+{% block title %} HolinessSingles {% endblock %} 
+
+
+
+
+
+
+
+
+
+
+{% block content%}
+
+{% if messages %}
+{%for message in messages%}
+
+<!-- <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div> -->
+
+
+{%endfor%}
+{%endif%}
+<link rel="stylesheet" href="{% static 'css/category.css' %}" />
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Palanquin+Dark&display=swap" rel="stylesheet">
+   
+        
+  
+  <div class="content mobileContainer">
+
+    <!-- <a class="btn btn-dark" href="{% url 'dashboard:addPost' %}"> Add Post</a>  -->
+
+
+    <div style="width: 90%;" class="tableHeaderContainer">
+      <div class="postSection">
+        <h1 class="postSectionItem">Messages</h1>
+       
+        <form class="postSectionItem unwanted-column">
+
+            <input class="postSectionSearch" placeholder="Searach Author.." type="search"><span></span>
+        </form>
+      </div>
+
+      <!-- <div style="float: right !important;" class=" figuresSection">
+        <p class="totalParagraph">Total Auhtor <span class="totalParagraphBold"> {{category_list|length}}</span></p>
+        <p class="totalParagraph">Published <span class="totalParagraphBold"> 43</span></p>
+        <p class="totalParagraph">Unpublished <span class="totalParagraphBold"> 34</span></p>
+      </div> -->
+
+
+    </div>
+<div class="tableConatiner shadow-lg">
+    <table  class="myTableStyling table table-borderless ">
+        <thead class="thead-dark">
+          <tr> 
+            
+            <th>Name</th>
+            <th class="unwanted-column" scope="">Email</th>
+            <th class="unwanted-column" scope="cl">Message</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+            {% for message in message_list %}
+                {% if message.id in cacheRead%}
+
+            <tr class="bg-light rounded">
+                 <td>{{message.name}} <span class="badge bg-danger" > new</span> </td>
+            <td class="unwanted-column">{{message.email}} </td>
+           
+            <td class="unwanted-column">{{message.body}} </td>
+          </tr>
+
+          {% else %}
+          <tr class="hoverMe">
+              <td>{{message.name}}</td>
+            <td class="unwanted-column">{{message.email}}</td>
+            
+            <td class="unwanted-column">{{message.body}}</td>
+          </tr>
+          {% endif %}
+          {% endfor %}
+        </tbody>
+      </table>
+</div>
+
+</div>
+
+
+
+
+{% endblock content%}

@@ -25,6 +25,9 @@ class Category(models.Model):
         verbose_name = 'category'
         verbose_name_plural = 'categories'
 
+    def post_count(self):
+        return Post.objects.filter(category=self).count()
+
     def get_absolute_url(self):
         return reverse('website:category_detail', args=[str(self.slug)])
 
@@ -51,6 +54,8 @@ class Post(models.Model):
         ordering = ('title',)
         verbose_name = 'post'
         verbose_name_plural = 'posts'
+
+    
 
     def get_absolute_url(self):
         return reverse('website:post_detail', args=[self.category.slug, self.slug])

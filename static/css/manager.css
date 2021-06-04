@@ -1,27 +1,306 @@
 
-.AdminProfileHeader{
+ @media only screen and (max-width: 968px) { 
 
+    body{
+        background-color: #E6E7FC;
+
+    }
+.sidebar{
+
+    display: none;
+}
+
+.mobileContainer{
+
+
+     display: flex; 
+     flex-direction: column;
+    align-items: center; 
+    background-color: #E6E7FC;
+}
+
+nav{
+    display: block !important;
+}
+/* GREETINGD SECTION=============================== */
+.greetingsContainer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    align-items: center;
+    width: 90%;
+    padding: 14px 0;
+  
+    background-color: white;
+    border-radius: 45px;
+}
+.undrawn{
+
+    width: 34%;
+    
+}
+.greetings-header{
+    font-size: 160%;
+    text-align: center !important;
+    font-weight: bolder;
+}
+
+.greetings-section-container{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.greetings-paragraph{
+
+    opacity: 40%;
+    width: 70%;
+    font-size: 80%;
+    text-align: center !important;
+}
+
+.greetingsButton{
+    border-radius: 46.5px;
+    font-size: 80%;
+    list-style-type: none;
+    text-transform: none;
+    text-decoration: none;
+    background: linear-gradient(154.86deg, #8648ED 57.59%, #6453ED 84.03%);
+    color: white;
+    padding: 2%;
+
+}
+
+
+/* STATISTICS SECTION */
+
+
+.yourStatisticsSection{
+    display: block;
+    padding-top: 3%;
+    padding-bottom: 2.4%;
+    width: 90%;
+
+}
+.yourStatisticsSectionHeader{
+
+    text-align: center;
+    font-size: 25px;
+    font-weight: bolder;
+}
+.yourStatisticsSectionParagraph{
+
+    display: none;
+}
+.statBoxContainer{
+    text-align: center;
+}
+.statBoxContainer1Header{
+font-weight: bolder;
+
+}
+
+.statBoxContainer1{
+    background: linear-gradient(180deg, #514CF4 0%, #8648ED 100%);
+    width: 40% !important;
+    height: 140px !important;
+    color: white;
+    display: inline-block;
+    border-radius: 20px;
+    padding-top: 30px;
+    margin: 10px;
+}
+
+.statBoxContainer1Paragraph{
+    text-align: center !important;
+    display: inline-block;
+    font-size: 10px;
+    
+}
+
+}
+
+@media only screen and (min-width: 969px) {
+
+    .AdminProfileHeader{
+
+        font-family: Helvetica;
+        font-weight: bolder;
+        margin-bottom: 80% !important;
+        margin-top: 4%;
+        background: linear-gradient(180deg, rgba(255, 0, 0, 0.72) 0%, #ED7048 100%);
+    }
+    
+    /* GREETINGS */
+    .greetingsContainer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2%;
+        width: 90%;
+        height: 42%;
+        background-color: white;
+        border-radius: 45px;
+    }
+    .greetings-section-container{
+    
+        padding-left: 3%;
+        width: 70% !important;
+    }
+    /* Greetings image */
+    .undrawn{
+    
+        width: 39%;
+        margin-left: 3%;
+      
+      
+    }
+    .greetings-header{
+        width: 40% !important;
+        font-size: 330%;
+    }
+    .greetings-paragraph{
+    
+        opacity: 40%;
+        width: 70%;
+    }
+    .greetingsButton{
+        border-radius: 46.5px;
+        font-size: 80%;
+        list-style-type: none;
+        text-transform: none;
+        text-decoration: none;
+        background: linear-gradient(154.86deg, #8648ED 57.59%, #6453ED 84.03%);
+        color: white;
+        padding: 2%;
+    }
+    .greetingsButton:hover{
+        color: black;
+        background-color: white ;
+    
+    }
+    
+    /* ===========================================Yout Statistics =========================================== */
+    
+    .yourStatisticsSection{
+        display: block;
+        padding-top: 3%;
+        padding-bottom: 2.4%;
+        width: 90%;
+    }
+    .yourStatisticsSectionParagraph{
+    
+        opacity: 40%;
+        width: 67%;
+    }
+    /* BOXES */
+    
+    .statBoxContainer{
+        display: flex;
+        width: 90%;
+    }
+    .statBoxContainer1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: linear-gradient(180deg, #514CF4 0%, #8648ED 100%);
+        color: white;
+        height: 160%;
+        border-radius: 20px;
+        margin-right: 50px;
+        font-size: 80%;
+         width: 90%;
+    }
+    .statBoxContainer1Header{
+    
+        font-size: 45px;
+    }
+    
+    /* SIDEBAR ONLY */
+    .sidebar{
+    
+        
+        background: linear-gradient(180deg, #514CF4 2.36%, #8648ED 102.36%);
+        width: 18%;
+        font-family: 'Righteous', cursive;
+    }
+    
+    /* SIDEBAR HEADER */
+    .AdminProfileHeader{
+    
+        display: flex;
+            justify-content: center;
+    }
+    
+    .content{
+    
+        height: 100vh !important;
+        background-color: #E6E7FC;
+        width: 82%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .content-body{
+    
+        width: 80vw;
+    }
+    /* SIDEBAR LINKS */
+    .sidebar-link{
+    
+        list-style-type: none;
+        text-transform: none;
+        text-decoration: none;
+        transition: 0.3s ease-in-out;
+    
+    }
+    .sidebar-link:target{
+    
+    color: red;
+    }
+    .sidebar-link:hover{
+        cursor: pointer; 
+        background-color: #4842f5;
+    }
+    .sidebar, .content{
+    height: 100vh !important;
+    overflow: auto;
+    float: left;
+    }
+    .sectionContent{
+        display: flex;
+        flex-direction: column;  
+    }
+    .sectionContent a{
+        padding-bottom: 20px;
+        padding-top: 20px;
+        padding-left: 30px;
+    }
+    
+
+
+}
+
+@media only screen and (min-width: 1392px) {
+.AdminProfileHeader{
 
     font-family: Helvetica;
     padding-bottom: 30px;
 }
 
-
-
 /* GREETINGS */
 .greetingsContainer{
-
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 3%;
+    margin-top: 2%;
     width: 90%;
     height: 42%;
     background-color: white;
     border-radius: 45px;
 }
-
-
 .greetings-section-container{
 
     padding-left: 5%;
@@ -96,38 +375,6 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* SIDEBAR ONLY */
 .sidebar{
 
@@ -167,6 +414,10 @@
     transition: 0.3s ease-in-out;
 
 }
+.sidebar-link:target{
+
+color: red;
+}
 .sidebar-link:hover{
     cursor: pointer; 
     background-color: #4842f5;
@@ -186,109 +437,4 @@ float: left;
     padding-left: 30px;
 }
 
-
-
-
-
-
-/* 
-
-
-
-
-.row1{
-
-    margin-top: 2%;
-    display: flex;
-    flex-direction: row;
-    flex-grow: 5;
-   
 }
-.column-top{
-    
-    align-self: center;
-    border-radius: 5px;
-   margin-right: 3vw;
-    background-color: white;
-    width: 18%;
-    height: 130px !important;
-}
-
-.box-items{
-
-    padding-top: 20px;
-    margin: 0 auto;
-    width: 80%;
-    display: flex;
-    align-self: flex-start;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.box-items-text{
-
-    font-size: 30px;
-    font-weight: bolder;
-}
-
-
-
-.postRow{
-
-    font-family: Helvetica;
-    margin-top: 2%;
-    background-color: white;
-    width: 100%;
-    border-radius: 3px;
-}
-
-
-
-.row2{
-    margin-top: 2%;
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-
-
-.categoryChart{
-    border-radius: 3px;
-    background-color: white;
-  
-}
-
-.countrySection{
-    border-radius: 3px;
-    width: 48%;
-    vertical-align: top !important;
-    background-color: white;
-}
-
-.rowCharts{
-
-    width: 50%;
-
-    background-color: rgb(197, 197, 197);
-}
-
-.container-fluid{
-    padding: 0 !important; 
-    margin: 0 !important;
-   
-}
-
-
-
-
-
-
-.sectionContent{
-
-    
-    padding-top: 33%;
-}
- */

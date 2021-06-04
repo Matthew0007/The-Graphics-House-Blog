@@ -28,27 +28,47 @@
    
         
   
-  <div class="content">
+  <div class="content mobileContainer">
 
     <!-- <a class="btn btn-dark" href="{% url 'dashboard:addPost' %}"> Add Post</a>  -->
 
+<!-- ==========================TOP SECTION UNTOP OF TABLE=====================≠≠≠=== -->
+    <div style="width: 90%;" class="tableHeaderContainer ">
+      <div class="postSection">
+        <h1 class="postSectionItem">Posts</h1>
+        <a  href="{% url 'dashboard:addPost' %}" class="postSectionItem btn btn-purple add">Add Post</a>
+        <form class="postSectionItem">
 
-    <div style="width: 90%;" class="tableHeaderContainer">
-      <div style="float: left !important;" class="postSection">
-        <h1>Posts</h1>
-        <a href="" class="btn btn-info">Add Post</a>
-        <input>
+            <input class="postSectionSearch unwanted-column" placeholder="Searach Posts.." type="search"><span></span>
+        </form>
+        <div class=" unwanted-column">
+          {% if posted.paginator.num_pages > 1 %}
+            
+            <div class="text-center">
+              {% for pg in posted.paginator.page_range %}
+                <a href="?page={{pg}}" class="btn btn-light
+                  {% if posted.number == pg %}active bg-dark text-light  {% endif %}">{{pg}}
+                </a>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+
+
+        
       </div>
 
-      <div class="figuresSection">
-        adf
-        adsf
-        adf
+      <div style="float: right !important;" class=" figuresSection">
+        <p class="totalParagraph unwanted-column">Total Posts <span class="totalParagraphBold"> {{post_listed|length}}</span></p>
+        <p class="totalParagraph unwanted-column">Published <span class="totalParagraphBold"> 43</span></p>
+        <p class="totalParagraph unwanted-column">Unpublished <span class="totalParagraphBold"> 34</span></p>
       </div>
 
 
     </div>
-<div class="tableConatiner">
+
+    <!-- ==========================TABLE STARTING=========================== -->
+<div class="tableConatiner shadow-lg">
     <table  class="myTableStyling table table-borderless">
         <!-- <h6 class="p-3  text-success"> Posts <br>{{post_listed|length}}</h6> -->
         <thead class="thead-dark">
@@ -56,51 +76,54 @@
               <th scope="">Photo</th>
             <th class="titleCol" scope="">Title</th>
             <!-- <th scope="">Views</th> -->
-            <th  scope="">Category</th>
-            <th scope="cl">Status</th>
+            <th class="unwanted-column"  scope="">Category</th>
+            <th class="unwanted-column" scope="cl">Status</th>
             <th scope="">Actions</th>
           </tr>
         </thead>
         <tbody>
-            {% for p in post_listed %}
+
+         <!-- ==========================TABLE ITEMS=========================== -->
+            {% for p in posted.object_list %}
           <tr class="">
-            <td><a href="{% url 'dashboard:editPost' p.category.slug p.slug %}"><img class="" style="width: 60px; border-radius: 8px;" src="{{p.image.url}}"></a></td>
-            <td style="opacity: 70%;">{{p.title}}</td>
+            <td><a class="" href=""><img class="" style="width: 60px; border-radius: 8px;" src="{{p.image.url}}"></a></td>
+            <td class="titleColValues" style="opacity: 70%;">{{p.title}}</td>
             <!-- <td>{{p.view_count}}</td> -->
-            <td class="catCol"> {{p.category}}</td>
-            <td>
+            <td class="catCol unwanted-column"> {{p.category}}</td>
+            <td class="unwanted-column">
             {% if p.published %} 
-                <a href="{% url 'dashboard:unpublishPost' p.category.slug p.slug %}"  class="buttonUnPublish">unpublish</a>
+                <a href="{% url 'dashboard:unpublishPost' p.category.slug p.slug %}"  class="buttonUnPublish ">unpublish</a>
             {%else%}
             <a href="{% url 'dashboard:publishPost' p.category.slug p.slug %}"  class="buttonPublish">publish</a>
             {% endif %}
             </td>
-            <td>
-                <a href="{% url 'dashboard:editPost' p.category.slug p.slug %}"><i class="far fa-edit"></i></a>
-                <a class="text-danger" href="{% url 'dashboard:deletePost' p.category.slug p.slug %}"><i class="fas fa-trash"></i></a>
-          </td>
+            <td class="actionRow">
+              {% if request.user.groups.all.0.name == 'Admin' %}
+                <a class="actionItem" href="{% url 'dashboard:editPost' p.category.slug p.slug %}"><i class="far fa-edit"></i></a>
+                <a class="actionItem text-danger text-center" href="{% url 'dashboard:deletePost' p.category.slug p.slug %}"><i class="fas fa-trash"></i></a>
+          {%else%}
+              <p class="badge bg-danger">Admin Only</p>
+          {% endif %}
+              </td>
           </tr>
           {% endfor %}
-
-         
         </tbody>
       </table>
 </div>
 
+<div class="wanted-column unwanted-column">
+  {% if posted.paginator.num_pages > 1 %}
+    
+    <div class="text-center">
+      {% for pg in posted.paginator.page_range %}
+        <a href="?page={{pg}}" class="btn btn-light
+          {% if posted.number == pg %}active bg-dark text-light  {% endif %}">{{pg}}
+        </a>
+      {% endfor %}
+    </div>
+  {% endif %}
 </div>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-		crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-		crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-		crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
-		integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
-		crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.1/dist/chart.min.js"></script>
+
+</div>
+
 {% endblock content%}

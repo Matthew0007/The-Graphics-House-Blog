@@ -5,6 +5,14 @@
 {% block title %} HolinessSingles {% endblock %} 
 
 
+
+
+
+
+
+
+
+
 {% block content%}
 
 {% if messages %}
@@ -20,58 +28,78 @@
 
 {%endfor%}
 {%endif%}
-<link rel="stylesheet" href="{% static 'css/category_manager.css' %}" />
-<div style="background-color: white !important;" class="content">
-
+<link rel="stylesheet" href="{% static 'css/category.css' %}" />
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Palanquin+Dark&display=swap" rel="stylesheet">
    
         
   
-<div class="container postRow">
-    <a class="btn btn-dark" href="{% url 'dashboard:categories' %}"> Manage Category</a> 
-    <a class="btn btn-dark" href="{% url 'dashboard:addCategory' %}"> Add Category</a> 
-    <table class="table">
-        <h6 class="p-3 border-bottom text-success"> Categories <br>{{category_list|length}}</h6>
+  <div class="content mobileContainer">
+
+    <!-- <a class="btn btn-dark" href="{% url 'dashboard:addPost' %}"> Add Post</a>  -->
+
+
+    <div style="width: 90%;" class="tableHeaderContainer">
+      <div class="postSection">
+        <h1 class="postSectionItem">Category</h1>
+        <a  href="{% url 'dashboard:addCategory' %}" class="postSectionItem btn btn-purple">Add Category</a>
+        <form class="postSectionItem">
+
+            <input class="postSectionSearch unwanted-column" placeholder="Searach Category.." type="search"><span></span>
+        </form>
+      </div>
+
+      <div style="float: right !important;" class="unwanted-column figuresSection">
+        <p class="totalParagraph">Total Categories <span class="totalParagraphBold"> {{category_list|length}}</span></p>
+        <p class="totalParagraph">Published <span class="totalParagraphBold"> 43</span></p>
+        <p class="totalParagraph">Unpublished <span class="totalParagraphBold"> 34</span></p>
+      </div>
+
+
+    </div>
+<div class="tableConatiner shadow-lg">
+    <table  class="myTableStyling table table-borderless ">
         <thead class="thead-dark">
           <tr>
-              <th scope="col">Name</th>
-            <th scope="col">Navigation Menu</th>
-            <th scope="col">Actions</th>
+              <th class="nameWidthTable" scope="">Name</th>
+            <th class="unwanted-column"  scope="">Slug</th>
+            <th scope="cl">Posts</th>
+            <th style="width: 50%;" class="text-center unwanted-column" scope="cl">Display on Menu</th>
+            <th scope="">Actions</th>
           </tr>
         </thead>
         <tbody>
             {% for category in category_list %}
-          <tr class="">
-            <td>{{category.name}}</td>
-            <td>{{category.navbar}}</td>
-            <td>
-                <a href="{% url 'dashboard:editCategory' category.slug %}">Edit</a><br>
-                <a class="text-danger" href="{% url 'dashboard:deleteCategory' category.slug %}">Delete</a><br>
-
-         
+          <tr class="hoverMe">
+            <td class="">{{category.name}}</td>
+            <td style="width: 10%;" class="unwanted-column">{{category.slug}}</td>
+            <td>{{category.post_count}}</td>
+            <td class="text-center unwanted-column"> 
+            {% if category.navbar %} 
+                <a href=""  class="buttonUnPublish">Hide</a>
+            {%else%}
+            <a href=""  class="buttonPublish">Show</a>
+            {% endif %}
             </td>
-            
+            <td class="actionRow">
+              {% if request.user.groups.all.0.name == 'Admin' %}
+                <a class="actionItem"  href="{% url 'dashboard:editCategory' category.slug %}"><i class="far fa-edit"></i></a>
+                <a class="text-danger actionItem text-center" href="{% url 'dashboard:deleteCategory' category.slug %}"><i class="fas fa-trash"></i></a>
+                {%else%}
+                <p class="badge bg-danger">Admin Only</p>
+            {% endif %}
+          
+              </td>
           </tr>
           {% endfor %}
-
-         
         </tbody>
       </table>
 </div>
 
 </div>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-		crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-		crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-		crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
-		integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
-		crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.1/dist/chart.min.js"></script>
+
+
+
 {% endblock content%}

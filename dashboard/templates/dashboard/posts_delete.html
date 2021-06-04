@@ -1,23 +1,61 @@
 
+
+
 {% extends "baseManager.html" %} 
 {% load static %} 
 {% block metadescription %} 
 {%endblock %} 
 {% block title %} HolinessSingles {% endblock %} 
-
+{% load crispy_forms_tags %}
 
 {% block content%}
-<div class="content">
 
-    <div class=" text-justify  shadow p-3  mb-5  blueRefund" style=" background-color: white; width: 80%;">
-        <a class="btn btn-dark" href="{% url 'dashboard:posts' %}"> Manage Post</a> 
-        <a class="btn btn-dark" href="{% url 'dashboard:addPost' %}"> Add Post</a> 
-    <h1 class="text-center">Add Book</h1>
+
+
+
+
+<link rel="stylesheet" href="{% static 'css/category.css' %}" />
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Palanquin+Dark&display=swap" rel="stylesheet">
+   
+        
+  
+  <div class="content mobileContainer">
+
+    <!-- <a class="btn btn-dark" href="{% url 'dashboard:addPost' %}"> Add Post</a>  -->
+
+
+    <div style="width: 90%;" class="tableHeaderContainer">
+      <div class="postSection">
+        <h1 class="postSectionItem">Delete Post</h1>
+        
+        
+      </div>
+
+     
+
+    </div>
+<div style="border-radius: 10px;" class="tableConatiner shadow-lg">
+   
     <form action="" method="post" enctype="multipart/form-data">
         {% csrf_token %}
-       <p class="text-center">Are you sire you want ot delete <b>"{{deletePost.title}}"</b> <button class="btn btn-danger text-center" type="submit">Confirm</button></p>
+       <p class="text-center">Are you sure you want to delete <b>"{{deletePost.title}}"</b><br> <button class="btn btn-danger text-center" type="submit">Confirm</button></p>
         
     </form>
-    </div>
-    </div>
+    
+
+</div>
+
+</div>
+
+
+
+
+
+    
     {% endblock content %}
+    
+   
+   

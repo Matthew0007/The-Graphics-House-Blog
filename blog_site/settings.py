@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'search_app',
     'dashboard',
     'crispy_forms',
+    'contact',
 ]
 
 MIDDLEWARE = [
@@ -67,8 +68,10 @@ TEMPLATES = [
         'DIRS': [
 
               str(BASE_DIR.joinpath('website','templates')),
+              str(BASE_DIR.joinpath('accounts','templates')),
               str(BASE_DIR.joinpath('search_app','templates')),
               str(BASE_DIR.joinpath('dashboard','templates')),
+              str(BASE_DIR.joinpath('contact','templates')),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -80,6 +83,8 @@ TEMPLATES = [
                 'website.context_processors.menu',
                 'website.context_processors.post_menu',
                 'website.context_processors.whatWeDo',
+                'website.context_processors.message_count',
+                'website.context_processors.contact_form',
             ],
         },
     },

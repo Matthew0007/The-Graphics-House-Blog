@@ -1,0 +1,56 @@
+
+{% load static %}
+
+
+<nav  style="display: none; background: linear-gradient(180deg,#514CF4 2.36%, #8648ED 102.36%);"   class="sticky-top navbar navbar-expand-lg">
+    <!-- <nav   style=" background-color: #c92020;"  id="navbarMain" class="navbar navbar-expand-lg  border-bottom "> -->
+        <button style=""  id="hamburger" onclick="searchRemover()" class=" navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars text-dark"></i>
+        </button>
+          
+        <a href="{% url 'dashboard:main' %}" class="navbar-brand text-center badge nav-link" style="font-family: Helvetica;
+        font-weight: bolder;
+        background: linear-gradient(180deg, rgba(255, 0, 0, 0.72) 0%, #ED7048 100%);">
+          {{request.user}}
+          </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+         
+    <ul id="navbarContent" class="navbar-nav mx-auto text-center">
+      
+     
+   <li class="py-3 h1 nav-item">
+<a class="text-white nav-link" href="{% url 'dashboard:main' %}"">
+ Dashboard
+        </a>
+   </li>
+   <li class="py-3 h1 nav-item">
+     <a id="" class="text-white nav-link" href="{% url 'dashboard:categories' %}">
+Categories
+        </a>
+  </li>
+  <li class="py-3 h1 nav-item">
+     <a class="text-white nav-link" href="{% url 'dashboard:posts' %}">
+  Posts
+        </a>
+  </li>
+  <li class="py-3 h1 nav-item">
+     <a class="text-white nav-link" href="{% url 'dashboard:authors' %}">
+Authors
+        </a>
+  </li>
+  <li class="py-3 h1 nav-item">
+     <a class="text-white nav-link" href="{% url 'dashboard:messages' %}">
+ Messages {% if message_count > 0 %}
+            <span class="badge bg-danger">
+
+                {{message_count}}</span>
+                {%endif%}
+        </a>
+  </li>
+ 
+    </ul>
+
+        </div>
+    
+     
+    </nav>

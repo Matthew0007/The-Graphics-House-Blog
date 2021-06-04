@@ -4,23 +4,54 @@
 {% block metadescription %} 
 {%endblock %} 
 {% block title %} HolinessSingles {% endblock %} 
-
 {% load crispy_forms_tags %}
-{% block content%}
-<div style="background-color: white;" class="content">
 
-    <div class=" text-justify card-profile  p-3  mb-5  blueRefund" style="background-color: white;">
-        <a class="btn btn-dark" href="{% url 'dashboard:posts' %}"> Manage Post</a> 
-        <a class="btn btn-dark" href="{% url 'dashboard:addPost' %}"> Add Post</a> 
-    
-        <h1 class="text-center">Add Book</h1>
-    <form action="" method="post" enctype="multipart/form-data">
+{% block content%}
+
+
+
+
+
+<link rel="stylesheet" href="{% static 'css/category.css' %}" />
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Palanquin+Dark&display=swap" rel="stylesheet">
+   
+        
+  
+  <div class="content mobileContainer">
+
+    <!-- <a class="btn btn-dark" href="{% url 'dashboard:addPost' %}"> Add Post</a>  -->
+
+
+    <div style="width: 90%;" class="tableHeaderContainer">
+      <div class="postSection">
+        <h1 class="postSectionItem">Edit Post</h1>
+        
+        
+      </div>
+
+     
+
+    </div>
+<div style="border-radius: 10px;" class="tableConatiner  shadow-lg">
+   
+    <form style="width: 100%;" class="formContainer" action="" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.media }}
         {{ form | crispy }}
         <button class="btn btn-success" type="submit">Save</button>
     </form>
-    </div>
-    </div>
+    
+
+</div>
+
+</div>
+
+
+
+
+    
     {% endblock content %}
     

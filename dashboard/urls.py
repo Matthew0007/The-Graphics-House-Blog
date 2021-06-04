@@ -19,6 +19,13 @@ urlpatterns = [
     path('categoryDelete/<slug:category_slug>/', views.deleteCategory, name='deleteCategory'),
     path('CategoryAdd/', views.addCategory, name='addCategory'),
 
+    # AUTHOR
+    path('Authors/', views.AuthorView, name='authors'),
 
-    
+
+    # Messages
+    path('Messages/', views.messageView, name='messages'),
+
+
+
 ]

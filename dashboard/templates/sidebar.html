@@ -7,27 +7,32 @@
 
 <div class="sidebar">
 
-<div class="text-white text-center py-md-3 px-md-3 w-75 mx-auto AdminProfileHeader">
+<div class="badge bg-light  text-center py-md-3 px-md-3 w-75 mx-auto AdminProfileHeader">
     {{request.user}}
     </div>
 <div class=" sectionContent ">
 
    <a class="text-white sidebar-link" href="{% url 'dashboard:main' %}"">
-    <i class="fas fa-star "></i>&nbsp;&nbsp;   Dashboard
+    <i class="fas fa-chart-line"></i>&nbsp;&nbsp;   Dashboard
     </a>
 
-    <a class="text-white sidebar-link" href="{% url 'dashboard:categories' %}">
+    <a id="" class="text-white sidebar-link target" href="{% url 'dashboard:categories' %}">
         <i class="fas fa-star"></i>&nbsp;&nbsp;  Categories
     </a>
     <a class="text-white sidebar-link" href="{% url 'dashboard:posts' %}">
-        <i class="fas fa-star"></i>&nbsp;&nbsp;   Posts
+        <i class="far fa-newspaper"></i>&nbsp;&nbsp;   Posts
     </a>
     
-    <a class="text-white sidebar-link" href="">
-        <i class="fas fa-star"></i>&nbsp;&nbsp;   Authors
+    <a class="text-white sidebar-link" href="{% url 'dashboard:authors' %}">
+        <i class="fas fa-id-badge"></i>&nbsp;&nbsp;   Authors
     </a>
-    <a class="text-white sidebar-link" href="">
-        <i class="fas fa-star"></i>&nbsp;&nbsp;   Messages
+    <a class="text-white sidebar-link" href="{% url 'dashboard:messages' %}">
+        <i class="fas fa-inbox"></i>&nbsp;&nbsp;   Messages {% if message_count > 0 %}
+        
+        <span class="badge bg-danger">
+    
+            {{message_count}}</span>
+            {%endif%}
     </a>
     
 </div>
