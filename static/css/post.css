@@ -53,6 +53,62 @@
     color: #c92020 !important;
   }
  
+
+  /* PROFILE HOLINESS CONTAINER */
+
+  .profileHoliness{
+
+    padding-top: 8vh;
+    
+  }
+.profileHolinessText{
+  font-family: Helvetica;
+opacity: 60%;
+}
+
+.profileHolinessMediaContainer{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.profileHolinessMedia{
+  padding: 0 5px;
+}
+
+
+  /* HOMEPAGE FIRST SECTION  */
+
+  .homePageFirstSection2{
+
+    padding-bottom: 5vh;
+  }
+  /* OTHER TOPICS ALLO */
+
+  .otherTopics{
+
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+  }
+.otherTopicsHeader{
+  font-size: 1rem;
+  font-family: "Playfair Display", serif;
+}
+.otherTopicsLabelText{
+  
+  font-family: "Playfair Display", serif;
+  font-weight: lighter !important;
+  padding: 0 20px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.otherTopicsLabelsContainer{
+
+  display: flex;
+  flex-direction: row;
+}
+
+
   
   
   /* HOMEPAGE */
@@ -76,6 +132,10 @@
       padding-top: 3.2vh;
       border: none !important;
       
+      
+    }
+    #navbarContent li a{
+      font-size: 400px !important;
     }
    
   
@@ -171,7 +231,7 @@
     font-weight: bold;
     padding-top: 5vh;
     padding-bottom: 3vh;
-    width: 39vw;
+    width: 42vw;
   }
 
   /* WHAT WE DO SECTION */
@@ -283,6 +343,76 @@
 
   display: block !important;
 }
+
+
+
+   /* CHECK OUT SECTION */
+
+   .checkOutPostInnerBody:nth-child(3){
+    display: none;
+  }
+  
+  .checkOutPostInnerContainer{
+  
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+  }
+  .checkOutPostInnerBody{
+    padding-right: 15px;
+  
+  }
+  
+  .checkOutPostImage{
+  
+    width: 45vw;
+  }
+  
+  .checkOutPostsHeading{
+    font-size: 13px;
+    font-weight: bold;
+    padding-top: 5vh;
+    padding-bottom: 3vh;
+    margin: 0 auto;
+    display: inline-block;
+  
+  }
+  
+  .checkOutPostInnerCategoryText{
+  
+    text-transform: uppercase;
+    padding: 25px 0 15px 0;
+    font-size: 9px;
+    font-weight: 400;
+    
+  }
+  .checkOutPostInnerTitle{
+    font-size: 12px;
+    font-family: "Soure Sans Pro", sans-serif;
+    text-transform: capitalize;
+    width: 100%;
+  
+    
+  
+  }
+  
+  .checkOutPostInnerFooter{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+  }
+  .checkOutPostInnerFooterText{
+  
+    font-size: 40%;
+    text-align: center;
+  text-transform: uppercase;
+   
+  }
+
+
   }
   /* ADDITIONAL MEDIA FOR NAVBAR TABLET */
   @media only screen and (max-width: 991px) {
@@ -301,7 +431,6 @@
       display: block !important;
     }
   
-   
 
   }
 
@@ -325,6 +454,7 @@
     #logoNavbar {
       display: none !important;
     }
+    
 
   }
   
@@ -603,6 +733,117 @@ font-weight: 300;
   padding-bottom: 3vh;
 }
   
+/* CHECK OUT SECTION */
+.checkOutPostInnerContainer{
+
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+}
+.checkOutPostInnerBody{
+  padding-right:30px;
+}
+
+.checkOutPostImage{
+
+  width: 38vw !important;
+}
+
+.checkOutPostsHeading{
+  font-size: 13px;
+  font-weight: bold;
+  padding-top: 5vh;
+  padding-bottom: 3vh;
+  margin: 0 auto;
+  display: inline-block;
+
+}
+
+.checkOutPostInnerCategoryText{
+
+  text-transform: uppercase;
+  padding: 25px 0 15px 0;
+  font-size: 9px;
+  font-weight: 400;
+}
+.checkOutPostInnerTitle{
+  font-size: 14px;
+  font-family: "Soure Sans Pro", sans-serif;
+  text-transform: capitalize;
+  
+
+}
+
+.checkOutPostInnerFooter{
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.checkOutPostInnerFooterText{
+
+  font-size: 50% !important;
+  padding: 0 10px;
+  text-transform: uppercase;
+  
+}
+/* CHECK OUT SECTION */
+
+
+
+.checkOutPostInnerContainer{
+
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+}
+.checkOutPostInnerBody{
+  padding-right:30px;
+}
+
+.checkOutPostImage{
+
+  width: 18vw;
+}
+
+.checkOutPostsHeading{
+  font-size: 13px;
+  font-weight: bold;
+  padding-top: 5vh;
+  padding-bottom: 3vh;
+  margin: 0 auto;
+  display: inline-block;
+
+}
+
+.checkOutPostInnerCategoryText{
+
+  text-transform: uppercase;
+  padding: 25px 0 15px 0;
+  font-size: 9px;
+  font-weight: 400;
+}
+.checkOutPostInnerTitle{
+  font-size: 14px;
+  font-family: "Soure Sans Pro", sans-serif;
+  text-transform: capitalize;
+  
+
+}
+
+.checkOutPostInnerFooter{
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.checkOutPostInnerFooterText{
+
+  font-size: 40%;
+  padding: 0 10px;
+  text-transform: uppercase;
+  
+}
   }
   
   
@@ -839,6 +1080,64 @@ font-weight: 300;
   display: block !important;
 }
 
+/* CHECK OUT SECTION */
+
+
+
+.checkOutPostInnerContainer{
+
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+}
+.checkOutPostInnerBody{
+  padding-right:30px;
+}
+
+.checkOutPostImage{
+
+  width: 18vw;
+}
+
+.checkOutPostsHeading{
+  font-size: 13px;
+  font-weight: bold;
+  padding-top: 5vh;
+  padding-bottom: 3vh;
+  margin: 0 auto;
+  display: inline-block;
+
+}
+
+.checkOutPostInnerCategoryText{
+
+  text-transform: uppercase;
+  padding: 25px 0 15px 0;
+  font-size: 9px;
+  font-weight: 400;
+}
+.checkOutPostInnerTitle{
+  font-size: 14px;
+  font-family: "Soure Sans Pro", sans-serif;
+  text-transform: capitalize;
+  
+
+}
+
+.checkOutPostInnerFooter{
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.checkOutPostInnerFooterText{
+
+  font-size: 40%;
+  padding: 0 10px;
+  text-transform: uppercase;
+  
+}
+
 }
   
   
@@ -898,7 +1197,7 @@ font-weight: 300;
     }
     .homePageFirstSection2Inner{
 
-        width: 45vw;
+        width: 55vw;
     
 }
     .labelContainer{
@@ -1112,4 +1411,68 @@ font-weight: 300;
 
   display: block !important;
 }
+
+
+
+/* CHECK OUT SECTION */
+
+
+
+.checkOutPostInnerContainer{
+
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+}
+.checkOutPostInnerBody{
+  padding-right:30px;
+}
+
+.checkOutPostImage{
+
+  width: 18vw;
+}
+
+.checkOutPostsHeading{
+  font-size: 13px;
+  font-weight: bold;
+  padding-top: 5vh;
+  padding-bottom: 3vh;
+  margin: 0 auto;
+  display: inline-block;
+
+}
+
+.checkOutPostInnerCategoryText{
+
+  text-transform: uppercase;
+  padding: 25px 0 15px 0;
+  font-size: 9px;
+  font-weight: 400;
+}
+.checkOutPostInnerTitle{
+  font-size: 14px;
+  font-family: "Soure Sans Pro", sans-serif;
+  text-transform: capitalize;
+  
+
+}
+
+.checkOutPostInnerFooter{
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.checkOutPostInnerFooterText{
+
+  font-size: 50%;
+  padding: 0 10px;
+  text-transform: uppercase;
+  
+}
+
+
+
+
   }

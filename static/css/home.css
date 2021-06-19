@@ -6,11 +6,7 @@
 #navbarContent li {
     
   font-weight: 300;
-
-  
 }
-
-
 
 #navbarMain {
   background-color: #f4f5f5;
@@ -19,8 +15,6 @@
 }
 #navbarContent li a{
   color: black;
-  
-  
 }
 .logo {
   display: block;
@@ -176,7 +170,7 @@
     font-weight: bold;
     padding-top: 5vh;
     padding-bottom: 3vh;
-    width: 39vw;
+    width: 45vw;
   }
 
   /* WHAT WE DO SECTION */
@@ -396,7 +390,7 @@
     
     vertical-align: top;
     height: 80%;
-    padding: 0 70px;
+    padding: 0 50px;
     
   
   }
@@ -610,7 +604,7 @@
   }
 
   .container-md {
-    max-width: 950px;
+    max-width: 95% !important;
   }
   .outer {
     display: flex;
@@ -621,7 +615,7 @@
   .homePageFirstSection {
   }
   .forEachRowImageMobile {
-    width: 22vw;
+    width: 28vw;
   }
 
   .forEachRowHomePageTextMobile {
@@ -638,7 +632,7 @@
   }
 
   .forEachRowHomePageTextHeaderMobile {
-    width: 25vw;
+    width: 27vw;
     padding-bottom: 5vh;
     font-size: 19px;
   }
@@ -665,7 +659,7 @@
   /* FACEBOOK SECTION */
 
   .facebookWidth {
-    width: 10vw;
+    width: 100%;
   }
 
   .homePageFacebookSection .facebookHeaderText {
@@ -678,7 +672,7 @@
   }
 
   .homePageFacebookSection {
-    width: 40%;
+    width: 100%;
   }
 
   .facebookSection {
@@ -771,12 +765,13 @@ font-weight: 300;
   font-size: 13px;
   font-weight: bold;
   padding-top: 5vh;
+
   padding-bottom: 3vh;
 }
   
 #reachUsWhatSectionOriginal{
 
-
+width: 100%;
   display: block !important;
 }
 
@@ -800,8 +795,215 @@ font-weight: 300;
 }
 }
 
+
 /* FULLSCREEN 😎 */
-@media only screen and (min-width: 1201px) {
+@media only screen and (min-width: 1201px) and (max-width: 1501px) {
+
+  #navbarContent li {
+    
+    font-weight: 300;
+    margin-left: 28px;
+    
+    
+  }
+  #logoNavbar {
+    display: none;
+  }
+
+  .container-md {
+    max-width: 85%;
+    display: flex;
+    
+    
+    justify-content: space-between;
+  }
+  .outer {
+    display: flex;
+    justify-content: space-between;
+  }
+  /* FIRST SECTION */
+
+  .homePageFirstSection {
+  }
+  .forEachRowImageMobile {
+    width: 28vw;
+  }
+
+  .forEachRowHomePageTextMobile {
+    padding-left: 2vw;
+  }
+
+  .forEachRowHomePageCategorytMobile {
+    padding-top: 0.5vh;
+    text-transform: uppercase;
+    font-size: 9px;
+  }
+  .forEachRowHomePageCategorytMobileSeperate {
+    font-size: 35px !important;
+  }
+  .forEachRowHomePageMobile {
+    padding-bottom: 5vh;
+  }
+
+  .forEachRowHomePageTextHeaderMobile {
+    width: 27vw;
+    padding-bottom: 5vh;
+    font-size: 22px;
+  }
+  .homePageFirstSection2Outer {
+  }
+  .homePageFirstSection2 {
+    display: flex;
+    padding-top: 5vh;
+
+    border-bottom: 1px solid #dee2e6 !important ;
+    justify-content: center;
+  }
+  /* DESKTOP SECTIONS */
+  .firstSectionDesktop {
+    display: inline-block !important;
+  }
+  .secondSectionDesktop {
+    
+    width: 45%;
+    padding-left: 8%;
+    vertical-align: top;
+    
+    
+  }
+
+  /* FACEBOOK SECTION */
+
+  .facebookWidth {
+    width: 10vw;
+  }
+
+  
+
+  .homePageFacebookSection {
+    width: 40%;
+  }
+
+  .facebookSection {
+    width: 30%;
+  }
+
+  .facebookHeaderText {
+    display: inline-block;
+    font-weight: bold;
+    padding-top: 5vh;
+    padding-bottom: 3vh;
+    width: 15vw;
+    font-size: 13px;
+  }
+
+  /* WHAT WE DO SECGTION */
+
+  .homePageWhatImage {
+    width: 5vw;
+    height: auto;
+   
+  }
+
+  .homePageWhatRow {
+    display: flex;
+    padding-bottom: 14px;
+    align-items: center;
+  }
+  .homePageWhatHeaderText {
+    padding-left: 10px;
+    font-size: 14px;
+    font-family: "Playfair Display", serif;
+    width: 70%;
+  }
+  .homePageWhatH1 {
+    font-size: 13px;
+    font-weight: bold;
+    padding-top: 5vh;
+    padding-bottom: 3vh;
+    margin: 0 auto;
+    display: inline-block;
+  }
+
+  .homePageWhatSection {
+   float: left;
+   width: 100%;
+    
+  }
+
+  /* NEWSLETTER SECTION */
+
+  .homePageNewsLetterSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+  }
+
+  .homePageNewsLetterBackground {
+    margin-top: 40px;
+    background-color: #c92020;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .homePageNewsLetterHeader {
+    font-size: 13px;
+    width: 80%;
+    font-weight: bold;
+    padding: 31px  0 26px 0;
+    color: white;
+  }
+  .homePageNewsLetterInput {
+    width: 80%;
+    height: 30px;
+    border: none;
+  }
+
+  .homePageNewsLetterButton {
+    width: 40%;
+    font-size: 13px;
+    margin-bottom: 30px;
+  }
+ ::placeholder{
+  margin-top: -10px;
+  padding-left: 16px;
+  margin-bottom: 19px;
+  font-size: 12px;
+  font-weight: 300;
+}
+  
+  #logo {
+    display: block;
+  }
+
+/* NEED TO RACH US */
+
+
+.homePageNeedReachUsH1{
+
+  
+  font-size: 13px;
+  font-weight: bold;
+  padding-top: 5vh;
+  padding-bottom: 3vh;
+}
+  
+#reachUsWhatSectionOriginal{
+
+
+  display: block !important;
+}
+
+ 
+}
+
+
+/* FULLSCREEN 😎 */
+@media only screen and (min-width: 1502px) {
 
   #navbarContent li {
     
@@ -1004,4 +1206,3 @@ font-weight: 300;
 
  
 }
-

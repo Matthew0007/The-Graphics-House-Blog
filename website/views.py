@@ -37,10 +37,10 @@ def allPostCat(request, category_slug):
 
     
 def post_detail(request, category_slug, post_slug):
+    checkOutPost = Post.objects.all().order_by('?')[:3]
     compareTime = tz.now() - datetime.timedelta(days=6)
-    print(compareTime)
+  
 
-    
     new = False
 
     def get_ip(request):
@@ -72,6 +72,6 @@ def post_detail(request, category_slug, post_slug):
     except Exception as e:
         raise e
 
-    return render(request, 'website/post.html', {'post':post,'new':new})
+    return render(request, 'website/post.html', {'post':post,'new':new, 'checkOutPost':checkOutPost})
 
    

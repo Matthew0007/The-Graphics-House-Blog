@@ -20,7 +20,7 @@
       <!--======================================================== FOR EACH ROW ======================================================== -->
   
               <div class="homePageFirstSection2Outer">
-              <div class="homePageFirstSection2">
+              <div class="homePageFirstSection2 border-bottom">
                 <div class="homePageFirstSection2InnerOuter">
 
             <div class="homePageFirstSection2Inner ">
@@ -48,30 +48,84 @@
               <p style="opacity: 20%;" class="forEachRowHomePageLabelstMobile forEachRowHomePageMinuteRead">{{post.read_time }} MIN READ</p>
              
               <p style="opacity: 30%;" class="forEachRowHomePageLabelstMobile"><i class="fas fa-eye"></i> {{post.view_count }}</p>
-      
-
-
             </div>
         </div>
     </div>
-                          <div class="forEachRowHomePageMobile">
-                  <a class="" href="{{post.get_absolute_url}}"> 
-                      <img style="" id="" class=" forEachRowImageMobile" src="{{post.image.url}}" />
-                  </a>
-
-           
+        <div class="forEachRowHomePageMobile">
+            <a class="" href="{{post.get_absolute_url}}"> 
+             <img style="" id="" class=" forEachRowImageMobile" src="{{post.image.url}}" />
+          </a>
              </div>
          
              <div class="forEachRowHomePageTextMobile">
-      
                 <p class="forEachRowHomePageContent">{{post.content|safe}}</p>
 
-      
               
               </div>
              </div>  
+
+
+             <div class="otherTopics border-bottom">
+
+                <h6 class="otherTopicsHeader">Other Topics</h6>
+
+                <div class="otherTopicsLabelsContainer">
+
+                    <p class="otherTopicsLabelText">#love </p>
+                    <p class="otherTopicsLabelText">#love </p>
+                    <p class="otherTopicsLabelText">#love </p>
+                </div>
+
+             </div>
+
+             <div class="profileHoliness text-center">
+                <img class="my-4 mx-auto" style="width: 250px;" src="{% static 'images/deeperLifeMarriages.png' %}" alt="Online Cushion Store">
+             <h6>HolinessSingles.com</h6>
+                <p class="profileHolinessText pt-2">We give hope to those waiting for thier life partners and a light to those who are in darkness. | Email: holinessSingles@gmail.com</p>
+            <div class="profileHolinessMediaContainer ">
+                <p class="profileHolinessMedia"><i style="" class=" fab fa-facebook text-dark"></i></p>
+                <p class="profileHolinessMedia"><i style="" class=" fab fa-facebook text-dark"></i></p>
+                <p class="profileHolinessMedia"><i style="" class=" fab fa-facebook text-dark"></i></p>
+
+
+            </div>
+            
+            </div>
+
+
+          
+             
+
+
+                  <div class="checkOutPostsContainer">
+
+                    <h5 class="checkOutPostsHeading">
+                        OUR OTHER POSTS
+                    </h5>
+                    
+                    <div class="checkOutPostInnerContainer">
+                        {% for chechOut in checkOutPost %}
+                        <div class="checkOutPostInnerBody">
+                            <img class="checkOutPostImage" src="{{chechOut.image.url}}" alt="check out this image text">
+                            <h6 class="checkOutPostInnerCategoryText text-center">{{chechOut.category}}</h6>
+                            <p class="checkOutPostInnerTitle text-center">{{chechOut.title}}</p>
+                            <div class="checkOutPostInnerFooter">
+                                <p class="checkOutPostInnerFooterText">{{chechOut.author}}</p>
+                                <p id="checkOutPostInnerFooterTextDate" class="checkOutPostInnerFooterText">{{chechOut.created|date:'M d, Y'}}</p>
+
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    
+                  </div>
+           
              
           </div>
+
+
+          
           </section>
       </div>
       

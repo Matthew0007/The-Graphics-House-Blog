@@ -1,124 +1,104 @@
 {% load static %}
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="{% static 'css/all.css' %}" />
-
+<script src="https://kit.fontawesome.com/c5d43b333f.js" crossorigin="anonymous"></script>
 <style>
+  @media only screen and (max-width: 765px) {}
 
+  @media only screen and (max-width: 991px) {
+    #searchIconMobile2 {
+      display: none !important;
+    }
 
+    #searchIconMobile {
+      display: block !important;
+    }
+  }
 
-@media only screen and (max-width: 765px) {
+  #hamburger{
 
+    font-size: 20px;
+  }
 
-
-}
-@media only screen and (max-width: 991px) {
-
-  #searchIconMobile2{
-
- display: none !important;
-
-}
-
-#searchIconMobile{
-
- display: block !important;
-}
-
-}
-
-
-
-  .t:hover{
-
+  .t:hover {
     color: #c92020 !important;
-   
-
   }
 
-  .t{
-
-    color: black !important; 
-    font-family:  Helvetica !important;
-    font-size: 12px !important; 
-    font-weight: 200 !important;
+  .t {
+    color: black !important;
+    font-family: Helvetica !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
   }
-  #searchIconMobile{
 
+  #searchIconMobile {
+    transition: 0.1s ease-in-out;
+    font-size: 20px;
+    opacity: 80%;
+  
+  }
+
+  #searchIconMobile:hover {
+    cursor: pointer;
+    opacity: 20%;
+  }
+
+  #searchIconMobile2 {
     transition: 0.1s ease-in-out;
   }
 
-  #searchIconMobile:hover{
-
+  #searchIconMobile2:hover {
     cursor: pointer;
     opacity: 20%;
-    
   }
-  #searchIconMobile2{
-
-transition: 0.1s ease-in-out;
-}
-
-#searchIconMobile2:hover{
-
-cursor: pointer;
-opacity: 20%;
-
-}
-
-
 </style>
 
-<nav   style="border-top: #eeeeee 1px solid;border-bottom: #eeeeee 1px solid; background-color: #c92020; background-color: #f4f5f5;"   id="navbarMain" class="sticky-top navbar navbar-expand-lg">
-  <!-- <nav   style=" background-color: #c92020;"  id="navbarMain" class="navbar navbar-expand-lg  border-bottom "> -->
-    
-      <button style=""  id="hamburger" onclick="searchRemover()" class=" navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fas fa-bars text-dark"></i>
-      </button>
-  
-      <a id="logoNavbar" class="navbar-brand mx-auto ml-3" href="{% url 'website:home' %}"> <img class=" mx-auto" style="width: 170px;" src="{% static 'images/HS.png' %}" alt="Online Cushion Store"></a>
-      <a class="navbar-brand" href="#"><img src=""></a>
-    
-      <i style="display: none; margin-right: 2vw;"  id="searchIconMobile" class="fas fa-search text-dark"></i>
-  
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul id="navbarContent" class="navbar-nav mx-auto ">
-          
-  
-  
-          {%for link in links%}
-         
-          <li class="nav-item text-center text-bold navers">
-     <a style="color: black;" href="{% url 'website:category_detail' link.slug %}"   class="text-white t " aria-current="page" >{{link.name}}</a> 
-          </li> 
-  
-          
-          {%endfor%}
-          <li class="nav-item text-center text-bold navers">
-            <a style="color: black;" href="{% url 'dashboard:main' %}"   class="text-white t " aria-current="page" >ADMIN PANEL</a> 
-                 </li> 
-                 	<!-- <a href="{% url 'signin' %}">Sign Up <i class="fas fa-user-plus"></i></a>
-   -->
-      </div>
-      <i  style="margin-right: 2vw; "  id="searchIconMobile2" class="fas fa-search text-dark"></i>
-  
-   
-  </nav>
 
+<nav  style="
+    /* border-top: #eeeeee 1px solid;
+    border-bottom: #eeeeee 1px solid; */
+    padding: 0 !important;
+    background-color: #f4f5f5;
+  " id="navbarMain" class="sticky-top navbar navbar-expand-lg">
+  <!-- <nav   style=" background-color: #c92020;"  id="navbarMain" class="navbar navbar-expand-lg  border-bottom "> -->
+  <button style="" id="hamburger" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-bars text-dark"></i>
+  </button>
+  <!-- IMAGEL LINK -->
+  <a id="logoNavbar" class="navbar-brand mx-auto ml-3" href="{% url 'website:home' %}">
+    <!-- IMAGE -->
+    <img class="mx-auto" style="width: 170px" src="{% static 'images/HS.png' %}" alt="Online Cushion Store" /></a>
+  <a class="navbar-brand" href="#"><img src="" /></a>
+  <!-- SEARCH ICON -->
+  <i style="display: none; margin-right: 2vw" id="searchIconMobile" class="fas fa-search text-dark"></i>
+  <!-- COLLAPSER -->
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul id="navbarContent" class="navbar-nav mx-auto">
+      {%for link in links%}
+      <li class="nav-item text-center text-bold navers">
+        <a style="color: black" href="{% url 'website:category_detail' link.slug %}" class="text-white t"
+          aria-current="page">{{link.name}}</a>
+      </li>
+      {%endfor%}
+      <!-- <li class="nav-item text-center text-bold navers">
+            <a style="color: black;" href="{% url 'dashboard:main' %}"   class="text-white t " aria-current="page" >ADMIN PANEL</a> 
+                 </li>  -->
+    </ul>
+    <!-- <a href="{% url 'signin' %}">Sign Up <i class="fas fa-user-plus"></i></a>
+   -->
+  </div>
+  <i style="margin-right: 2vw" id="searchIconMobile2" class="fas fa-search text-dark"></i>
+</nav>
 
 
 
 <script>
+  const search_Icon = document.getElementById("searchIconMobile");
+  const hamburger = document.getElementById("hamburger");
 
-const search_Icon = document.getElementById("searchIconMobile");
-const hamburger = document.getElementById("hamburger");
-
-
-
-function searchReover(){
-
-  search_Icon.style.display = "none";
-}
- 
-
+  function searchReover() {
+    search_Icon.style.display = "none";
+  }
 </script>
