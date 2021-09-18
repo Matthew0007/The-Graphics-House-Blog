@@ -1,20 +1,33 @@
 {% extends "base.html" %} 
 {% load static %} 
-{% block metadescription %} 
+{% block metadescription %}
 {%endblock %} 
-{% block title %} DeeperLifeSingles {% endblock %} 
-{% block content%}
+{% block title %} The Graphics House {% endblock %} 
+{% block
+content %}
 
 <link rel="stylesheet" href="{% static 'css/home.css' %}" />
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
+  rel="stylesheet"
+/>
 
 <link rel="stylesheet" href="{% static 'css/all.css' %}" />
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.gstatic.com"> 
-<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-{%comment%}<!-- 
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap"
+  rel="stylesheet"
+/>
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+  rel="stylesheet"
+/>
+
+{%comment%}
+
+<!-- 
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;700&display=swap" rel="stylesheet">
 
@@ -139,64 +152,73 @@ data-show-facepile="false"
       </div>
      -->
 
-
-
-
-
 {%endcomment%}
 
+<div id="dropdown" class="container-fluid bg-dark"></div>
 
-<div id="dropdown" class="container-fluid bg-dark">
-
-   
-
-
-</div>
-
-<p class="text-center my_search_text mt-5">You have searched for: <b>"{{ query }}"</b></p>
+<p class="text-center my_search_text mt-5">
+  You have searched for: <b>"{{ query }}"</b>
+</p>
 <div class="Outer container-md">
+  <div class="firstSectionDesktop">
+    <section class="homePageFirstSection">
+      <!--======================================================== FOR EACH ROW ======================================================== -->
 
-
-<div class="firstSectionDesktop ">
-<section class=" homePageFirstSection">
-<!--======================================================== FOR EACH ROW ======================================================== -->
-
-        {% for post in posts%}
-        <div class="homePageFirstSection2Outer">
+      {% for post in posts%}
+      <div class="homePageFirstSection2Outer">
         <div class="homePageFirstSection2">
-        <div class="forEachRowHomePageMobile">
-            <a class="" href="{{post.get_absolute_url}}"> 
-                <img style="" id="" class=" forEachRowImageMobile" src="{{post.image.url}}" />
+          <div class="forEachRowHomePageMobile">
+            <a class="" href="{{post.get_absolute_url}}">
+              <img
+                style=""
+                id=""
+                class="forEachRowImageMobile"
+                src="{{post.image.url}}"
+              />
             </a>
-       </div>
-       <div class="forEachRowHomePageTextMobile">
+          </div>
+          <div class="forEachRowHomePageTextMobile">
+            <p class="forEachRowHomePageCategorytMobile">
+              <a
+                style="list-style-type: none; text-decoration: none"
+                href="{%url 'website:category_detail' post.category.slug%}"
+                class="text-dark"
+                >{{post.category}}</a
+              >
+            </p>
 
-        <p class="forEachRowHomePageCategorytMobile"><a style="list-style-type: none; text-decoration: none;"  href="{%url 'website:category_detail' post.category.slug%}" class=" text-dark">{{post.category}}</a></p>
+            <h4
+              style="text-transform: capitalize"
+              class="forEachRowHomePageTextHeaderMobile text-dark"
+            >
+              <a
+                style="list-style-type: none; text-decoration: none"
+                class="text-dark"
+                href="{{post.get_absolute_url}}"
+              >
+                {{post.title}}</a
+              >
+            </h4>
+          </div>
+        </div>
+      </div>
 
+      {% empty %}
+      <section style="padding-bottom: 100vh"></section>
 
-        <h4 style="text-transform:capitalize ;" class="forEachRowHomePageTextHeaderMobile text-dark"><a style="list-style-type: none; text-decoration: none; " class="text-dark  " href="{{post.get_absolute_url}}"> {{post.title}}</a></h4>
+      {%endfor%}
+    </section>
+  </div>
 
-       </div>  
-    </div>
-</div>
-
-{% empty %}
-
-        {%endfor%}
-   
-</section>
-
-</div>
-
-<div class="secondSectionDesktop ">
+  <!-- <div class="secondSectionDesktop ">
       
       
       
     <section class=" homePageFacebookSection">
-        <!--======================================================== FACEBOOK SECTION ======================================================== -->
+     
     <h1 style="width: 200px !important;" class="facebookHeaderText">RECOMMENDED PAGES</h1>
         <div class="facebookSection">
-          <iframe src="https://www.facebook.com/plugins/group.php?href=https%3A%2F%2Fwww.facebook.com%2Fgroups%2Fdeeperlifebiblechurchsingles&width=300&show_social_context=true&show_metadata=true&appId=148660960575291&height=352" width="300" height="352" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>    
+          <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FThe-Graphics-House-107859138255189%2F&tabs=timeline&width=300&height=352&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="300" height="352" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>    
       
       
           <section style="display: none;" id="newsLetterFacebook"  class="newsLetterFacebook homePageNewsLetterSection mb-5">
@@ -217,7 +239,7 @@ data-show-facepile="false"
       
       </section>
       </section>
-    <!--======================================================== WHAT WE DO SECTION ======================================================== -->
+ 
 <section class="container-mine homePageWhatSection" id="container-tablet-WhatWeDo">
 
   <h1 class=" homePageWhatH1">WHAT WE DO</h1>
@@ -236,7 +258,7 @@ data-show-facepile="false"
   {%endfor%}
   {%endif%}
 
-  <!--======================================================== NEED TO REACH US SECTION ======================================================== -->
+
 
 
   <section id="reachUsWhatSection" style="display:none;" class=" homePageNeedReachUs">
@@ -250,7 +272,7 @@ data-show-facepile="false"
 
 </section>
 
-        <!--======================================================== NEWSLETTER ======================================================== -->
+
         <section class=" homePageNewsLetterSection mb-5">
           <div class="homePageNewsLetterBackground">
               <h1 class="text-center homePageNewsLetterHeader" >GET NOTIFIED WHEN WE POST SOMETHING NEW!</h1>
@@ -259,15 +281,14 @@ data-show-facepile="false"
           </div>
       </section>
 
-      <!--======================================================== NEED TO REACH US SECTION ======================================================== -->
+ 
+      <br>
      <section id="reachUsWhatSectionOriginal"  style="display:none;" class=" homePageNeedReachUs">
-      <h1 class="homePageNeedReachUsH1">NEED TO REACH US?</h1>
+      <h1 style="" class="homePageNeedReachUsH1">NEED TO REACH US?</h1>
       <p class="homePageNeedReachUsEmail "><b>Email:</b> <span style="font-weight: lighter;" class="homePageNeedReachUsAddress"> HolinessSingles@gmail.com</span></p>
       </section>
      
-    </div>
-    </div>
-    
-    
-    {% endblock content %}
-    
+    </div> -->
+</div>
+
+{% endblock content %}

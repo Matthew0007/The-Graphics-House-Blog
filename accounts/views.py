@@ -13,7 +13,7 @@ from accounts.forms import *
 
 def signoutView(request):
     logout(request)
-    return redirect('signup')
+    return redirect('signin')
 
 def signupView(request):
     if request.method == 'POST':

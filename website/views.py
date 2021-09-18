@@ -14,7 +14,7 @@ def index(request):
     featured = Post.objects.filter(featured = True)
     for i in whatWeDo:
        pass
-    print(request.geolocation['continent'])
+    # print(request.geolocation['continent'])
     return render(request, 'website/home.html', {'featured':featured, 'whatWeDo':whatWeDo})
 
 
