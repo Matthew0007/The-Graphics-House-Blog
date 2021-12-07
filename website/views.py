@@ -3,7 +3,7 @@ from .models import *
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone as tz
 import datetime
-from django_ip_geolocation.decorators import with_ip_geolocation
+
 
 # Create your views here.
 
@@ -43,13 +43,7 @@ def post_detail(request, category_slug, post_slug):
 
     new = False
 
-    def get_ip(request):
-        address = request.META.get('HTTP_X_FORWARDED_FOR')
-        if address:
-            ip = address.split(',')[-1].strip()
-        else:
-            ip = request.META.get('REMOTE_ADDR')
-        return ip
+    
 
     try:
         post = get_object_or_404(Post, slug=post_slug)
@@ -58,16 +52,10 @@ def post_detail(request, category_slug, post_slug):
         if post.created >= compareTime:
             new = True
   
-        ip= get_ip(request)
-        result = UserSession.objects.filter(user=ip, post=post)
-        u = UserSession(user=ip, post=post)
-        if result:
-            print("hello")
-        else:
-            print("nah")
-            u.save()
-            post.view_count = post.view_count + 1
-            post.save()
+        
+        
+       
+        
        
     except Exception as e:
         raise e
