@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-b07p^uj4cychne$u_c(3j(r*&&&cod6k5_(f=-(#rcyyfj9xac
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','christian-jesus-graphics.herokuapp.com/']
+ALLOWED_HOSTS = ['127.0.0.1','christian-jesus-graphics.herokuapp.com']
 
 
 # Application definition
@@ -99,8 +99,12 @@ WSGI_APPLICATION = 'blog_site.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'convert_db',
+        'USER' : 'postgres',
+        'PASSWORD' : '1255',
+        'HOST' : 'localhost',
+        'PORT' : '5432'
     }
 }
 
