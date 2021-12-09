@@ -93,10 +93,10 @@
       
                  {% if user.is_authenticated  %}
 
-                 <li><a class="badge badge-info" href="{% url 'signout' %}">Sign Out <i class="fas fa-user-plus"></i></a></li>
+                 <li><a class="badge badge-info" href="{% url 'signout' %}">Sign Out </a></li>
                  {% else %}
 
-                 <li><a class="badge badge-info" href="{% url 'signin' %}">Sign In <i class="fas fa-user-plus"></i></a></li>
+                 <li class="text-center"><a class="badge badge-info" href="{% url 'signin' %}">Sign In </a></li>
                  {% endif %}
     </ul>
    

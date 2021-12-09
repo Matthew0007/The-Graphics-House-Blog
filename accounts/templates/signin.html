@@ -34,25 +34,25 @@
 />
 <div class="container pb-4 mb-4">
   <br />
-  <h1 class="my_title text-center">Login or Create a New Account</h1>
+  <h1 class="my_title text-center">Admin Login </h1>
   <br />
   <div class="row">
     <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center my_custom_div">
-      <br />
-      <h2 class="my_title">New User?</h2>
+      <!-- <br />
+      <h2 class="my_title">Contact </h2>
       <br />
       <a href="{% url 'signup' %}" class="btn btn-secondary"
         >Create New Account</a
-      >
+      > -->
     </div>
-    <div class="col-12 col-sm-12 col-md-12 col-lg-6 bg-light">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 bg-light">
       <div>
         <br />
         <h2 class="my_title">Registered Users Only</h2>
         <form method="post">
           {% csrf_token %}
           <p>{{ form | crispy }}</p>
-          <button type="submit" class="btn btn-secondary">Login</button>
+          <button type="submit" class="btn rounded-0 btn-dark marginx-0;">Login</button>
         </form>
         <br />
       </div>

@@ -28,7 +28,6 @@
                 {%if new %} 
                <br>
                 <span style=" font-size: 11px; background-color: red !important;" class=" badge badge-pill badge-danger ">New</span>
-                <span style=" font-size: 11px; color: black; background-color: rgb(255, 217, 0) !important;" class=" badge badge-pill badge-alert ">Popular</span>
 
                 {%else%}
                 {%endif%}
@@ -73,10 +72,14 @@
                 <h6 class="otherTopicsHeader">Other Topics</h6>
 
                 <div class="otherTopicsLabelsContainer">
+                    {% if checkOutCategory %}
+                    {%for label in checkOutCategory%}
 
-                    <p class="otherTopicsLabelText">#banner </p>
-                    <p class="otherTopicsLabelText">#logo </p>
-                    <p class="otherTopicsLabelText">#albumCovers </p>
+                    <p class=""><a class="otherTopicsLabelText text-dark" href="{{label.get_absolute_url}}">#{{label.name}}</a>  </p>
+                   
+                    {%endfor%}
+                    {%endif%}
+    
                 </div>
 
              </div>
@@ -109,7 +112,7 @@
                     <div class="checkOutPostInnerContainer">
                         {% for chechOut in checkOutPost %}
                         <div class="checkOutPostInnerBody">
-                            <img class="checkOutPostImage" src="{{chechOut.image.url}}" alt="check out this image text">
+                           <a href="{{chechOut.get_absolute_url}}"><img class="checkOutPostImage" src="{{chechOut.image.url}}" alt="check out this image text"></a> 
                             <h6 class="checkOutPostInnerCategoryText text-center">{{chechOut.category}}</h6>
                             <p class="checkOutPostInnerTitle text-center">{{chechOut.title}}</p>
                             <div class="checkOutPostInnerFooter">
