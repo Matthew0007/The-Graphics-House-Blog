@@ -48,6 +48,9 @@ def post_detail(request, category_slug, post_slug):
 
     try:
         post = get_object_or_404(Post, slug=post_slug)
+        post.view_count = post.view_count + 1
+        post.save()
+
         
 
         if post.created >= compareTime:
