@@ -66,13 +66,22 @@
     data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <i class="fas fa-bars text-dark"></i>
   </button>
+  <button style="opacity: 0%; width: 02%;" id="" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-bars text-dark"></i>
+  </button>
   <!-- IMAGEL LINK -->
   <a id="logoNavbar" class="navbar-brand mx-auto ml-3" href="{% url 'website:home' %}">
     <!-- IMAGE -->
     <img class="mx-auto" style="width: 170px" src="{% static 'images/graphicslogo.png' %}" alt="Online Cushion Store" /></a>
   <a class="navbar-brand" href="#"><img src="" /></a>
   <!-- SEARCH ICON -->
-  <i style="display: none; margin-right: 2vw" id="searchIconMobile" class="fas fa-search text-dark"></i>
+  <button style="border: none ; font: 1.4em sans-serif; background-color: #f4f5f5;" data-toggle="modal" data-target="#exampleModal" id="mobileButtonn"
+    class=" ">
+    <i class="fas fa-envelope text-dark bg-light"></i>
+    </button>
+
+    <i style="display: none; margin-right: 2vw " id="searchIconMobile" class="fas fa-search "></i>
   <!-- COLLAPSER -->
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul id="navbarContent" class="navbar-nav mx-auto">
@@ -93,7 +102,7 @@
       
                  {% if user.is_authenticated  %}
 
-                 <li><a class="badge badge-info" href="{% url 'signout' %}">Sign Out </a></li>
+                 <li class="text-center"><a class="badge badge-info" href="{% url 'signout' %}">Sign Out </a></li>
                  {% else %}
 
                  <li class="text-center"><a class="badge badge-info" href="{% url 'signin' %}">Sign In </a></li>
