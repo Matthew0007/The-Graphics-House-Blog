@@ -1,7 +1,10 @@
 from .models import *
 from contact.models import *
+from django.shortcuts import render, get_object_or_404, redirect
 from contact.models import *
+from django.db.models import Q
 from contact.forms import *
+
 
 def whatWeDo(request):
     whatWeDo = Post.objects.filter(category = 8)
@@ -15,6 +18,32 @@ def menu(request):
 
     
     return dict(links=links)
+
+def user_count(request):
+    def get_ip(request):
+            address = request.META.get('HTTP_X_FORWARDED_FOR')
+            if address:
+                ip = address.split(',')[-1].strip()
+            else:
+                ip = request.META.get('REMOTE_ADDR')
+            return ip
+            
+    ip = get_ip(request)
+    u = UserSession(user=ip)
+    result = UserSession.objects.filter(Q(user__icontains=ip))
+    if len(result) == 1:
+        print("user exists")
+    elif len(result) > 1:
+        print("user exists again")
+
+    else:
+        u.save()
+        print("user is uniqq")
+    countusers = UserSession.objects.all().count()
+    print("total users", countusers)       
+
+    
+    return dict(countusers=countusers)
 
 
 def post_menu(request):

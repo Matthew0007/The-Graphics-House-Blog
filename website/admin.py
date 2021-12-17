@@ -11,6 +11,14 @@ class CategoryAdmin(admin.ModelAdmin):
 admin.site.register(Category, CategoryAdmin)
 
 
+class UserPostAdmin(admin.ModelAdmin):
+
+    list_display = ('user', )
+   
+
+admin.site.register(UserPost, UserPostAdmin)
+
+
 class PostAdmin(admin.ModelAdmin):
 
     list_display = ('title', 'created', 'category','image' )

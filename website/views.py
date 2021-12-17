@@ -3,12 +3,35 @@ from .models import *
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone as tz
 import datetime
+from django.db.models import Q
 
 
 # Create your views here.
 
 
 def index(request):
+
+    def get_ip(request):
+        address = request.META.get('HTTP_X_FORWARDED_FOR')
+        if address:
+            ip = address.split(',')[-1].strip()
+        else:
+            ip = request.META.get('REMOTE_ADDR')
+        return ip
+
+    ip=get_ip(request)
+    u=UserSession(user=ip)
+    result = UserSession.objects.filter(Q(user__icontains=ip))
+    if len(result) == 1:
+        print("user exists")
+    elif len(result) > 1:
+        print("user exists again")
+
+    else:
+        u.save()
+        print("user is uniqq")
+    count = UserSession.objects.all().count()
+    print("total users", count)
 
     whatWeDo = Post.objects.filter(category = 8)
     featured = Post.objects.filter(featured = True)
@@ -46,11 +69,22 @@ def post_detail(request, category_slug, post_slug):
 
     
 
+    
+
     try:
+
+
+          
+
+
+
+
         post = get_object_or_404(Post, slug=post_slug)
+        
         post.view_count = post.view_count + 1
         post.save()
 
+         
         
 
         if post.created >= compareTime:

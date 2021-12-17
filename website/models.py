@@ -67,7 +67,15 @@ class Post(models.Model):
 class UserSession(models.Model):
 
     user = models.TextField(default=None)
-    post = models.ForeignKey(Post, on_delete=models.CASCADE, default="1") 
+    # post = models.ForeignKey(Post, on_delete=models.CASCADE) 
+
+    def __str__(self):
+        return self.user
+
+class UserPost(models.Model):
+
+    user = models.TextField(default=None)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE) 
 
     def __str__(self):
         return self.user

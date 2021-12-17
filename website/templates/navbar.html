@@ -16,8 +16,7 @@
     }
   }
 
-  #hamburger{
-
+  #hamburger {
     font-size: 20px;
   }
 
@@ -29,14 +28,12 @@
     color: black !important;
     font-family: Helvetica !important;
     font-size: 13px !important;
-  
   }
 
   #searchIconMobile {
     transition: 0.1s ease-in-out;
     font-size: 20px;
     opacity: 80%;
-  
   }
 
   #searchIconMobile:hover {
@@ -54,67 +51,66 @@
   }
 </style>
 
-
-<nav  style="
+<nav style="
     /* border-top: #eeeeee 1px solid;
     border-bottom: #eeeeee 1px solid; */
     padding: 0 !important;
     background-color: #f4f5f5;
-  " id="navbarMain" class="sticky-top navbar navbar-expand-lg ">
+  " id="navbarMain" class="sticky-top navbar navbar-expand-lg">
   <!-- <nav   style=" background-color: #c92020;"  id="navbarMain" class="navbar navbar-expand-lg  border-bottom "> -->
   <button style="" id="hamburger" class="navbar-toggler" type="button" data-bs-toggle="collapse"
     data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <i class="fas fa-bars text-dark"></i>
   </button>
-  <button style="opacity: 0%; width: 02%;" id="" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+  <button style="opacity: 0%; width: 02%" id="" class="navbar-toggler" type="button" data-bs-toggle="collapse"
     data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <i class="fas fa-bars text-dark"></i>
   </button>
   <!-- IMAGEL LINK -->
   <a id="logoNavbar" class="navbar-brand mx-auto ml-3" href="{% url 'website:home' %}">
     <!-- IMAGE -->
-    <img class="mx-auto" style="width: 170px" src="{% static 'images/graphicslogo.png' %}" alt="Online Cushion Store" /></a>
+    <img class="mx-auto" style="width: 170px" src="{% static 'images/graphicslogo.png' %}" alt="Online Cushion Store" />
+  </a>
   <a class="navbar-brand" href="#"><img src="" /></a>
   <!-- SEARCH ICON -->
-  <button style="border: none ; font: 1.4em sans-serif; background-color: #f4f5f5;" data-toggle="modal" data-target="#exampleModal" id="mobileButtonn"
-    class=" ">
+  <button style="border: none; font: 1.4em sans-serif; background-color: #f4f5f5" data-toggle="modal"
+    data-target="#exampleModal" id="mobileButtonn" class="">
     <i class="fas fa-envelope text-dark bg-light"></i>
-    </button>
+  </button>
 
-    <i style="display: none; margin-right: 2vw " id="searchIconMobile" class="fas fa-search "></i>
+  <i style="display: none; margin-right: 2vw" id="searchIconMobile" class="fas fa-search"></i>
   <!-- COLLAPSER -->
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul id="navbarContent" class="navbar-nav mx-auto">
-      {% if links %}
+      {% if links %} 
       {%for link in links%}
       <li class="nav-item text-center text-bold navers">
         <a style="color: black" href="{% url 'website:category_detail' link.slug %}" class="text-white t"
           aria-current="page">{{link.name}}</a>
       </li>
-      {%endfor%}
-      {% endif %}
-
+      {%endfor%} 
+      {% endif %} 
       {% if request.user.groups.all.0.name == "Admin" %}
       <li class="nav-item text-center text-bold navers">
-        <a style="color: black;" href="{% url 'dashboard:main' %}"   class="badge text-white bg-secondary" aria-current="page" >ADMIN PANEL</a> 
-             </li> 
-             {%endif%}
-      
-                 {% if user.is_authenticated  %}
+        <a style="color: black" href="{% url 'dashboard:main' %}" class="badge text-white bg-secondary"
+          aria-current="page">ADMIN PANEL</a>
+      </li>
+      {%endif%} 
+      {% if user.is_authenticated %}
 
-                 <li class="text-center"><a class="badge badge-info" href="{% url 'signout' %}">Sign Out </a></li>
-                 {% else %}
+      <li class="text-center">
+        <a class="badge badge-info" href="{% url 'signout' %}">Sign Out </a>
+      </li>
+      {% else %}
 
-                 <li class="text-center"><a class="badge badge-info" href="{% url 'signin' %}">Sign In </a></li>
-                 {% endif %}
+      <li class="text-center">
+        <a class="badge badge-info" href="{% url 'signin' %}">Sign In </a>
+      </li>
+      {% endif %}
     </ul>
-   
-  
   </div>
   <i style="margin-right: 2vw" id="searchIconMobile2" class="fas fa-search text-dark"></i>
 </nav>
-
-
 
 <script>
   const search_Icon = document.getElementById("searchIconMobile");
