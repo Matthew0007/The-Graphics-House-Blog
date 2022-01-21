@@ -12,6 +12,14 @@ def whatWeDo(request):
 
     return dict(whatWeDo=whatWeDo)
 
+def contribute(request):
+    contribute = Post.objects.filter(category__name__contains="Contribute")
+    
+    
+
+
+    return dict(contribute=contribute)
+
 
 def menu(request):
     links = Category.objects.filter(navbar = True)

@@ -98,16 +98,23 @@
     
       <!--======================================================== WANT TO CONTRIBUTE SECTION ======================================================== -->
     
+
+    
+        {% if contribute %}
         <h1 style="padding-top: -10vh !important;" class=" homePageWhatH1">CONTRIBUTE</h1>
+      {%for contribution in contribute%}
+    
     
         <div class="homePageWhatRow">
-            <a href="#"><img class="homePageWhatImage" src="{% static 'images/undraw_Investing_re_bov7.png'%}"></a>
+            <a href="#"><img class="homePageWhatImage" src="{{contribution.image.url}}"></a>
             <p class="homePageWhatHeaderText ">
-                    <a style="list-style-type: none; text-decoration: none; color: black;" href="#">
-                         Want to contribute to our repetoire of posts? Come on along!
+                    <a style="list-style-type: none; text-decoration: none; color: black;" href="{{contribution.get_absolute_url}}">
+                        {{contribution.title}}
                     </a>
                 </p>
             </div> 
+            {%endfor%}
+            {%endif%}
         
       
     <br>

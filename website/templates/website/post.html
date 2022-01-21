@@ -37,7 +37,7 @@
 
                 <!-- https://developers.facebook.com/docs/plugins/share-button/ -->
                
-<iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fchristian-jesus-graphics.herokuapp.com%2F{{post.category.slug}}%2F{{post.slug}}%2F&layout=button_count&size=small&width=77&height=20&appId" width="77" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+<iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fthegraphicshouse.org%2F{{post.category.slug}}%2F{{post.slug}}%2F&layout=button_count&size=small&width=77&height=20&appId" width="77" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
 
                 <!-- <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fwww.facebook.com%2Fgroups%2Fdeeperlifebiblechurchsingles%2F%3F__cft__
                 [0]%3DAZW64t27v4lSZNTyrjqlLZH27XG_0jHhh4KvxXRSkx9cBDn8dOuBz_Y2Wnel3hlaORyGCrLG3G6qzxmG
@@ -174,18 +174,21 @@
         {%endif%}
     
       <!--======================================================== WANT TO CONTRIBUTE SECTION ======================================================== -->
-    
-        <h1 style="padding-top: -10vh !important;" class=" homePageWhatH1">CONTRIBUTE</h1>
+      {% if contribute %}
+      <h1 style="padding-top: -10vh !important;" class=" homePageWhatH1">CONTRIBUTE</h1>
+      {%for contribution in contribute%}
+
     
         <div class="homePageWhatRow">
-            <a href="#"><img class="homePageWhatImage" src="{% static 'images/undraw_Investing_re_bov7.png'%}"></a>
+            <a href="#"><img class="homePageWhatImage" src="{{contribution.image.url}}"></a>
             <p class="homePageWhatHeaderText ">
-                    <a style="list-style-type: none; text-decoration: none; color: black;" href="#">
-                         Want to contribute to our repetoire of posts? Come on along!
+                    <a style="list-style-type: none; text-decoration: none; color: black;" href="{{contribution.get_absolute_url}}">
+                        {{contribution.title}}
                     </a>
                 </p>
             </div> 
-        
+            {%endfor%}
+            {%endif%}
       
     
     

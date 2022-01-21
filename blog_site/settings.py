@@ -82,6 +82,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'website.context_processors.menu',
+                'website.context_processors.contribute',
                 'website.context_processors.user_count',
                 'website.context_processors.post_menu',
                 'website.context_processors.whatWeDo',

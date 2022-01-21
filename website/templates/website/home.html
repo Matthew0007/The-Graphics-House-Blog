@@ -56,7 +56,7 @@
         <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FThe-Graphics-House-107859138255189%2F&tabs=timeline&width=300&height=352&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="300" height="352" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>        <section style="display: none;" id="newsLetterFacebook"  class="newsLetterFacebook homePageNewsLetterSection mb-5">
             <div class="homePageNewsLetterBackground">
                 <h1 class="text-center homePageNewsLetterHeader" >GET NOTIFIED WHEN WE POST SOMETHING NEW!</h1>
-                <input class="text-gray homePageNewsLetterInput"  type="email" placeholder="Enter your email">
+                <input class="text-gray homePageNewsLetterInput"  type="email" placeholder="">
                 <button class="btn btn-dark rounded-0 mt-3 homePageNewsLetterButton" id="newsletter_button">SUBSCRIBE</button>
             </div>
         </section>
@@ -80,17 +80,24 @@
 
   <!--======================================================== WANT TO CONTRIBUTE SECTION ======================================================== -->
 
-    <h1 style="padding-top: -10vh !important;" class=" homePageWhatH1">CONTRIBUTE</h1>
+  {% if contribute %}
 
-    <div class="homePageWhatRow">
-        <a href="#"><img class="homePageWhatImage" src="{% static 'images/undraw_Investing_re_bov7.png'%}"></a>
-        <p class="homePageWhatHeaderText ">
-                <a style="list-style-type: none; text-decoration: none; color: black;" href="#">
-                     Want to contribute to our repetoire of posts? Come on along!
-                </a>
-            </p>
-        </div> 
+  <h1 style="padding-top: -10vh !important;" class=" homePageWhatH1">CONTRIBUTE</h1>
+      {%for contribution in contribute%}
     
+    
+        <div class="homePageWhatRow">
+            <a href="#"><img class="homePageWhatImage" src="{{contribution.image.url}}"></a>
+            <p class="homePageWhatHeaderText ">
+                    <a style="list-style-type: none; text-decoration: none; color: black;" href="{{contribution.get_absolute_url}}">
+                        {{contribution.title}}
+                    </a>
+                </p>
+            </div> 
+            {%endfor%}
+            {%endif%}
+
+   
   
 
 
@@ -123,7 +130,7 @@
     <section class=" homePageNewsLetterSection mt-3 mb-5">
         <div class="homePageNewsLetterBackground">
             <h1 class="text-center homePageNewsLetterHeader" >GET NOTIFIED WHEN WE POST SOMETHING NEW!</h1>
-            <input class="text-gray homePageNewsLetterInput"  type="email" placeholder="Enter your email">
+            <input class="text-gray homePageNewsLetterInput"  type="email" placeholder="">
             <button class="btn btn-dark rounded-0 mt-3 homePageNewsLetterButton" id="newsletter_button">SUBSCRIBE</button>
         </div>
     </section>
