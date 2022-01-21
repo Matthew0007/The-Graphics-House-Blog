@@ -1,1 +1,1 @@
-# mBlog
+# Graphics Blog
